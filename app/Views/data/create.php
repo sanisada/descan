@@ -18,7 +18,7 @@
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
-    <form action="" method="POST">
+    <form action="<?php echo base_url('User/save') ?>" method="POST">
         <div class="card mt-3">
             <div class="card-header" style="background-color: #042165;">
                 <h3 class="card-title text-white">I. KETERANGAN TEMPAT</h3>
@@ -36,15 +36,15 @@
                         </div>
                         <div class="form-group">
                             <label for="">Kecamatan</label>
-                            <input type="text" name="kec" class="form-control" id="" value="" placeholder="Masukkan Kecamatan">
+                            <input type="text" name="kec" class="form-control" name="R103" value="" placeholder="Masukkan Kecamatan">
                         </div>
                         <div class="form-group">
                             <label>Desa</label>
-                            <input type="text" name="desa" class="form-control" id="" value="" placeholder="Masukkan Desa">
+                            <input type="text" name="desa" class="form-control" name="R104" value="" placeholder="Masukkan Desa">
                         </div>
                         <div class="form-group">
                             <label>SK pembentukan/pengesahan desa/kelurahan</label>
-                            <select class="form-control" name="sk" style="width: 100%;">
+                            <select name="R106A" class="form-control" name="sk" style="width: 100%;">
                                 <option hidden>--Pilih SK--</option>
                                     <option value="1">Permendagri/Kepmendagri</option>
                                     <option value="2">Perda Provinsi</option>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" name="edit_data" class="btn btn-block btn-success float-right"><i class="fas fa-save"></i> Simpan Perubahan Data</button>
+        <button type="submit" name="simpan" class="btn btn-block btn-success float-right"><i class="fas fa-save"></i> Simpan Perubahan Data</button>
 <!-- 
         <div class="row">
             <div class="col-md-12 mb-3">

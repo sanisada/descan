@@ -32,6 +32,27 @@ class Data extends BaseController
                 . view('templates/footer');
     }
 
+    public function save()
+    {
+        //load helper form and URL
+        helper(['form', 'url']);
+        $dataModel = new data_model();
+        
+        //insert data into database
+        $dataModel->insert([
+            'user_username'   => $this->request->getPost('username'),
+            'user_name' => $this->request->getPost('name'),
+            'user_email' => $this->request->getPost('email'),
+            'user_password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+            'user_role' => $this->request->getPost('role')
+        ]);
+
+        //flash message
+        session()->setFlashdata('message', 'Pengguna Berhasil Disimpan');
+
+        return redirect()->to(base_url('pengaturan'));
+    }
+
     /**
      * edit function
      */
