@@ -4,15 +4,34 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\data_model;
+use App\Models\kec_model;
+use App\Models\desa_model;
 
 class Data extends BaseController
 {
+    public function __construct()
+    {
+        helper(['form', 'url']);
+        $this->dataModel = new data_model();
+        $this->desaModel = new desa_model();
+        $this->kecamatanModel = new kec_model();
+        $this->uri = new \CodeIgniter\HTTP\URI(str_replace(base_url(),'',current_url()));
+        // $uri = current_url(true);
+    }
+
     public function index(): string
     {
         $session = session();
+
+        $data = array(
+                'data' => $this->dataModel->findAll(),
+                'pager' => $this->dataModel->pager
+            );
+
         return view('templates/header')
             . view('templates/menu')
-            . view('data/data_view')
+            . view('data/data_view', $data)
             . view('templates/footer');
     }
 
@@ -24,15 +43,24 @@ class Data extends BaseController
                 . view('templates/footer');
     }
 
-    public function create()
+    public function create($id)
     {
+        // model initialize
+        $dataModel = new data_model();
+
+        $data = array(
+            'data' => $dataModel->find($id),
+            'kecamatan' => $this->kecamatanModel->findAll(),
+            'desa' => $this->desaModel->findAll()
+        );
+
         return view('templates/header')
                 . view('templates/menu')
-                . view('data/create')
+                . view('data/create', $data)
                 . view('templates/footer');
     }
 
-    public function save()
+    public function tambah_data()
     {
         //load helper form and URL
         helper(['form', 'url']);
@@ -40,17 +68,37 @@ class Data extends BaseController
         
         //insert data into database
         $dataModel->insert([
-            'user_username'   => $this->request->getPost('username'),
-            'user_name' => $this->request->getPost('name'),
-            'user_email' => $this->request->getPost('email'),
-            'user_password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-            'user_role' => $this->request->getPost('role')
+            'Tahun'   => $this->request->getPost('tahun'),
         ]);
 
-        //flash message
-        session()->setFlashdata('message', 'Pengguna Berhasil Disimpan');
+        $data_id = $dataModel->getInsertID();
 
-        return redirect()->to(base_url('pengaturan'));
+        //flash message
+        session()->setFlashdata('message', 'Data Berhasil Disimpan');
+
+        return redirect()->to(base_url('data/create/'.$data_id));
+    }
+
+    public function save($id)
+    {
+        //load helper form and URL
+        helper(['form', 'url']);
+        $dataModel = new data_model();
+        // $id = $this->uri->getSegment(3);
+
+        //insert data into database
+        $dataModel->update($id, [
+            'R101'   => 'Lampung',
+            'R102'   => 'Pringsewu',
+            'R103'   => $this->request->getPost('R103'),
+            'R104' => $this->request->getPost('R104'),
+            'R106A' => $this->request->getPost('R106A')
+        ]);
+        
+        //flash message
+        session()->setFlashdata('message', 'Data Berhasil Disimpan');
+
+        return redirect()->to(base_url('data_podes'));
     }
 
     /**

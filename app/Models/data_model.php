@@ -8,6 +8,7 @@ class data_model extends Model{
    protected $table = 'data';
    protected $primaryKey = 'id';
    protected $allowedFields = [
+      'Tahun',
       'R101',
       'R102',
       'R103',
@@ -604,4 +605,13 @@ class data_model extends Model{
       'R1604C',
       'R1604D'
    ];
+
+   function getAll(){
+      $builder = $this->db->table('data dt');
+      $builder->join('desa ds', 'ds.kode_desa = dt.desa');
+      $query = $builder->get();
+      return $query->getResult();
+      // $result = json_decode($query, true);
+      // return $result;
+   }
 }

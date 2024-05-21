@@ -42,24 +42,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <?php $no = 1; $village = array("Panutan", "Lugusari", "Fajar Agung", "Wonodadi Utara");
-                                            $kec = array("Pagelaran","Pagelaran","Pringsewu","Gadingrejo")?>
-                                        <?php foreach($village as $key => $vill) : ?>
+                                        <?php $no = 1; ?>
+                                        <?php foreach($data as $key => $data) : ?>
                                         <tr>
                                             <td class="text-center"><?= ($no++); ?></td>
-                                            <td><?php echo $vill ?></td>
-                                            <td><?php echo $kec[$no-2] ?></td>
-                                            <td style="text-align:center;">2021</td>
-                                            <td style="text-align:center;">SUBMITTED</td>
+                                            <td><?php echo $data['R104'] ?></td>
+                                            <td><?php echo $data['R103'] ?></td>
+                                            <td style="text-align:center;"><?php echo $data['Tahun'] ?></td>
+                                            <td style="text-align:center;"><?php echo $data['status'] ?></td>
                                             <td class="text-center">
                                                 <ul class="list-inline m-0">
                                                     <li class="list-inline-item">
-                                                        <a href="<?php echo base_url('data/detail/')?>"  class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i></a>
+                                                        <a href="<?php echo base_url('data/detail/').$data['id']?>"  class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i></a>
                                                         <!-- <button class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-eye"></i></button> -->
                                                     </li>
                                                     <li class="list-inline-item">
                                                         <!-- <button class="btn btn-success btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Edit"> -->
-                                                        <a href="<?php echo base_url('data/edit/')?>"  class="btn btn-success btn-sm" type="button"><i class="fa fa-edit"></i></a>
+                                                        <a href="<?php echo base_url('data/edit/').$data['id']?>"  class="btn btn-success btn-sm" type="button"><i class="fa fa-edit"></i></a>
                                                     <!-- </button> -->
                                                     </li>
                                                     <li class="list-inline-item">
@@ -99,14 +98,20 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="" method="post">
+            <form action="<?php echo base_url('Data/tambah_data') ?>" method="POST">
                 <div class="modal-body">
-                    <label for="tahun">Tahun</label>
-                    <input type="text" name="tahun" id="tahun" class="form-control">
+                    <label for="tahun">Tahun</label><br>
+                    <select name="tahun" id="tahun" class="custom-select custom-select-md mb-3">
+                        <?php echo " ". PHP_EOL;
+                            for($i = date("Y")-3; $i <=date("Y"); $i++){
+                                echo '<option value="' . $i . '">' . $i . '</option>' . PHP_EOL;
+                            }
+                        ?>
+                    </select>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Tutup</button>
-                    <a href="<?php echo base_url('data/create') ?>"  class="btn btn-sm btn-success" type="submit" name="tambah_tahun">Simpan</a>
+                    <button class="btn btn-sm btn-success float-right" type="submit" name="tambah_data">Simpan</button>
                 </div>
             </form>
         </div>

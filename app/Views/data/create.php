@@ -18,7 +18,7 @@
 <!-- Main content -->
 <section class="content">
     <!-- Default box -->
-    <form action="<?php echo base_url('User/save') ?>" method="POST">
+    <form action="<?php echo base_url('Data/save/').$data['id']  ?>" method="POST">
         <div class="card mt-3">
             <div class="card-header" style="background-color: #042165;">
                 <h3 class="card-title text-white">I. KETERANGAN TEMPAT</h3>
@@ -36,15 +36,27 @@
                         </div>
                         <div class="form-group">
                             <label for="">Kecamatan</label>
-                            <input type="text" name="kec" class="form-control" name="R103" value="" placeholder="Masukkan Kecamatan">
+                            <select class="form-control" name="R103" required>
+                                <?php echo "<option hidden>--Pilih Kecamatan--</option>". PHP_EOL;
+                                        foreach($kecamatan as $key => $kec) : {
+                                        echo '<option value="' . $kec['kode_kec'] . '">' . $kec['kecamatan'] . '</option>' . PHP_EOL;}
+                                ?>
+                                <?php endforeach ?>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Desa</label>
-                            <input type="text" name="desa" class="form-control" name="R104" value="" placeholder="Masukkan Desa">
+                            <select class="form-control" name="R104" required>
+                                    <?php echo "<option hidden>--Pilih Desa--</option>". PHP_EOL;
+                                            foreach($desa as $key => $desa) : {
+                                            echo '<option value="' . $desa['kode_desa'] . '">' . $desa['desa'] . '</option>' . PHP_EOL;}
+                                    ?>
+                                    <?php endforeach ?>
+                                </select>
                         </div>
                         <div class="form-group">
                             <label>SK pembentukan/pengesahan desa/kelurahan</label>
-                            <select name="R106A" class="form-control" name="sk" style="width: 100%;">
+                            <select name="R106A" class="form-control" style="width: 100%;">
                                 <option hidden>--Pilih SK--</option>
                                     <option value="1">Permendagri/Kepmendagri</option>
                                     <option value="2">Perda Provinsi</option>

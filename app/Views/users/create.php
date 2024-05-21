@@ -52,6 +52,26 @@
                                     <option value="Viewer">Viewer</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label>Kecamatan</label>
+                                <select class="form-control" name="kec" required>
+                                    <?php echo "<option hidden>--Pilih Kecamatan--</option>". PHP_EOL;
+                                            foreach($kecamatan as $key => $kec) : {
+                                            echo '<option value="' . $kec['kode_kec'] . '">' . $kec['kecamatan'] . '</option>' . PHP_EOL;}
+                                    ?>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Desa</label>
+                                <select class="form-control" name="desa" required>
+                                    <?php echo "<option hidden>--Pilih Desa--</option>". PHP_EOL;
+                                            foreach($desa as $key => $desa) : {
+                                            echo '<option value="' . $desa['kode_desa'] . '">' . $desa['desa'] . '</option>' . PHP_EOL;}
+                                    ?>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-primary">SIMPAN</button>
                         </form>
                     </div>
