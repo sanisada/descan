@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class data_model extends Model{
    protected $table = 'data';
-   protected $primaryKey = 'id';
+   protected $primaryKey = 'data_id';
    protected $allowedFields = [
       'Tahun',
       'R101',
@@ -608,7 +608,8 @@ class data_model extends Model{
 
    function getAll(){
       $builder = $this->db->table('data dt');
-      $builder->join('desa ds', 'ds.kode_desa = dt.desa');
+      $builder->join('desa ds', 'ds.kode_desa = dt.R104');
+      $builder->join('kec k', 'k.kode_kec = dt.R103');
       $query = $builder->get();
       return $query->getResult();
       // $result = json_decode($query, true);

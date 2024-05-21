@@ -7,6 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\data_model;
 use App\Models\kec_model;
 use App\Models\desa_model;
+use App\Models\ques_model;
 
 class Data extends BaseController
 {
@@ -16,6 +17,7 @@ class Data extends BaseController
         $this->dataModel = new data_model();
         $this->desaModel = new desa_model();
         $this->kecamatanModel = new kec_model();
+        $this->quesModel = new ques_model();
         $this->uri = new \CodeIgniter\HTTP\URI(str_replace(base_url(),'',current_url()));
         // $uri = current_url(true);
     }
@@ -25,7 +27,7 @@ class Data extends BaseController
         $session = session();
 
         $data = array(
-                'data' => $this->dataModel->findAll(),
+                'datas' => $this->dataModel->getAll(),
                 'pager' => $this->dataModel->pager
             );
 
@@ -43,20 +45,39 @@ class Data extends BaseController
                 . view('templates/footer');
     }
 
-    public function create($id)
+    public function create($data_id)
     {
         // model initialize
         $dataModel = new data_model();
 
         $data = array(
-            'data' => $dataModel->find($id),
+            'data' => $dataModel->find($data_id),
             'kecamatan' => $this->kecamatanModel->findAll(),
-            'desa' => $this->desaModel->findAll()
+            'desa' => $this->desaModel->findAll(),
+            'ques' => $this->quesModel->findAll()
         );
 
         return view('templates/header')
                 . view('templates/menu')
                 . view('data/create', $data)
+                . view('templates/footer');
+    }
+
+    public function create2($data_id)
+    {
+        // model initialize
+        $dataModel = new data_model();
+
+        $data = array(
+            'data' => $dataModel->find($data_id),
+            'kecamatan' => $this->kecamatanModel->findAll(),
+            'desa' => $this->desaModel->findAll(),
+            'ques' => $this->quesModel->findAll()
+        );
+
+        return view('templates/header')
+                . view('templates/menu')
+                . view('data/create2', $data)
                 . view('templates/footer');
     }
 
@@ -79,20 +100,44 @@ class Data extends BaseController
         return redirect()->to(base_url('data/create/'.$data_id));
     }
 
-    public function save($id)
+    public function save1($data_id)
     {
         //load helper form and URL
         helper(['form', 'url']);
         $dataModel = new data_model();
-        // $id = $this->uri->getSegment(3);
+        // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($id, [
+        $dataModel->update($data_id, [
             'R101'   => 'Lampung',
             'R102'   => 'Pringsewu',
             'R103'   => $this->request->getPost('R103'),
             'R104' => $this->request->getPost('R104'),
-            'R106A' => $this->request->getPost('R106A')
+            'R106A' => $this->request->getPost('R106A'),
+            'R304'   => $this->request->getPost('R304'),
+            'R307B1'   => $this->request->getPost('R307B1'),
+            'R307B1_LAT' => $this->request->getPost('R307B1_LAT'),
+            'R307B1_LA0' => $this->request->getPost('R307B1_LA0'),
+            'R307B1_LON' => $this->request->getPost('R307B1_LON'),
+            'R307B2' => $this->request->getPost('R307B2')
+        ]);
+        
+        //flash message
+        session()->setFlashdata('message', 'Data Berhasil Disimpan');
+
+        return redirect()->to(base_url('data/create2/'.$data_id));
+    }
+
+    public function save2($data_id)
+    {
+        //load helper form and URL
+        helper(['form', 'url']);
+        $dataModel = new data_model();
+        // $data_id = $this->uri->getSegment(3);
+
+        //insert data into database
+        $dataModel->update($data_id, [
+            
         ]);
         
         //flash message
@@ -117,5 +162,20 @@ class Data extends BaseController
                 . view('templates/menu')
                 . view('data/edit')
                 . view('templates/footer');
+    }
+
+    public function delete($data_id)
+    {
+
+        $data = $this->dataModel->find($data_id);
+
+        if($data) {
+            $this->dataModel->delete($data_id);
+
+            //flash message
+            session()->setFlashdata('message', 'Data Berhasil Dihapus');
+
+            return redirect()->to(base_url('data_podes'));
+        }
     }
 }

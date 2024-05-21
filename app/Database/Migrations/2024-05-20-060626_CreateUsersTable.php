@@ -34,8 +34,7 @@ class CreateUsersTable extends Migration
             ],
             'user_role' => [
                 'type'       => 'ENUM',
-                'constraint' => ['Admin', 'Operator', 'Viewer'],
-                'default'    => 'pending',
+                'constraint' => ['Admin', 'Operator', 'Viewer']
             ],
             'kecamatan' => [
                 'type'           => 'INT',
@@ -59,6 +58,6 @@ class CreateUsersTable extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('users');
     }
 }

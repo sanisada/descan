@@ -10,7 +10,7 @@ class CreateKecTable extends Migration
     {
         // Membuat kolom/field untuk tabel data
 		$this->forge->addField([
-			'id'          => [
+			'kec_id'          => [
 				'type'           => 'INT',
 				'constraint'     => 5,
 				'unsigned'       => true,
@@ -27,7 +27,7 @@ class CreateKecTable extends Migration
             ]);
         
         // Membuat primary key
-		$this->forge->addKey('id', TRUE);
+		$this->forge->addKey('kec_id', TRUE);
 
 		// Membuat tabel data
 		$this->forge->createTable('kec', TRUE);
@@ -35,6 +35,6 @@ class CreateKecTable extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('kec');
     }
 }

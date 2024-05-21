@@ -27,6 +27,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Daftar Data Potensi Desa</h3>
                     </div>
+                    
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div class="table-responsive">
@@ -43,26 +44,28 @@
                                 </thead>
                                 <tbody>
                                         <?php $no = 1; ?>
-                                        <?php foreach($data as $key => $data) : ?>
+                                        <?php foreach($datas as $key => $data) : ?>
                                         <tr>
-                                            <td class="text-center"><?= ($no++); ?></td>
-                                            <td><?php echo $data['R104'] ?></td>
-                                            <td><?php echo $data['R103'] ?></td>
-                                            <td style="text-align:center;"><?php echo $data['Tahun'] ?></td>
-                                            <td style="text-align:center;"><?php echo $data['status'] ?></td>
+                                            <td class="text-center"><?= $no++; ?></td>
+                                            <td><?php echo $data->desa ?></td>
+                                            <td><?php echo $data->kecamatan ?></td>
+                                            <td style="text-align:center;"><?php echo $data->Tahun ?></td>
+                                            <td style="text-align:center;"><?php echo $data->status ?></td>
                                             <td class="text-center">
                                                 <ul class="list-inline m-0">
                                                     <li class="list-inline-item">
-                                                        <a href="<?php echo base_url('data/detail/').$data['id']?>"  class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i></a>
+                                                        <a href="<?php echo base_url('Data/detail/').$data->data_id?>"  class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i></a>
                                                         <!-- <button class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-eye"></i></button> -->
                                                     </li>
                                                     <li class="list-inline-item">
                                                         <!-- <button class="btn btn-success btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Edit"> -->
-                                                        <a href="<?php echo base_url('data/edit/').$data['id']?>"  class="btn btn-success btn-sm" type="button"><i class="fa fa-edit"></i></a>
+                                                        <a href="<?php echo base_url('Data/edit/').$data->data_id?>"  class="btn btn-success btn-sm" type="button"><i class="fa fa-edit"></i></a>
                                                     <!-- </button> -->
                                                     </li>
                                                     <li class="list-inline-item">
-                                                        <button class="btn btn-danger btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                                        <a href="<?php echo base_url('Data/delete/'.$data->data_id) ?>">
+                                                        <button  onclick="return confirm('Apakah Anda yakin akan menghapus data ini?')" class="btn btn-danger btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                        <i class="fa fa-trash"></i></button></a>
                                                     </li>
                                                 </ul>
                                                 <!-- <button type="button" class="btn btn-default" data-toggle="dropdown">

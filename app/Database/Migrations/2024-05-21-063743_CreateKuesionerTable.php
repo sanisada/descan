@@ -4,41 +4,37 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateDesaTable extends Migration
+class CreateKuesionerTable extends Migration
 {
     public function up()
     {
         // Membuat kolom/field untuk tabel data
 		$this->forge->addField([
-			'desa_id'          => [
+			'ques_id'          => [
 				'type'           => 'INT',
 				'constraint'     => 5,
 				'unsigned'       => true,
 				'auto_increment' => true
 			],
-			'kode_kec'       => [
+			'dataKey'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
             ],
-            'kode_desa'       => [
+            'ques_label'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '255'
-            ],
-            'desa'     => [
-                'type'           => 'VARCHAR',
 				'constraint'     => '255'
             ]
             ]);
         
         // Membuat primary key
-		$this->forge->addKey('desa_id', TRUE);
+		$this->forge->addKey('ques_id', TRUE);
 
 		// Membuat tabel data
-		$this->forge->createTable('desa', TRUE);
+		$this->forge->createTable('ques', TRUE);
     }
 
     public function down()
     {
-        $this->forge->dropTable('desa');
+        $this->forge->dropTable('ques');
     }
 }

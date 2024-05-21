@@ -10,7 +10,7 @@ class CreateDataTable extends Migration
     {
         // Membuat kolom/field untuk tabel data
 		$this->forge->addField([
-			'id'          => [
+			'data_id'          => [
 				'type'           => 'INT',
 				'unsigned'       => true,
 				'auto_increment' => true
@@ -2973,7 +2973,7 @@ class CreateDataTable extends Migration
 		]);
 
 		// Membuat primary key
-		$this->forge->addKey('id', TRUE);
+		$this->forge->addKey('data_id', TRUE);
 
 		// Membuat tabel data
 		$this->forge->createTable('data', TRUE);
