@@ -39,20 +39,24 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">Kecamatan</label>
-                                    <select class="form-control" name="R103" required>
+                                    <select class="form-control" name="R103" value="<?php echo $data['R103']  ?>" required>
                                         <?php echo "<option hidden>--Pilih Kecamatan--</option>". PHP_EOL;
                                                 foreach($kecamatan as $key => $kec) : {
-                                                echo '<option value="' . $kec['kode_kec'] . '">' . $kec['kecamatan'] . '</option>' . PHP_EOL;}
+                                                echo '<option value="' . $kec['kode_kec'] . '"';
+                                                if ($data['R103'] == $kec['kode_kec']) echo "selected";
+                                                echo '>' . $kec['kecamatan'] . '</option>' . PHP_EOL;}
                                         ?>
                                         <?php endforeach ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Desa</label>
-                                    <select class="form-control" name="R104" required>
+                                    <select class="form-control" name="R104" value="<?php echo $data['R104']  ?>" required>
                                             <?php echo "<option hidden>--Pilih Desa--</option>". PHP_EOL;
                                                     foreach($desa as $key => $desa) : {
-                                                    echo '<option value="' . $desa['kode_desa'] . '">' . $desa['desa'] . '</option>' . PHP_EOL;}
+                                                    echo '<option value="' . $desa['kode_desa'] . '"';
+                                                    if ($data['R104'] == $desa['kode_desa']) echo "selected";
+                                                    echo '>' . $desa['desa'] . '</option>' . PHP_EOL;}
                                             ?>
                                             <?php endforeach ?>
                                         </select>
@@ -61,11 +65,11 @@
                                     <label>SK pembentukan/pengesahan desa/kelurahan</label>
                                     <select name="R106A" class="form-control" style="width: 100%;">
                                         <option hidden>--Pilih SK--</option>
-                                            <option value="1">Permendagri/Kepmendagri</option>
-                                            <option value="2">Perda Provinsi</option>
-                                            <option value="3">Perda Kabupaten</option>
-                                            <option value="4">SK Gubernur/Bupati</option>
-                                            <option value="5">Lainnya</option>
+                                            <option value="1" <?php if ($data['R106A'] == 1) echo "selected"; ?>>Permendagri/Kepmendagri</option>
+                                            <option value="2" <?php if ($data['R106A'] == 2) echo "selected"; ?>>Perda Provinsi</option>
+                                            <option value="3" <?php if ($data['R106A'] == 3) echo "selected"; ?>>Perda Kabupaten</option>
+                                            <option value="4" <?php if ($data['R106A'] == 4) echo "selected"; ?>>SK Gubernur/Bupati</option>
+                                            <option value="5" <?php if ($data['R106A'] == 5) echo "selected"; ?>>Lainnya</option>
                                     </select>
                                 </div>
                             </div>
@@ -130,7 +134,7 @@
                                 <?php for ($i = 6; $i < 12; $i++): ?>
                                 <div class="form-group">
                                     <label for=""><?php echo $ques[$i]['ques_label']?></label>
-                                    <input type="text" name="<?php echo $ques[$i]['dataKey']?>" class="form-control">
+                                    <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
                                 </div>
                                 <?php endfor?>
                                 <?php?>
