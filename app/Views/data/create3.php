@@ -237,6 +237,7 @@
                 </div>
             </div>
         </div>
+        </div>
 
         <div class="row">
             <div class="col-md-12">
@@ -256,7 +257,6 @@
         } else {
         document.getElementById('R504C1').style.display = 'none'; // Hide el
         }
-        
     }
 
     function on_change2(el){
@@ -266,7 +266,6 @@
         } else {
         document.getElementById('R509B').style.display = 'none'; // Hide el
         }
-        
     }
 
     function on_change3(el){
@@ -276,7 +275,6 @@
         } else {
         document.getElementById('R509C').style.display = 'none'; // Hide el
         }
-        
     }
 
     function on_change5(el){
@@ -286,7 +284,6 @@
         } else {
         document.getElementById('R511B').style.display = 'none'; // Hide el
         }
-        
     }
 
     function on_change6(el){
@@ -296,7 +293,6 @@
         } else {
         document.getElementById('R513B').style.display = 'none'; // Hide el
         }
-        
     }
 
     function on_change7(el){
@@ -306,7 +302,6 @@
         } else {
         document.getElementById('R516A').style.display = 'none'; // Hide el
         }
-        
     }
 
     function on_change8(el){
@@ -316,6 +311,5 @@
         } else {
         document.getElementById('R518A').style.display = 'none'; // Hide el
         }
-        
     }
 </script>

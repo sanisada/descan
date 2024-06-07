@@ -60,13 +60,26 @@
                                 <hr/>
                                 <div class="form-group mt-20">
                                     <h5>Jumlah penduduk bekerja per lapangan usaha</h5>
-                                    <?php for ($i = 22; $i < 43; $i++): ?>
-                                    <div class="form-group">
-                                        <label for=""><?php echo $ques[$i]['ques_label']?></label>
-                                        <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <?php for ($i = 22; $i < 32; $i++): ?>
+                                            <div class="form-group">
+                                                <label for=""><?php echo $ques[$i]['ques_label']?></label>
+                                                <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
+                                            </div>
+                                            <?php endfor?>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <?php for ($i = 32; $i < 43; $i++): ?>
+                                            <div class="form-group">
+                                                <label for=""><?php echo $ques[$i]['ques_label']?></label>
+                                                <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
+                                            </div>
+                                            <?php endfor?>
+                                        </div>
                                     </div>
-                                    <?php endfor?>
                                 </div>
+                                <hr/>
                                 <div class="form-group">
                                     <label>Jenis sub sektor utama sebagian besar penduduk desa/kelurahan:</label>
                                     <div style="margin-bottom:-9.5px;">

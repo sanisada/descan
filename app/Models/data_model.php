@@ -610,6 +610,7 @@ class data_model extends Model{
       $builder = $this->db->table('data dt');
       $builder->join('desa ds', 'ds.kode_desa = dt.R104');
       $builder->join('kec k', 'k.kode_kec = dt.R103');
+      // $builder->join('sls s','s.data_id = dt.data_id');
       $query = $builder->get();
       return $query->getResult();
       // $result = json_decode($query, true);

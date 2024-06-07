@@ -79,11 +79,6 @@ class CreateDataTable extends Migration
 				'constraint'     => '10',
 				'null'           => true
 			],
-			'R401'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
-				'null'           => true
-			],
 			'R401A'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
@@ -104,11 +99,6 @@ class CreateDataTable extends Migration
 				'constraint'     => '10',
 				'null'           => true
 			],
-			'R402B'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
-				'null'           => true
-			],
 			'R402B1'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
@@ -120,11 +110,6 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R402E'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
-				'null'           => true
-			],
-			'R403A'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
 				'null'           => true
@@ -240,8 +225,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R403B2'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '200',
 				'null'           => true
 			],
 			'R501A1'       => [
@@ -264,6 +249,11 @@ class CreateDataTable extends Migration
 				'constraint'     => '10',
 				'null'           => true
 			],
+			'R504C1'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '200',
+				'null'           => true
+			],
 			'R509A'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
@@ -277,6 +267,11 @@ class CreateDataTable extends Migration
 			'R509C1'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
+				'null'           => true
+			],
+			'R509C1A'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '200',
 				'null'           => true
 			],
 			'R509C2'       => [
@@ -514,14 +509,44 @@ class CreateDataTable extends Migration
 				'constraint'     => '10',
 				'null'           => true
 			],
+			'R513'       => [
+				'type'           => 'INT',
+				'constraint'     => '10',
+				'null'           => true
+			],
+			'R513B1'       => [
+				'type'           => 'INT',
+				'constraint'     => '10',
+				'null'           => true
+			],
+			'R513B2'       => [
+				'type'           => 'INT',
+				'constraint'     => '10',
+				'null'           => true
+			],
+			'R513B3'       => [
+				'type'           => 'INT',
+				'constraint'     => '10',
+				'null'           => true
+			],
 			'R516'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
 				'null'           => true
 			],
+			'R516A'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '200',
+				'null'           => true
+			],
 			'R518'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
+				'null'           => true
+			],
+			'R518A'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '200',
 				'null'           => true
 			],
 			'R601AK2'       => [
@@ -1232,6 +1257,11 @@ class CreateDataTable extends Migration
 			'R701QK3'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
+				'null'           => true
+			],
+			'R701R'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '200',
 				'null'           => true
 			],
 			'R702A'       => [
@@ -2974,6 +3004,8 @@ class CreateDataTable extends Migration
 
 		// Membuat primary key
 		$this->forge->addKey('data_id', TRUE);
+        // $this->forge->addForeignKey('R104', 'desa', 'kode_desa', 'CASCADE', 'CASCADE');
+        // $this->forge->addForeignKey('R103', 'kecamatan', 'kode_kec', 'CASCADE', 'CASCADE');
 
 		// Membuat tabel data
 		$this->forge->createTable('data', TRUE);
