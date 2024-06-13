@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Tambah Data Potensi Desa</h3>
+                <h3>Tambah Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -29,33 +29,51 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <?php for ($i = 45; $i < 47; $i++): ?>
-                                <div class="form-group">
-                                    <label for=""><?php echo $ques[$i]['ques_label']?></label>
-                                    <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
-                                </div>
-                                <?php endfor?>
-                                <div class="form-group">
-                                    <label>Keberadaan Tempat Penampungan Sementara (TPS)</label>
-                                    <div style="margin-bottom:-9.5px;">
-                                        <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R504C" value="1" <?php if ($data['R504C'] == 1) echo "checked"; ?>>
-                                            <label class="form-check-label">Ada, digunakan</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <?php for ($i = 47; $i < 49; $i++): ?>
+                                        <div class="form-group">
+                                            <label for=""><?php echo $ques[$i]['ques_label']?></label>
+                                            <input type="number" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
                                         </div>
-                                        <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R504C" value="2" <?php if ($data['R504C'] == 2) echo "checked"; ?>>
-                                            <label class="form-check-label">Ada, tidak digunakan</label>
-                                        </div>
-                                        <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R504C" value="3" <?php if ($data['R504C'] == 3) echo "checked"; ?>>
-                                            <label class="form-check-label">Tidak ada</label>
+                                        <?php endfor?>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for=""><?php echo $ques[49]['ques_label']?></label>
+                                            <input type="number" name="<?php echo $ques[49]['dataKey']?>" value="<?php echo $data['R501B']  ?>" class="form-control">
                                         </div>
                                     </div>
                                 </div>
-                                <div id="R504C1" class="form-group" style="display:none;">
-                                    <label for="">Nama TPS</label>
-                                    <input type="text" name="R504C1" class="form-control">
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Keberadaan Tempat Penampungan Sementara (TPS)</label>
+                                            <div style="margin-bottom:-9.5px;">
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R504C" value="1" <?php if ($data['R504C'] == 1) echo "checked"; ?>>
+                                                    <label class="form-check-label">Ada, digunakan</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R504C" value="2" <?php if ($data['R504C'] == 2) echo "checked"; ?>>
+                                                    <label class="form-check-label">Ada, tidak digunakan</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R504C" value="3" <?php if ($data['R504C'] == 3) echo "checked"; ?>>
+                                                    <label class="form-check-label">Tidak ada</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="R504C1" class="form-group" style="display:none;">
+                                            <label for="">Nama TPS</label>
+                                            <input type="text" name="R504C1" class="form-control" value="<?php echo $data['R504C1']  ?>">
+                                        </div>
+                                    </div>
                                 </div>
+                                <hr/>
                                 <div class="form-group">
                                     <label>Wilayah desa/kelurahan dilalui Saluran Udara Tegangan Ekstra Tinggi (SUTET) / Saluran Udara Tegangan Tinggi (SUTT) / Saluran Udara Tegangan Tinggi Arus Searah (SUTTAS)</label>
                                     <div style="margin-bottom:-9.5px;">
@@ -85,14 +103,21 @@
                                 <div id="R509C" class="form-group" style="display:none;">
                                     <hr/>
                                     <h6>Jika ada permukiman di bawah SUTET/SUTT/SUTTAS:</h6>
-                                    <label for="">Jumlah lokasi</label>
-                                    <input type="text" name="R509C1" value="<?php echo $data['R509C1']  ?>" class="form-control">
-                                    <label for="">Tuliskan alamatnya</label>
-                                    <input type="text" name="R509C1A" class="form-control">
-                                    <?php for ($i = 54; $i < 56; $i++): ?>
-                                        <label for=""><?php echo $ques[$i]['ques_label']?></label>
-                                        <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
-                                    <?php endfor?>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <?php for ($i = 54; $i < 56; $i++): ?>
+                                            <label for=""><?php echo $ques[$i]['ques_label']?></label>
+                                            <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
+                                            <?php endfor?>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <?php for ($i = 56; $i < 58; $i++): ?>
+                                            <label for=""><?php echo $ques[$i]['ques_label']?></label>
+                                            <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
+                                            <?php endfor?>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                                 <hr/>
                                 <div class="form-group">
@@ -100,10 +125,10 @@
                                     <label>Keberadaan sungai, saluran irigasi, danau/waduk/situ/bendungan, embung di desa/kelurahan <i>(beri tanda cek jika ada)</i></label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
-                                        <?php for ($i = 56; $i < 60; $i++): ?>
+                                        <?php for ($i = 58; $i < 62; $i++): ?>
                                             <div style="margin-bottom:-9.5px;">
                                                 <div class="form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($ques[$i]['dataKey'] == 1) echo "checked"; ?>>
+                                                    <input class="form-check-input" oninput="toggleUsage(<?php echo $i; ?>)" type="checkbox" id="checkbox-<?php echo $i; ?>" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                     <label class="form-check-label"><?php echo $ques[$i]['ques_label']?></label>
                                                 </div>
                                             </div>
@@ -111,43 +136,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php for ($j = 56; $j < 60; $j++): ?>
-                                    <div class="form-group">
-                                        <label for="">Penggunaan <?php echo $ques[$j]['ques_label']?> <i>(beri tanda cek jika ada)</i></label>
-                                        <div style="margin-bottom:-9.5px;">
-                                            <div class="form-check-inline">
-                                                <div class="col-12">
-                                                    <input class="form-check-input margin-left:4px;" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label margin-left:4px;">Mandi/cuci</label><br/>
-                                                    <input class="form-check-input margin-left:4px;" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label margin-left:4px;">Sumber air minum/masak</label><br/>
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Bahan baku air minum</label><br/>
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Pengairan/irigasi lahan pertanian</label><br/>
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Pengairan/irigasi lahan pertanian</label>
-                                                </div>
-                                                <div class="col-12">
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Pariwisata (komersial)</label><br/>
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Perikanan</label><br/>
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Transportasi</label><br/>
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Pembangkit listrik</label><br/>
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Industri/pabrik</label><br/>
-                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data['R509AK2'] == 1) echo "checked"; ?>>
-                                                    <label class="form-check-label">Lainnya</label><br/>
-                                                </div>
+                                <?php $initialI = 58; $initialJ = 62;
+                                for ($i = $initialI; $i < 62; $i++): ?>
+                                    <div class="form-group" id="usage-<?php echo $i; ?>" style="display: none;">
+                                        <label for="">Penggunaan <?php echo $ques[$i]['ques_label']?> <i>(beri tanda cek jika ada)</i></label>
+                                        <?php $startJ = $initialJ + ($i - $initialI); $interval = 4; for ($j = $startJ; $j < 99; $j += $interval): ?>
+                                            <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="<?php echo $ques[$j]['dataKey']?>" value="1" <?php if ($data[$ques[$j]['dataKey']] == 1) echo "checked"; ?>>
+                                                    <label class="form-check-label"><?php echo $ques[$j]['ques_label']?></label>
                                             </div>
-                                        </div>
+                                        <?php endfor?>
                                     </div>
                                 <?php endfor?>
                                 <div id="R511A" class="form-group">
-                                    <label>Keberadaan permukiman di bantaran sungai :</label>
+                                    <label>Keberadaan permukiman di bantaran sungai</label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
                                             <input class="form-check-input" oninput='on_change5(event)' type="radio" name="R511A" value="1" <?php if ($data['R511A'] == 1) echo "checked"; ?>>
@@ -162,36 +164,30 @@
                                 <div id="R511B" class="form-group" style="display:none;">
                                     <hr/>
                                     <h6>Jika ada permukiman di bantaran sungai:</h6>
-                                    <label for="">Jumlah lokasi</label>
-                                    <input type="text" name="R511B1" value="<?php echo $data['R511B1']  ?>" class="form-control">
-                                    <label for="">Tuliskan alamatnya</label>
-                                    <input type="text" name="R511BA" class="form-control">
-                                    <?php for ($i = 99; $i < 101; $i++): ?>
+                                    <?php for ($i = 103; $i < 106; $i++): ?>
                                         <label for=""><?php echo $ques[$i]['ques_label']?></label>
-                                        <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
+                                        <input type="number" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
                                     <?php endfor?>
                                 </div>
-                                <div id="R511A" class="form-group">
-                                    <label>Keberadaan permukiman kumuh :</label>
+                                <div id="R513A" class="form-group">
+                                    <label>Keberadaan permukiman kumuh</label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change6(event)' type="radio" name="R511A" value="1" <?php if ($data['R511A'] == 1) echo "checked"; ?>>
+                                            <input class="form-check-input" oninput='on_change6(event)' type="radio" name="R513A" value="1" <?php if ($data['R513A'] == 1) echo "checked"; ?>>
                                             <label class="form-check-label">Ada</label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change6(event)' type="radio" name="R511A" value="2" <?php if ($data['R511A'] == 2) echo "checked"; ?>>
+                                            <input class="form-check-input" oninput='on_change6(event)' type="radio" name="R513A" value="2" <?php if ($data['R513A'] == 2) echo "checked"; ?>>
                                             <label class="form-check-label">Tidak ada</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div id="R511B" class="form-group" style="display:none;">
+                                <div id="R513B" class="form-group">
                                     <hr/>
                                     <h6>Jika ada permukiman kumuh:</h6>
-                                    <label for="">Jumlah lokasi</label>
-                                    <input type="text" name="R511B1" value="<?php echo $data['R511B1']  ?>" class="form-control">
-                                    <?php for ($i = 100; $i < 102; $i++): ?>
+                                    <?php for ($i = 107; $i < 110; $i++): ?>
                                         <label for=""><?php echo $ques[$i]['ques_label']?></label>
-                                        <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
+                                        <input type="number" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
                                     <?php endfor?>
                                 </div>
                                 <div id="R516" class="form-group">
@@ -213,7 +209,7 @@
                                 </div>
                                 <div id="R516A" class="form-group" style="display:none;">
                                     <label for="">Nama komunitas/kelompok lingkungan hidup</label>
-                                    <input type="text" name="R516A" value="" class="form-control">
+                                    <input type="text" name="R516A" value="<?php echo $data['R516A']  ?>" class="form-control">
                                 </div>
                                 <div id="R518" class="form-group">
                                     <label>Keberadaan lokasi penggalian Golongan C (misalnya batu kali, pasir, kapur, kaolin, pasir kuarsa, tanah liat, dll) di desa/kelurahan</label>
@@ -230,7 +226,7 @@
                                 </div>
                                 <div id="R518A" class="form-group" style="display:none;">
                                     <label for="">Sebutkan lokasi dan nama galiannya</label>
-                                    <input type="text" name="R518A" value="" class="form-control">
+                                    <input type="text" name="R518A" value="<?php echo $data['R518A']  ?>" class="form-control">
                                 </div>
                         </div>
                     </div>
@@ -257,59 +253,142 @@
         } else {
         document.getElementById('R504C1').style.display = 'none'; // Hide el
         }
+        window.localStorage.setItem('var', selectedOption);
     }
 
     function on_change2(el){
-        var selectedOption = el.target.value;
-        if (selectedOption === '1') {
+        var selectedOption1 = el.target.value;
+        if (selectedOption1 === '1') {
         document.getElementById('R509B').style.display = 'block';
         } else {
         document.getElementById('R509B').style.display = 'none'; // Hide el
         }
+        window.localStorage.setItem('var1', selectedOption1);
     }
 
     function on_change3(el){
-        var selectedOption = el.target.value;
-        if (selectedOption === '1') {
+        var selectedOption2 = el.target.value;
+        if (selectedOption2 === '1') {
         document.getElementById('R509C').style.display = 'block';
         } else {
         document.getElementById('R509C').style.display = 'none'; // Hide el
         }
+        window.localStorage.setItem('var2', selectedOption2);
     }
 
     function on_change5(el){
-        var selectedOption = el.target.value;
-        if (selectedOption === '1') {
+        var selectedOption3 = el.target.value;
+        if (selectedOption3 === '1') {
         document.getElementById('R511B').style.display = 'block';
         } else {
         document.getElementById('R511B').style.display = 'none'; // Hide el
         }
+        window.localStorage.setItem('var3', selectedOption3);
     }
 
     function on_change6(el){
-        var selectedOption = el.target.value;
-        if (selectedOption === '1' || selectedOption === '2') {
+        var selectedOption4 = el.target.value;
+        if (selectedOption4 === '1') {
         document.getElementById('R513B').style.display = 'block';
         } else {
         document.getElementById('R513B').style.display = 'none'; // Hide el
         }
+        window.localStorage.setItem('var4', selectedOption4);
     }
 
     function on_change7(el){
-        var selectedOption = el.target.value;
-        if (selectedOption === '1' || selectedOption === '2') {
+        var selectedOption5 = el.target.value;
+        if (selectedOption5 === '1' || selectedOption5 === '2') {
         document.getElementById('R516A').style.display = 'block';
         } else {
         document.getElementById('R516A').style.display = 'none'; // Hide el
         }
+        window.localStorage.setItem('var5', selectedOption5);
     }
 
     function on_change8(el){
-        var selectedOption = el.target.value;
-        if (selectedOption === '1') {
+        var selectedOption6 = el.target.value;
+        if (selectedOption6 === '1') {
         document.getElementById('R518A').style.display = 'block';
         } else {
         document.getElementById('R518A').style.display = 'none'; // Hide el
         }
+        window.localStorage.setItem('var6', selectedOption6);
     }
+
+    window.onload = function() {
+        var selectedOption = window.localStorage.getItem('var');
+        var selectedOption1 = window.localStorage.getItem('var1');
+        var selectedOption2 = window.localStorage.getItem('var2');
+        var selectedOption3 = window.localStorage.getItem('var3');
+        var selectedOption4 = window.localStorage.getItem('var4');
+        var selectedOption5 = window.localStorage.getItem('var5');
+        var selectedOption6 = window.localStorage.getItem('var6');
+
+        if (selectedOption === '1' || selectedOption === '2') {
+        document.getElementById('R504C1').style.display = 'block';
+        } else {
+        document.getElementById('R504C1').style.display = 'none'; // Hide el
+        }
+        window.localStorage.setItem('var', selectedOption);
+
+        if (selectedOption1 === '1') {
+        document.getElementById('R509B').style.display = 'block';
+        } else {
+        document.getElementById('R509B').style.display = 'none'; // Hide el
+        }
+        window.localStorage.setItem('var1', selectedOption1);
+
+        if (selectedOption2 === '1') {
+        document.getElementById('R509C').style.display = 'block';
+        } else {
+        document.getElementById('R509C').style.display = 'none'; // Hide el
+        }
+        window.localStorage.setItem('var2', selectedOption2);
+
+        if (selectedOption3 === '1') {
+        document.getElementById('R511B').style.display = 'block';
+        } else {
+        document.getElementById('R511B').style.display = 'none'; // Hide el
+        }
+        window.localStorage.setItem('var3', selectedOption3);
+
+        if (selectedOption4 === '1') {
+        document.getElementById('R513B').style.display = 'block';
+        } else {
+        document.getElementById('R513B').style.display = 'none'; // Hide el
+        }
+        window.localStorage.setItem('var4', selectedOption4);
+
+        if (selectedOption5 === '1' || selectedOption5 === '2') {
+        document.getElementById('R516A').style.display = 'block';
+        } else {
+        document.getElementById('R516A').style.display = 'none'; // Hide el
+        }
+        window.localStorage.setItem('var5', selectedOption5);
+
+        if (selectedOption6 === '1') {
+        document.getElementById('R518A').style.display = 'block';
+        } else {
+        document.getElementById('R518A').style.display = 'none'; // Hide el
+        }
+        window.localStorage.setItem('var6', selectedOption6);
+    }
+
+    function toggleUsage(index) {
+        var checkbox = document.getElementById('checkbox-' + index);
+        var usageDiv = document.getElementById('usage-' + index);
+        if (checkbox.checked) {
+            usageDiv.style.display = 'block';
+        } else {
+            usageDiv.style.display = 'none';
+        }
+    }
+
+    // Initialize the display state based on the initial checkbox states
+    document.addEventListener("DOMContentLoaded", function() {
+        <?php for ($i = 58; $i < 62; $i++): ?>
+            toggleUsage(<?php echo $i; ?>);
+        <?php endfor; ?>
+    });
 </script>

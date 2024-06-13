@@ -300,41 +300,51 @@ class Data extends BaseController
             'R307B2' => $this->request->getPost('R307B2')
         ]);
 
-        // $requestData = $this->request->getPost();
-        // foreach ($requestData as $row) {
-        //     // Validasi input form di sini jika diperlukan
-
-        //     $slsModel = new sls_model();
-
-        //     // Save each row of data
-        //     $slsModel->insert([
-        //         'data_id' => $data_id,
-        //         'kode_desa' => $this->request->getPost('R104'),
-        //         'kode_sls' => $this->request->getPost('kode_sls'),
-        //         'nama_sls' => $this->request->getPost('nama_sls'),
-        //     ]);
-        // }
         $requestData = $this->request->getPost();
         $slsModel = new sls_model();
 
-        foreach ($requestData['sls'] as $slsData) {
-            $slsModel->save([
-                'data_id' => $data_id,
-                'kode_desa' => $this->request->getPost('R104'),
-                'kode_sls' => $slsData['kode_sls'],
-                'nama_sls' => $slsData['nama_sls']
-            ]);
+        // Menyimpan data SLS baru
+        if (!empty($requestData['new_sls'])) {
+            foreach ($requestData['new_sls'] as $newSls) {
+                $slsModel->save([
+                    'data_id' => $data_id,
+                    'kode_desa' => $this->request->getPost('R104'),
+                    'kode_sls' => $newSls['kode_sls'],
+                    'nama_sls' => $newSls['nama_sls']
+                ]);
+            }
+        }
+
+        // Mengupdate data SLS yang ada
+        if (!empty($requestData['sls'])) {
+            foreach ($requestData['sls'] as $slsData) {
+                $slsModel->update($slsData['sls_id'], [
+                    'kode_sls' => $slsData['kode_sls'],
+                    'nama_sls' => $slsData['nama_sls']
+                ]);
+            }
         }
 
         return redirect()->to(base_url('data/create2/'.$data_id));
     }
+
+    public function deleteSls($id, $data_id)
+    {
+        $slsModel = new sls_model();
+        // Validate that the SLS belongs to the data ID
+        $sls = $slsModel->where('data_id', $data_id)->find($id);
+        if ($sls) {
+            $slsModel->delete($id);
+        }
+        return redirect()->to(base_url('data/create/'.$data_id));
+    }
+
 
     public function save2($data_id)
     {
         //load helper form and URL
         helper(['form', 'url']);
         $dataModel = new data_model();
-        // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
         $dataModel->update($data_id, [
@@ -345,6 +355,8 @@ class Data extends BaseController
             'R402B1'   => $this->request->getPost('R402B1'),
             'R402B2'   => $this->request->getPost('R402B2'),
             'R402E'   => $this->request->getPost('R402E'),
+            'R402E1'   => $this->request->getPost('R402E1'),
+            'R402E2'   => $this->request->getPost('R402E2'),
             'R403A1'   => $this->request->getPost('R403A1'),
             'R403A2'   => $this->request->getPost('R403A2'),
             'R403A3'   => $this->request->getPost('R403A3'),
@@ -424,14 +436,17 @@ class Data extends BaseController
             'R510B7K2'   => $this->request->getPost('R510B7K2'),
             'R510B7K3'   => $this->request->getPost('R510B7K3'),
             'R510B7K4'   => $this->request->getPost('R510B7K4'),
+            'R510B7K5'   => $this->request->getPost('R510B7K5'),
             'R510B8K2'   => $this->request->getPost('R510B8K2'),
             'R510B8K3'   => $this->request->getPost('R510B8K3'),
             'R510B8K4'   => $this->request->getPost('R510B8K4'),
             'R510B8K5'   => $this->request->getPost('R510B8K5'),
             'R510B9K2'   => $this->request->getPost('R510B9K2'),
+            'R510B9K3'   => $this->request->getPost('R510B9K3'),
             'R510B9K4'   => $this->request->getPost('R510B9K4'),
             'R510B9K5'   => $this->request->getPost('R510B9K5'),
             'R510B10K2'   => $this->request->getPost('R510B10K2'),
+            'R510B10K3'   => $this->request->getPost('R510B10K3'),
             'R510B10K4'   => $this->request->getPost('R510B10K4'),
             'R510B10K5'   => $this->request->getPost('R510B10K5'),
             'R511A'   => $this->request->getPost('R511A'),
@@ -456,88 +471,134 @@ class Data extends BaseController
         //load helper form and URL
         helper(['form', 'url']);
         $dataModel = new data_model();
-        // $data_id = $this->uri->getSegment(3);
+
+        $R601AK5 = $this->request->getPost('R601AK5');
+        $R601AK8 = $this->request->getPost('R601AK8');
+        $R601BK5 = $this->request->getPost('R601BK5');
+        $R601BK8 = $this->request->getPost('R601BK8');
+        $R601CK5 = $this->request->getPost('R601CK5');
+        $R601CK8 = $this->request->getPost('R601CK8');
+        $R601DK5 = $this->request->getPost('R601DK5');
+        $R601DK8 = $this->request->getPost('R601DK8');
+        $R601EK5 = $this->request->getPost('R601EK5');
+        $R601EK8 = $this->request->getPost('R601EK8');
+        $R601FK5 = $this->request->getPost('R601FK5');
+        $R601FK8 = $this->request->getPost('R601FK8');
+        $R601GK5 = $this->request->getPost('R601GK5');
+        $R601GK8 = $this->request->getPost('R601GK8');
+        $R601HK5 = $this->request->getPost('R601HK5');
+        $R601HK8 = $this->request->getPost('R601HK8');
+        $R601IK5 = $this->request->getPost('R601IK5');
+        $R601IK8 = $this->request->getPost('R601IK8');
+        $R601JK5 = $this->request->getPost('R601JK5');
+        $R601JK8 = $this->request->getPost('R601JK8');
+        $R601KK5 = $this->request->getPost('R601KK5');
+        $R601KK8 = $this->request->getPost('R601KK8');
+
+        // Ubah array menjadi string
+        $R601AK5_str = is_array($R601AK5) ? implode(',', $R601AK5) : '';
+        $R601AK8_str = is_array($R601AK8) ? implode(',', $R601AK8) : '';
+        $R601BK5_str = is_array($R601BK5) ? implode(',', $R601BK5) : '';
+        $R601BK8_str = is_array($R601BK8) ? implode(',', $R601BK8) : '';
+        $R601CK5_str = is_array($R601CK5) ? implode(',', $R601CK5) : '';
+        $R601CK8_str = is_array($R601CK8) ? implode(',', $R601CK8) : '';
+        $R601DK5_str = is_array($R601DK5) ? implode(',', $R601DK5) : '';
+        $R601DK8_str = is_array($R601DK8) ? implode(',', $R601DK8) : '';
+        $R601EK5_str = is_array($R601EK5) ? implode(',', $R601EK5) : '';
+        $R601EK8_str = is_array($R601EK8) ? implode(',', $R601EK8) : '';
+        $R601FK5_str = is_array($R601FK5) ? implode(',', $R601FK5) : '';
+        $R601FK8_str = is_array($R601FK8) ? implode(',', $R601FK8) : '';
+        $R601GK5_str = is_array($R601GK5) ? implode(',', $R601GK5) : '';
+        $R601GK8_str = is_array($R601GK8) ? implode(',', $R601GK8) : '';
+        $R601HK5_str = is_array($R601HK5) ? implode(',', $R601HK5) : '';
+        $R601HK8_str = is_array($R601HK8) ? implode(',', $R601HK8) : '';
+        $R601IK5_str = is_array($R601IK5) ? implode(',', $R601IK5) : '';
+        $R601IK8_str = is_array($R601IK8) ? implode(',', $R601IK8) : '';
+        $R601JK5_str = is_array($R601JK5) ? implode(',', $R601JK5) : '';
+        $R601JK8_str = is_array($R601JK8) ? implode(',', $R601JK8) : '';
+        $R601KK5_str = is_array($R601KK5) ? implode(',', $R601KK5) : '';
+        $R601KK8_str = is_array($R601KK8) ? implode(',', $R601KK8) : '';
+
 
         //insert data into database
         $dataModel->update($data_id, [
             'R601AK2'   => $this->request->getPost('R601AK2'),
             'R601AK3'   => $this->request->getPost('R601AK3'),
             'R601AK4'   => $this->request->getPost('R601AK4'),
-            'R601AK5'   => $this->request->getPost('R601AK5'),
+            'R601AK5'   => $R601AK5_str,
             'R601AK6'   => $this->request->getPost('R601AK6'),
             'R601AK7'   => $this->request->getPost('R601AK7'),
-            'R601AK8'   => $this->request->getPost('R601AK8'),
+            'R601AK8'   => $R601AK8_str,
             'R601BK2'   => $this->request->getPost('R601BK2'),
             'R601BK3'   => $this->request->getPost('R601BK3'),
             'R601BK4'   => $this->request->getPost('R601BK4'),
-            'R601BK5'   => $this->request->getPost('R601BK5'),
+            'R601BK5'   => $R601BK5_str,
             'R601BK6'   => $this->request->getPost('R601BK6'),
             'R601BK7'   => $this->request->getPost('R601BK7'),
-            'R601BK8'   => $this->request->getPost('R601BK8'),
+            'R601BK8'   => $R601BK8_str,
             'R601CK2'   => $this->request->getPost('R601CK2'),
             'R601CK3'   => $this->request->getPost('R601CK3'),
             'R601CK4'   => $this->request->getPost('R601CK4'),
-            'R601CK5'   => $this->request->getPost('R601CK5'),
+            'R601CK5'   => $R601CK5_str,
             'R601CK6'   => $this->request->getPost('R601CK6'),
             'R601CK7'   => $this->request->getPost('R601CK7'),
-            'R601CK8'   => $this->request->getPost('R601CK8'),
+            'R601CK8'   => $R601CK8_str,
             'R601DK2'   => $this->request->getPost('R601DK2'),
             'R601DK3'   => $this->request->getPost('R601DK3'),
             'R601DK4'   => $this->request->getPost('R601DK4'),
-            'R601DK5'   => $this->request->getPost('R601DK5'),
+            'R601DK5'   => $R601DK5_str,
             'R601DK6'   => $this->request->getPost('R601DK6'),
             'R601DK7'   => $this->request->getPost('R601DK7'),
-            'R601DK8'   => $this->request->getPost('R601DK8'),
+            'R601DK8'   => $R601DK8_str,
             'R601EK2'   => $this->request->getPost('R601EK2'),
             'R601EK3'   => $this->request->getPost('R601EK3'),
             'R601EK4'   => $this->request->getPost('R601EK4'),
-            'R601EK5'   => $this->request->getPost('R601EK5'),
+            'R601EK5'   => $R601DK5_str,
             'R601EK6'   => $this->request->getPost('R601EK6'),
             'R601EK7'   => $this->request->getPost('R601EK7'),
-            'R601EK8'   => $this->request->getPost('R601EK8'),
+            'R601EK8'   => $R601DK8_str,
             'R601FK2'   => $this->request->getPost('R601FK2'),
             'R601FK3'   => $this->request->getPost('R601FK3'),
             'R601FK4'   => $this->request->getPost('R601FK4'),
-            'R601FK5'   => $this->request->getPost('R601FK5'),
+            'R601FK5'   => $R601DK5_str,
             'R601FK6'   => $this->request->getPost('R601FK6'),
             'R601FK7'   => $this->request->getPost('R601FK7'),
-            'R601FK8'   => $this->request->getPost('R601FK8'),
+            'R601FK8'   => $R601DK8_str,
             'R601GK2'   => $this->request->getPost('R601GK2'),
             'R601GK3'   => $this->request->getPost('R601GK3'),
             'R601GK4'   => $this->request->getPost('R601GK4'),
-            'R601GK5'   => $this->request->getPost('R601GK5'),
+            'R601GK5'   => $R601DK5_str,
             'R601GK6'   => $this->request->getPost('R601GK6'),
             'R601GK7'   => $this->request->getPost('R601GK7'),
-            'R601GK8'   => $this->request->getPost('R601GK8'),
-            'R601GK6'   => $this->request->getPost('R601GK6'),
+            'R601GK8'   => $R601DK8_str,
             'R601HK2'   => $this->request->getPost('R601HK2'),
             'R601HK3'   => $this->request->getPost('R601HK3'),
             'R601HK4'   => $this->request->getPost('R601HK4'),
-            'R601HK5'   => $this->request->getPost('R601HK5'),
+            'R601HK5'   => $R601DK5_str,
             'R601HK6'   => $this->request->getPost('R601HK6'),
             'R601HK7'   => $this->request->getPost('R601HK7'),
-            'R601HK8'   => $this->request->getPost('R601HK8'),
+            'R601HK8'   => $R601DK8_str,
             'R601IK2'   => $this->request->getPost('R601IK2'),
             'R601IK3'   => $this->request->getPost('R601IK3'),
             'R601IK4'   => $this->request->getPost('R601IK4'),
-            'R601IK5'   => $this->request->getPost('R601IK5'),
+            'R601IK5'   => $R601DK5_str,
             'R601IK6'   => $this->request->getPost('R601IK6'),
             'R601IK7'   => $this->request->getPost('R601IK7'),
-            'R601IK8'   => $this->request->getPost('R601IK8'),
+            'R601IK8'   => $R601DK8_str,
             'R601JK2'   => $this->request->getPost('R601JK2'),
             'R601JK3'   => $this->request->getPost('R601JK3'),
             'R601JK4'   => $this->request->getPost('R601JK4'),
-            'R601JK5'   => $this->request->getPost('R601JK5'),
+            'R601JK5'   => $R601DK5_str,
             'R601JK6'   => $this->request->getPost('R601JK6'),
             'R601JK7'   => $this->request->getPost('R601JK7'),
-            'R601JK8'   => $this->request->getPost('R601JK8'),
+            'R601JK8'   => $R601DK8_str,
             'R601KK2'   => $this->request->getPost('R601KK2'),
             'R601KK3'   => $this->request->getPost('R601KK3'),
             'R601KK4'   => $this->request->getPost('R601KK4'),
-            'R601KK5'   => $this->request->getPost('R601KK5'),
+            'R601KK5'   => $R601DK5_str,
             'R601KK6'   => $this->request->getPost('R601KK6'),
             'R601KK7'   => $this->request->getPost('R601KK7'),
-            'R601KK8'   => $this->request->getPost('R601KK8'),
+            'R601KK8'   => $R601DK8_str,
             'R604A'   => $this->request->getPost('R604A'),
             'R604B'   => $this->request->getPost('R604B'),
             'R604C'   => $this->request->getPost('R604C'),

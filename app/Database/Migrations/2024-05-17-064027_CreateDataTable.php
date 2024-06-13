@@ -114,6 +114,16 @@ class CreateDataTable extends Migration
 				'constraint'     => '10',
 				'null'           => true
 			],
+			'R402E1'       => [
+				'type'           => 'INT',
+				'constraint'     => '10',
+				'null'           => true
+			],
+			'R402E2'       => [
+				'type'           => 'INT',
+				'constraint'     => '10',
+				'null'           => true
+			],
 			'R403A1'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
@@ -509,7 +519,7 @@ class CreateDataTable extends Migration
 				'constraint'     => '10',
 				'null'           => true
 			],
-			'R513'       => [
+			'R513A'       => [
 				'type'           => 'INT',
 				'constraint'     => '10',
 				'null'           => true
@@ -565,8 +575,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601AK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601AK6'       => [
@@ -580,8 +590,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601AK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601BK2'       => [
@@ -600,8 +610,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601BK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601BK6'       => [
@@ -615,8 +625,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601BK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601CK2'       => [
@@ -635,8 +645,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601CK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601CK6'       => [
@@ -650,8 +660,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601CK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601DK2'       => [
@@ -670,8 +680,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601DK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601DK6'       => [
@@ -685,8 +695,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601DK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601EK2'       => [
@@ -705,8 +715,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601EK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601EK6'       => [
@@ -720,8 +730,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601EK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601FK2'       => [
@@ -740,8 +750,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601FK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601FK6'       => [
@@ -755,8 +765,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601FK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601GK2'       => [
@@ -775,8 +785,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601GK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601GK6'       => [
@@ -790,8 +800,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601GK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601GK6'       => [
@@ -815,8 +825,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601HK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601HK6'       => [
@@ -830,8 +840,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601HK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601IK2'       => [
@@ -850,8 +860,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601IK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601IK6'       => [
@@ -865,8 +875,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601IK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601JK2'       => [
@@ -885,8 +895,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601JK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601JK6'       => [
@@ -900,8 +910,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601JK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601KK2'       => [
@@ -920,8 +930,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601KK5'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R601KK6'       => [
@@ -935,8 +945,8 @@ class CreateDataTable extends Migration
 				'null'           => true
 			],
 			'R601KK8'       => [
-				'type'           => 'INT',
-				'constraint'     => '10',
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 				'null'           => true
 			],
 			'R604A'       => [

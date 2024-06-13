@@ -14,7 +14,7 @@
  | existing namespaces of App\* namespaced-classes.
  */
 defined('APP_NAMESPACE') || define('APP_NAMESPACE', 'App');
-define('SITE_NAME', 'Prospera');
+define('SITE_NAME', 'Prospera Cantik');
 
 /*
  | --------------------------------------------------------------------------

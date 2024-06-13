@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prospera</title>
+  <title>Prospera Cantik</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -23,7 +23,7 @@
         <div class="logo">
             <h1 class="text-light">
                 <a href="<?php echo base_url('/')?>">
-                    <small>PROSPERA</small>
+                    <small>PROSPERA CANTIK</small>
                 </a>
             </h1>
             <!-- Uncomment below if you prefer to use an image logo -->
@@ -60,7 +60,7 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h1>Prospera</h1>
+                <h1>Prospera Cantik</h1>
                 <p style="text-align: justify;">
                     Sistem Prospera merupakan suatu sistem yang mengumpulkan dan menyajikan beragam informasi, baik yang bersifat potensi yang dimiliki desa/kelurahan maupun informasi terkait kerawanan atau tantangan yang dihadapi desa/kelurahan.</p>
             </div>

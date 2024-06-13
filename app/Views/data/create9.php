@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Tambah Data Potensi Desa</h3>
+                <h3>Tambah Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">

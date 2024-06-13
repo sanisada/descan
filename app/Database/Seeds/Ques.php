@@ -94,6 +94,14 @@ class Ques extends Seeder
                 'ques_label' => 'Keberadaan Warga Negara Asing (WNA) di desa/kelurahan pada 1 Januari 2024'
 			],
             [
+                'dataKey' => 'R402E1',
+                'ques_label' => '1. Laki-laki'
+			],
+            [
+                'dataKey' => 'R402E2',
+                'ques_label' => '2. Perempuan'
+			],
+            [
                 'dataKey' => 'R403A',
                 'ques_label' => 'Jumlah penduduk bekerja per lapangan usaha'
 			],
@@ -231,187 +239,159 @@ class Ques extends Seeder
 			],
             [
                 'dataKey' => 'R509C3',
-                'ques_label' => 'Jumlah keluarga (Isian tidak boleh lebih dari isian R401c)'
+                'ques_label' => 'Jumlah keluarga'
 			],
             [
                 'dataKey' => 'R509AK2',
-                'ques_label' => 'Keberadaan sungai :'
+                'ques_label' => 'Sungai'
 			],
             [
                 'dataKey' => 'R509AK3',
-                'ques_label' => 'Keberadaan saluran irigasi :'
+                'ques_label' => 'Saluran irigasi'
 			],
             [
                 'dataKey' => 'R509AK4',
-                'ques_label' => 'Keberadaan danau waduk situ bendungan :'
+                'ques_label' => 'Danau/waduk/situ/bendungan'
 			],
             [
                 'dataKey' => 'R509AK5',
-                'ques_label' => 'Keberadaan embung :'
+                'ques_label' => 'Embung'
 			],
-            [
-                'dataKey' => 'R510B1K2',
+            ['dataKey' => 'R510B1K2',
                 'ques_label' => 'Penggunaan sungai untuk : Mandi cuci'
 			],
-            [
-                'dataKey' => 'R510B1K3',
+            ['dataKey' => 'R510B1K3',
                 'ques_label' => 'Penggunaan saluran irigasi untuk : Mandi cuci'
 			],
-            [
-                'dataKey' => 'R510B1K4',
+            ['dataKey' => 'R510B1K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Mandi cuci'
 			],
-            [
-                'dataKey' => 'R510B1K5',
+            ['dataKey' => 'R510B1K5',
                 'ques_label' => 'Penggunaan embung untuk : Mandi cuci'
 			],
-            [
-                'dataKey' => 'R510B2K2',
+            ['dataKey' => 'R510B2K2',
                 'ques_label' => 'Penggunaan sungai untuk : Sumber air minum masak'
 			],
-            [
-                'dataKey' => 'R510B2K3',
+            ['dataKey' => 'R510B2K3',
                 'ques_label' => 'Penggunaan saluran irigasi untuk : Sumber air minum masak'
 			],
-            [
-                'dataKey' => 'R510B2K4',
+            ['dataKey' => 'R510B2K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Sumber air minum masak'
 			],
-            [
-                'dataKey' => 'R510B2K5',
+            ['dataKey' => 'R510B2K5',
                 'ques_label' => 'Penggunaan embung untuk : Sumber air minum masak'
 			],
-            [
-                'dataKey' => 'R510B3K2',
+            ['dataKey' => 'R510B3K2',
                 'ques_label' => 'Penggunaan sungai untuk : Bahan baku air minum'
 			],
-            [
-                'dataKey' => 'R510B3K3',
+            ['dataKey' => 'R510B3K3',
                 'ques_label' => 'Penggunaan saluran irigasi untuk : Bahan baku air minum'
 			],
-            [
-                'dataKey' => 'R510B3K4',
+            ['dataKey' => 'R510B3K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Bahan baku air minum masak'
 			],
-            [
-                'dataKey' => 'R510B3K5',
+            ['dataKey' => 'R510B3K5',
                 'ques_label' => 'Penggunaan embung untuk : Bahan baku air minum masak'
 			],
-            [
-                'dataKey' => 'R510B4K2',
+            ['dataKey' => 'R510B4K2',
                 'ques_label' => 'Penggunaan sungai untuk : Pengairan irigasi lahan pertanian'
 			],
-            [
-                'dataKey' => 'R510B4K3',
+            ['dataKey' => 'R510B4K3',
                 'ques_label' => 'Penggunaan saluran irigasi untuk : Pengairan irigasi lahan pertanian'
 			],
-            [
-                'dataKey' => 'R510B4K4',
+            ['dataKey' => 'R510B4K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Pengairan irigasi lahan pertanian'
 			],
-            [
-                'dataKey' => 'R510B4K5',
+            ['dataKey' => 'R510B4K5',
                 'ques_label' => 'Penggunaan embung untuk : Pengairan irigasi lahan pertanian'
 			],
-            [
-                'dataKey' => 'R510B5K2',
+            ['dataKey' => 'R510B5K2',
                 'ques_label' => 'Penggunaan sungai untuk : Pariwisata (komersial)'
 			],
-            [
-                'dataKey' => 'R510B5K3',
+            ['dataKey' => 'R510B5K3',
                 'ques_label' => 'Penggunaan saluran irigasi untuk : Pariwisata (komersial)'
 			],
-            [
-                'dataKey' => 'R510B5K4',
+            ['dataKey' => 'R510B5K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Pariwisata (komersial)'
 			],
-            [
-                'dataKey' => 'R510B5K5',
+            ['dataKey' => 'R510B5K5',
                 'ques_label' => 'Penggunaan embung untuk : Pariwisata (komersial)'
 			],
-            [
-                'dataKey' => 'R510B6K2',
+            ['dataKey' => 'R510B6K2',
                 'ques_label' => 'Penggunaan sungai untuk : Perikanan'
 			],
-            [
-                'dataKey' => 'R510B6K3',
+            ['dataKey' => 'R510B6K3',
                 'ques_label' => 'Penggunaan saluran irigasi untuk : Perikanan'
 			],
-            [
-                'dataKey' => 'R510B6K4',
+            ['dataKey' => 'R510B6K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Perikanan'
 			],
-            [
-                'dataKey' => 'R510B6K5',
+            ['dataKey' => 'R510B6K5',
                 'ques_label' => 'Penggunaan embung untuk : Perikanan'
 			],
-            [
-                'dataKey' => 'R510B7K2',
+            ['dataKey' => 'R510B7K2',
                 'ques_label' => 'Penggunaan sungai untuk : Transportasi'
 			],
-            [
-                'dataKey' => 'R510B7K3',
+            ['dataKey' => 'R510B7K3',
                 'ques_label' => 'Penggunaan saluran irigasi untuk : Transportasi'
 			],
-            [
-                'dataKey' => 'R510B7K4',
+            ['dataKey' => 'R510B7K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Transportasi'
 			],
-            [
-                'dataKey' => 'R510B8K2',
+            ['dataKey' => 'R510B7K5',
+                'ques_label' => 'Penggunaan embung untuk : Transportasi'
+			],
+            ['dataKey' => 'R510B8K2',
                 'ques_label' => 'Penggunaan sungai untuk : Pembangkit listrik'
 			],
-            [
-                'dataKey' => 'R510B8K3',
+            ['dataKey' => 'R510B8K3',
                 'ques_label' => 'Penggunaan saluran irigasi untuk : Pembangkit listrik'
 			],
-            [
-                'dataKey' => 'R510B8K4',
+            ['dataKey' => 'R510B8K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Pembangkit listrik'
 			],
-            [
-                'dataKey' => 'R510B8K5',
+            ['dataKey' => 'R510B8K5',
                 'ques_label' => 'Penggunaan embung untuk : Pembangkit listrik'
 			],
-            [
-                'dataKey' => 'R510B9K2',
+            ['dataKey' => 'R510B9K2',
                 'ques_label' => 'Penggunaan sungai untuk : Industri pabrik'
 			],
-            [
-                'dataKey' => 'R510B9K4',
+            ['dataKey' => 'R510B9K3',
+                'ques_label' => 'Penggunaan saluran irigasi untuk : Industri pabrik'
+			],
+            ['dataKey' => 'R510B9K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Industri pabrik'
 			],
-            [
-                'dataKey' => 'R510B9K5',
+            ['dataKey' => 'R510B9K5',
                 'ques_label' => 'Penggunaan embung untuk : Industri pabrik'
 			],
-            [
-                'dataKey' => 'R510B10K2',
+            ['dataKey' => 'R510B10K2',
                 'ques_label' => 'Penggunaan sungai untuk : Lainnya'
 			],
-            [
-                'dataKey' => 'R510B10K4',
+            ['dataKey' => 'R510B10K3',
+                'ques_label' => 'Penggunaan saluran irigasi untuk : Lainnya'
+			],
+            ['dataKey' => 'R510B10K4',
                 'ques_label' => 'Penggunaan danau waduk situ bendungan untuk : Lainnya'
 			],
-            [
-                'dataKey' => 'R510B10K5',
+            [   'dataKey' => 'R510B10K5',
                 'ques_label' => 'Penggunaan embung untuk : Lainnya'
 			],
             [
                 'dataKey' => 'R511A',
-                'ques_label' => 'Keberadaan permukiman di bantaran sungai :'
-			],
+                'ques_label' => 'Keberadaan permukiman di bantaran sungai'
+            ],
             [
                 'dataKey' => 'R511B1',
-                'ques_label' => 'Jumlah lokasi permukiman di bantaran sungai :'
+                'ques_label' => 'Jumlah lokasi'
 			],
             [
                 'dataKey' => 'R511B2',
-                'ques_label' => 'Jumlah bangunan rumah permukiman di bantaran sungai :'
+                'ques_label' => 'Jumlah bangunan rumah'
 			],
             [
                 'dataKey' => 'R511B3',
-                'ques_label' => 'Jumlah keluarga permukiman di bantaran sungai :'
+                'ques_label' => 'Jumlah keluarga'
 			],
             [
                 'dataKey' => 'R513A',
@@ -419,15 +399,15 @@ class Ques extends Seeder
 			],
             [
                 'dataKey' => 'R513B1',
-                'ques_label' => 'Jumlah lokasi permukiman kumuh :'
+                'ques_label' => 'Jumlah lokasi'
 			],
             [
                 'dataKey' => 'R513B2',
-                'ques_label' => 'Jumlah bangunan rumah permukiman kumuh :'
+                'ques_label' => 'Jumlah bangunan rumah'
 			],
             [
                 'dataKey' => 'R513B3',
-                'ques_label' => 'Jumlah keluarga permukiman kumuh :'
+                'ques_label' => 'Jumlah keluarga'
 			],
             [
                 'dataKey' => 'R516',
@@ -615,35 +595,31 @@ class Ques extends Seeder
 			],
             [
                 'dataKey' => 'R601GK2',
-                'ques_label' => 'Angin puyuh puting beliung topan'
+                'ques_label' => 'Angin puyuh/puting beliung/topan'
 			],
             [
                 'dataKey' => 'R601GK3',
-                'ques_label' => 'Banyak kejadian Angin puyuh puting beliung topan 2023'
+                'ques_label' => 'Banyak kejadian Angin puyuh/puting beliung/topan 2023'
 			],
             [
                 'dataKey' => 'R601GK4',
-                'ques_label' => 'Korban meninggal Angin puyuh puting beliung topan 2023'
+                'ques_label' => 'Korban meninggal Angin puyuh/puting beliung/topan 2023'
 			],
             [
                 'dataKey' => 'R601GK5',
-                'ques_label' => 'Keberadaan korban Angin puyuh puting beliung topan 2023'
+                'ques_label' => 'Keberadaan korban Angin puyuh/puting beliung/topan 2023'
 			],
             [
                 'dataKey' => 'R601GK6',
-                'ques_label' => 'Banyak kejadian Angin puyuh puting beliung topan Januari - April 2024'
+                'ques_label' => 'Banyak kejadian Angin puyuh/puting beliung/topan Januari - April 2024'
 			],
             [
                 'dataKey' => 'R601GK7',
-                'ques_label' => 'Korban meninggal Angin puyuh puting beliung topan Januari - April 2024'
+                'ques_label' => 'Korban meninggal Angin puyuh/puting beliung/topan Januari - April 2024'
 			],
             [
                 'dataKey' => 'R601GK8',
-                'ques_label' => 'Keberadaan korban Angin puyuh puting beliung topan Januari - April 2024'
-			],
-            [
-                'dataKey' => 'R601GK6',
-                'ques_label' => 'Korban meninggal Angin puyuh puting beliung topan Januari - April 2024'
+                'ques_label' => 'Keberadaan korban Angin puyuh/puting beliung/topan Januari - April 2024'
 			],
             [
                 'dataKey' => 'R601HK2',

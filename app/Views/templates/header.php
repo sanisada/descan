@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prospera</title>
+  <title>Prospera Cantik</title>
+  <link rel="icon" type="images/x-icon" href="<?php echo base_url('assets')?>/dist/img/logo.png" />
   <base href="<?php echo base_url('assets')?>/">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -31,7 +32,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake"  src="<?php echo base_url('assets')?>/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake"  src="<?php echo base_url('assets')?>/dist/img/logo.png" alt="logo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -59,8 +60,8 @@
     <!-- Brand Logo -->
     <base href="<?php echo base_url('/')?>/">
     <a href="<?= base_url('/'); ?>" class="brand-link">
-      <img  src="<?php echo base_url('assets')?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">PROSPERA</span>
+      <img  src="<?php echo base_url('assets')?>/dist/img/logo.png" alt="logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">PROSPERA CANTIK</span>
     </a>
 
     <!-- Sidebar -->

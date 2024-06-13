@@ -5,8 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index',['filter' => 'redirectifauthenticated']);
-$routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
+// $routes->get('/', 'Home::index',['filter' => 'redirectifauthenticated']);
+$routes->get('/', 'Dashboard::index',['filter' => 'auth']);
 $routes->get('/pengaturan', 'User::index',['filter' => 'auth']);
 $routes->get('/user/create', 'User::create',['filter' => 'auth']);
 $routes->get('/data_podes', 'Data::index',['filter' => 'auth']);
