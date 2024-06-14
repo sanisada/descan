@@ -117,7 +117,6 @@
                                             <?php endfor?>
                                         </div>
                                     </div>
-                                    
                                 </div>
                                 <hr/>
                                 <div class="form-group">

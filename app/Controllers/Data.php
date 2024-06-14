@@ -687,7 +687,7 @@ class Data extends BaseController
             'R703D'   => $this->request->getPost('R703D'),
             'R703E'   => $this->request->getPost('R703E'),
             'R703F'   => $this->request->getPost('R703F'),
-            'R703F'   => $this->request->getPost('R703F'),
+            'R703G'   => $this->request->getPost('R703G'),
             'R704AK2'   => $this->request->getPost('R704AK2'),
             'R704BK2'   => $this->request->getPost('R704BK2'),
             'R704CK2'   => $this->request->getPost('R704CK2'),

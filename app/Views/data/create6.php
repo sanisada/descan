@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <h5>Keberadaan warga yang menganut agama/kepercayaan di desa/kelurahan</h5>
-                                <?php for ($i = 320; $i < 327; $i++): ?>
+                                <?php for ($i = 328; $i < 335; $i++): ?>
                                     <div class="form-group">
                                         <label><?php echo $ques[$i]['ques_label']?></label>
                                         <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo ($data[$ques[$i]['dataKey']])?>" class="form-control">
@@ -53,7 +53,7 @@
                             <div class="col-md-6">
                                 <h5>Jumlah tempat ibadah di desa/kelurahan</h5>
                                 <div class="form-group">
-                                    <?php for ($i = 328; $i < 338; $i++): ?>
+                                    <?php for ($i = 336; $i < 346; $i++): ?>
                                     <div class="form-group">
                                         <label for=""><?php echo $ques[$i]['ques_label']?></label>
                                         <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
@@ -81,7 +81,7 @@
                                 <hr/>
                                 <h5>Banyaknya penyandang disabilitas di desa/kelurahan:</h5>
                                 <div class="form-group">
-                                    <?php for ($i = 340; $i < 350; $i++): ?>
+                                    <?php for ($i = 348; $i < 358; $i++): ?>
                                     <div class="form-group">
                                         <label for=""><?php echo $ques[$i]['ques_label']?></label>
                                         <input type="text" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']]  ?>" class="form-control">
