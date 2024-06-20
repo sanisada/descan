@@ -845,7 +845,8 @@ class Data extends BaseController
             'R901LK3'   => $this->request->getPost('R901LK3'),
             'R901LK4'   => $this->request->getPost('R901LK4'),
             'R902A'   => $this->request->getPost('R902A'),
-            'R1005A'   => $this->request->getPost('R1005A')
+            'R1005A'   => $this->request->getPost('R1005A'),
+            'R1005A1'   => $this->request->getPost('R1005A1')
         ]);
 
         return redirect()->to(base_url('data/create7/'.$data_id));
@@ -919,33 +920,33 @@ class Data extends BaseController
             'R1209AK2'   => $this->request->getPost('R1209AK2'),
             'R1209AK3'   => $this->request->getPost('R1209AK3'),
             'R1209AK4'   => $this->request->getPost('R1209AK4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4'),
-            'R1209K2'   => $this->request->getPost('R1209K2'),
-            'R1209K3'   => $this->request->getPost('R1209K3'),
-            'R1209K4'   => $this->request->getPost('R1209K4')
+            'R1209BK2'   => $this->request->getPost('R1209BK2'),
+            'R1209BK3'   => $this->request->getPost('R1209BK3'),
+            'R1209BK4'   => $this->request->getPost('R1209BK4'),
+            'R1209CK2'   => $this->request->getPost('R1209CK2'),
+            'R1209CK3'   => $this->request->getPost('R1209CK3'),
+            'R1209CK4'   => $this->request->getPost('R1209CK4'),
+            'R1209DK2'   => $this->request->getPost('R1209DK2'),
+            'R1209DK3'   => $this->request->getPost('R1209DK3'),
+            'R1209DK4'   => $this->request->getPost('R1209DK4'),
+            'R1209EK2'   => $this->request->getPost('R1209EK2'),
+            'R1209EK3'   => $this->request->getPost('R1209EK3'),
+            'R1209EK4'   => $this->request->getPost('R1209EK4'),
+            'R1209FK2'   => $this->request->getPost('R1209FK2'),
+            'R1209FK3'   => $this->request->getPost('R1209FK3'),
+            'R1209FK4'   => $this->request->getPost('R1209FK4'),
+            'R1209GK2'   => $this->request->getPost('R1209GK2'),
+            'R1209GK3'   => $this->request->getPost('R1209GK3'),
+            'R1209GK4'   => $this->request->getPost('R1209GK4'),
+            'R1209HK2'   => $this->request->getPost('R1209HK2'),
+            'R1209HK3'   => $this->request->getPost('R1209HK3'),
+            'R1209HK4'   => $this->request->getPost('R1209HK4'),
+            'R1209IK2'   => $this->request->getPost('R1209IK2'),
+            'R1209IK3'   => $this->request->getPost('R1209IK3'),
+            'R1209IK4'   => $this->request->getPost('R1209IK4'),
+            'R1209JK2'   => $this->request->getPost('R1209JK2'),
+            'R1209JK3'   => $this->request->getPost('R1209JK3'),
+            'R1209JK4'   => $this->request->getPost('R1209JK4')
         ]);
 
         return redirect()->to(base_url('data/create8/'.$data_id));
@@ -988,21 +989,7 @@ class Data extends BaseController
             'R1307AK2'   => $this->request->getPost('R1307AK2'),
             'R1307AK3'   => $this->request->getPost('R1307AK3'),
             'R1307BK2'   => $this->request->getPost('R1307BK2'),
-            'R1307BK3'   => $this->request->getPost('R1307BK3')
-        ]);
-
-        return redirect()->to(base_url('data/create9/'.$data_id));
-    }
-
-    public function save9($data_id)
-    {
-        //load helper form and URL
-        helper(['form', 'url']);
-        $dataModel = new data_model();
-        // $data_id = $this->uri->getSegment(3);
-
-        //insert data into database
-        $dataModel->update($data_id, [
+            'R1307BK3'   => $this->request->getPost('R1307BK3'),
             'R1403A'   => $this->request->getPost('R1403A'),
             'R1403B'   => $this->request->getPost('R1403B'),
             'R1403C'   => $this->request->getPost('R1403C'),
@@ -1023,6 +1010,47 @@ class Data extends BaseController
             'R1407A'   => $this->request->getPost('R1407A'),
             'R1407A1'   => $this->request->getPost('R1407A1'),
             'R1407B'   => $this->request->getPost('R1407B')
+        ]);
+
+        return redirect()->to(base_url('data/create9/'.$data_id));
+    }
+
+    public function save9($data_id)
+    {
+        //load helper form and URL
+        helper(['form', 'url']);
+        $dataModel = new data_model();
+        // $data_id = $this->uri->getSegment(3);
+
+        //insert data into database
+        $dataModel->update($data_id, [
+            'R1501AK2'   => $this->request->getPost('R1501AK2'),
+            'R1501AK3'   => $this->request->getPost('R1501AK3'),
+            'R1501AK4'   => $this->request->getPost('R1501AK4'),
+            'R1501AK5'   => $this->request->getPost('R1501AK5'),
+            'R1501BK2'   => $this->request->getPost('R1501BK2'),
+            'R1501BK3'   => $this->request->getPost('R1501BK3'),
+            'R1501BK4'   => $this->request->getPost('R1501BK4'),
+            'R1501BK5'   => $this->request->getPost('R1501BK5'),
+            'R1501CK2'   => $this->request->getPost('R1501CK2'),
+            'R1501CK3'   => $this->request->getPost('R1501CK3'),
+            'R1501CK4'   => $this->request->getPost('R1501CK4'),
+            'R1501CK5'   => $this->request->getPost('R1501CK5'),
+            'R1502_1'   => $this->request->getPost('R1502_1'),
+            'R1502_1A'   => $this->request->getPost('R1502_1A'),
+            'R1502_1B'   => $this->request->getPost('R1502_1B'),
+            'R1502_1C'   => $this->request->getPost('R1502_1C'),
+            'R1502_1D'   => $this->request->getPost('R1502_1D'),
+            'R1502_2'   => $this->request->getPost('R1502_2'),
+            'R1502_3'   => $this->request->getPost('R1502_3'),
+            'R1502_4'   => $this->request->getPost('R1502_4'),
+            'R1502_5'   => $this->request->getPost('R1502_5'),
+            'R1502_6'   => $this->request->getPost('R1502_6'),
+            'R1502_7'   => $this->request->getPost('R1502_7'),
+            'R1502_8'   => $this->request->getPost('R1502_8'),
+            'R1502_9'   => $this->request->getPost('R1502_9'),
+            'R1502_10'   => $this->request->getPost('R1502_10'),
+            'R1502_11'   => $this->request->getPost('R1502_11')
         ]);
 
         return redirect()->to(base_url('data/create10/'.$data_id));

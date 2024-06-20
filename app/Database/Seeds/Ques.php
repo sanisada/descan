@@ -1846,111 +1846,111 @@ class Ques extends Seeder
                 'ques_label' => 'Kemudahan untuk mencapai Kelompok pertokoan (minimal 10 toko dan mengelompok dalam satu lokasi)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209BK2',
                 'ques_label' => 'Jumlah Pasar dengan bangunan permanen (memiliki atap, lantai, dan dinding)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209BK3',
                 'ques_label' => 'Jarak Pasar dengan bangunan permanen (memiliki atap, lantai, dan dinding)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209BK4',
                 'ques_label' => 'Kemudahan untuk mencapai Pasar dengan bangunan permanen (memiliki atap, lantai, dan dinding)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209CK2',
                 'ques_label' => 'Jumlah Pasar dengan bangunan semi permanen (memiliki atap dan lantai, tanpa dinding)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209CK3',
                 'ques_label' => 'Jarak Pasar dengan bangunan semi permanen (memiliki atap dan lantai, tanpa dinding)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209CK4',
                 'ques_label' => 'Kemudahan untuk mencapai Pasar dengan bangunan semi permanen (memiliki atap dan lantai, tanpa dinding)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209DK2',
                 'ques_label' => 'Jumlah Pasar tanpa bangunan (misalnya: pasar subuh, pasar terapung, dll.)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209DK3',
                 'ques_label' => 'Jarak Pasar tanpa bangunan (misalnya: pasar subuh, pasar terapung, dll.)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209DK4',
                 'ques_label' => 'Kemudahan untuk mencapai Pasar tanpa bangunan (misalnya: pasar subuh, pasar terapung, dll.)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209EK2',
                 'ques_label' => 'Jumlah Jumlah minimarket/swalayan/supermarket (tempat usaha di bangunan tetap untuk menjual berbagai jenis barang secara eceran dengan label harga, sistem pelayanan mandiri)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209EK3',
                 'ques_label' => 'Jarak Jumlah minimarket/swalayan/supermarket (tempat usaha di bangunan tetap untuk menjual berbagai jenis barang secara eceran dengan label harga, sistem pelayanan mandiri)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209EK4',
                 'ques_label' => 'Kemudahan untuk mencapai Jumlah minimarket/swalayan/supermarket (tempat usaha di bangunan tetap untuk menjual berbagai jenis barang secara eceran dengan label harga, sistem pelayanan mandiri)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209FK2',
                 'ques_label' => 'Jumlah Restoran/rumah makan (usaha pangan siap saji di bangunan tetap, pembeli biasanya dikenai pajak)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209FK3',
                 'ques_label' => 'Jarak Restoran/rumah makan (usaha pangan siap saji di bangunan tetap, pembeli biasanya dikenai pajak)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209FK4',
                 'ques_label' => 'Kemudahan untuk mencapai Restoran/rumah makan (usaha pangan siap saji di bangunan tetap, pembeli biasanya dikenai pajak)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209GK2',
                 'ques_label' => 'Jumlah Warung/kedai makanan minuman (usaha pangan siap saji di bangunan tetap, pembeli biasanya tidak dikenai pajak)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209GK3',
                 'ques_label' => 'Jarak Warung/kedai makanan minuman (usaha pangan siap saji di bangunan tetap, pembeli biasanya tidak dikenai pajak)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209GK4',
                 'ques_label' => 'Kemudahan untuk mencapai Warung/kedai makanan minuman (usaha pangan siap saji di bangunan tetap, pembeli biasanya tidak dikenai pajak)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209HK2',
                 'ques_label' => 'Jumlah Hotel (menyediakan jasa akomodasi dan ada restoran, penginapan dengan izin usaha sebagai hotel)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209HK3',
                 'ques_label' => 'Jarak Hotel (menyediakan jasa akomodasi dan ada restoran, penginapan dengan izin usaha sebagai hotel)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209HK4',
                 'ques_label' => 'Kemudahan untuk mencapai Hotel (menyediakan jasa akomodasi dan ada restoran, penginapan dengan izin usaha sebagai hotel)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209IK2',
                 'ques_label' => 'Jumlah Penginapan: hostel/motel/losmen/wisma (menyediakan akomodasi, penginapan dengan izin usaha bukan sebagai hotel)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209IK3',
                 'ques_label' => 'Jarak Penginapan: hostel/motel/losmen/wisma (menyediakan akomodasi, penginapan dengan izin usaha bukan sebagai hotel)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209IK4',
                 'ques_label' => 'Kemudahan untuk mencapai Penginapan: hostel/motel/losmen/wisma (menyediakan akomodasi, penginapan dengan izin usaha bukan sebagai hotel)'
 			],
             [
-                'dataKey' => 'R1209K2',
+                'dataKey' => 'R1209JK2',
                 'ques_label' => 'Jumlah Toko/warung kelontong (tempat usaha di bangunan tetap untuk menjual berbagai jenis barang keperluan sehari–hari secara eceran, tanpa ada sistem pelayanan mandiri)'
 			],
             [
-                'dataKey' => 'R1209K3',
+                'dataKey' => 'R1209JK3',
                 'ques_label' => 'Jarak Toko/warung kelontong (tempat usaha di bangunan tetap untuk menjual berbagai jenis barang keperluan sehari–hari secara eceran, tanpa ada sistem pelayanan mandiri)'
 			],
             [
-                'dataKey' => 'R1209K4',
+                'dataKey' => 'R1209JK4',
                 'ques_label' => 'Kemudahan untuk mencapai Toko/warung kelontong (tempat usaha di bangunan tetap untuk menjual berbagai jenis barang keperluan sehari–hari secara eceran, tanpa ada sistem pelayanan mandiri)'
 			],
             [
