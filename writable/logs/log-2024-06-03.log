@@ -259,7 +259,7 @@ Stack trace:
 #14 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
 #15 {main}
 CRITICAL - 2024-06-03 03:49:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_sls' cannot be null
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in SYSTEMPATH\Database\BaseConnection.php on line 676.
  1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sls` (`data_id`, `kode_sls`, `nama_sls`) VALUES (:data_id:, :kode_sls:, :nama_sls:)', [...], false)
  2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
@@ -326,7 +326,7 @@ Stack trace:
 #14 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
 #15 {main}
 CRITICAL - 2024-06-03 03:49:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_sls' cannot be null
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in SYSTEMPATH\Database\BaseConnection.php on line 676.
  1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sls` (`data_id`, `kode_sls`, `nama_sls`) VALUES (:data_id:, :kode_sls:, :nama_sls:)', [...], false)
  2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
@@ -380,7 +380,7 @@ INFO - 2024-06-03 03:50:50 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-03 03:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-03 04:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-03 04:03:12 --> ErrorException: Undefined variable $kode_desa
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 312.
  1 APPPATH\Controllers\Data.php(312): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kode_desa', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 312)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
@@ -393,7 +393,7 @@ in APPPATH\Controllers\Data.php on line 312.
 INFO - 2024-06-03 04:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-03 04:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-03 04:23:43 --> ErrorException: Undefined variable $requestData
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 319.
  1 APPPATH\Controllers\Data.php(319): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $requestData', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 319)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
@@ -409,7 +409,7 @@ INFO - 2024-06-03 04:25:18 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-03 04:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-03 04:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-03 04:44:31 --> Error: Call to a member function insert() on array
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 322.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -420,7 +420,7 @@ in APPPATH\Controllers\Data.php on line 322.
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-06-03 04:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-03 04:44:49 --> Error: Call to a member function save() on array
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 322.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -431,7 +431,7 @@ in APPPATH\Controllers\Data.php on line 322.
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-06-03 04:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-03 04:46:46 --> Error: Call to undefined function App\Controllers\debug_to_console()
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 322.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -461,7 +461,7 @@ Stack trace:
 #15 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
 #16 {main}
 CRITICAL - 2024-06-03 04:47:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_sls' cannot be null
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in SYSTEMPATH\Database\BaseConnection.php on line 676.
  1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sls` (`data_id`, `kode_desa`, `kode_sls`, `nama_sls`) VALUES (:data_id:, :kode_desa:, :kode_sls:, :nama_sls:)', [...], false)
  2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
@@ -528,7 +528,7 @@ INFO - 2024-06-03 04:56:20 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-03 04:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-03 04:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-03 04:58:25 --> Error: Undefined constant "App\Controllers\x"
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 326.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -1573,7 +1573,7 @@ in APPPATH\Views\data\create.php on line 107.
 INFO - 2024-06-03 07:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-03 07:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-03 07:20:06 --> ErrorException: Undefined array key "kode_sls"
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 324.
  1 APPPATH\Controllers\Data.php(324): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_sls"', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 324)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
@@ -1584,7 +1584,7 @@ in APPPATH\Controllers\Data.php on line 324.
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 CRITICAL - 2024-06-03 07:22:46 --> ErrorException: Undefined array key "kode_sls"
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 324.
  1 APPPATH\Controllers\Data.php(324): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_sls"', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 324)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
@@ -1598,7 +1598,7 @@ INFO - 2024-06-03 07:22:47 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-03 07:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-03 07:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-03 07:23:01 --> ErrorException: Undefined array key "sls"
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 320.
  1 APPPATH\Controllers\Data.php(320): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sls"', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 320)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')

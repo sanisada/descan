@@ -6,7 +6,7 @@ INFO - 2024-06-07 03:04:30 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-07 03:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-07 03:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-07 03:04:39 --> ErrorException: Undefined array key "sls"
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 320.
  1 APPPATH\Controllers\Data.php(320): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sls"', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 320)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')

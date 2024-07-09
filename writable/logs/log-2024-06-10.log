@@ -44,7 +44,7 @@ INFO - 2024-06-10 02:22:46 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-10 02:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-10 02:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-10 02:26:45 --> ErrorException: Undefined variable $slsData
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 335.
  1 APPPATH\Controllers\Data.php(335): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $slsData', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 335)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
@@ -56,7 +56,7 @@ in APPPATH\Controllers\Data.php on line 335.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-06-10 02:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-10 02:27:28 --> ErrorException: Undefined array key "data_id"
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 344.
  1 APPPATH\Controllers\Data.php(344): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data_id"', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 344)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')
@@ -109,7 +109,7 @@ INFO - 2024-06-10 02:46:04 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-10 02:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-10 02:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-10 02:46:28 --> Error: Class "App\Controllers\SlsModel" not found
-[Method: GET, Route: Data/deleteSls/139]
+[Method: GET, Route: data/deleteSls/139]
 in APPPATH\Controllers\Data.php on line 357.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->deleteSls('139')
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -120,7 +120,7 @@ in APPPATH\Controllers\Data.php on line 357.
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-06-10 02:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-10 02:46:48 --> ErrorException: Undefined variable $data_id
-[Method: GET, Route: Data/deleteSls/139]
+[Method: GET, Route: data/deleteSls/139]
 in APPPATH\Controllers\Data.php on line 360.
  1 APPPATH\Controllers\Data.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_id', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 360)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->deleteSls('139')
@@ -147,7 +147,7 @@ in APPPATH\Views\data\create.php on line 112.
 11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-06-10 02:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-10 02:53:07 --> ErrorException: Undefined variable $sls_id
-[Method: GET, Route: Data/deleteSls/138/1]
+[Method: GET, Route: data/deleteSls/138/1]
 in APPPATH\Controllers\Data.php on line 359.
  1 APPPATH\Controllers\Data.php(359): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sls_id', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 359)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->deleteSls('138', '1')
@@ -164,7 +164,7 @@ INFO - 2024-06-10 02:53:53 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-10 02:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-10 02:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-06-10 02:54:30 --> ErrorException: Undefined array key "sls_id"
-[Method: POST, Route: Data/save1/1]
+[Method: POST, Route: data/save1/1]
 in APPPATH\Controllers\Data.php on line 344.
  1 APPPATH\Controllers\Data.php(344): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sls_id"', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 344)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save1('1')

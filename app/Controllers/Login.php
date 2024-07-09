@@ -32,10 +32,13 @@ class Login extends BaseController
 					'user_username' => $data['user_username'],
                     'user_name'     => $data['user_name'],
                     'user_email'    => $data['user_email'],
+                    'user_kecamatan'=> $data['kecamatan'],
+                    'user_desa'     => $data['desa'],
+                    'user_role'     => $data['user_role'],
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/dashboard');
+                return redirect()->to('/data_podes');
             }else{
                 $session->setFlashdata('msg', 'Password salah');
                 return redirect()->to('/login');

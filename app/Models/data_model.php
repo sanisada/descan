@@ -561,6 +561,7 @@ class data_model extends Model{
       'R1501BK5',
       'R1501CK2',
       'R1501CK3',
+      'R1501CK4',
       'R1501CK5',
       'R1502_1',
       'R1502_1A',
@@ -594,7 +595,7 @@ class data_model extends Model{
       'R1601BK3',
       'R1601BK4',
       'R1601BK5',
-      'R1601AK6',
+      'R1601BK6',
       'R1602A',
       'R1602A1',
       'R1602B',
@@ -610,14 +611,76 @@ class data_model extends Model{
       'R1604D'
    ];
 
-   function getAll(){
+   public function getAll()
+   {
       $builder = $this->db->table('data dt');
       $builder->join('desa ds', 'ds.kode_desa = dt.R104');
       $builder->join('kec k', 'k.kode_kec = dt.R103');
-      // $builder->join('sls s','s.data_id = dt.data_id');
       $query = $builder->get();
       return $query->getResult();
-      // $result = json_decode($query, true);
-      // return $result;
+   }
+
+   public function getDataByDesa($desa_id)
+   {
+      $builder = $this->db->table('data dt');
+      $builder->join('desa ds', 'ds.kode_desa = dt.R104');
+      $builder->join('kec k', 'k.kode_kec = dt.R103');
+      $builder->where('ds.kode_desa', $desa_id);
+      $query = $builder->get();
+      return $query->getResult();
+   }
+
+   public function getPendudukLakilaki()
+   {
+      $builder = $this->db->table($this->table);
+      $builder->selectSum('R401A');
+      $query = $builder->get();
+
+      return $query->getRow()->R401A;
+   }
+
+   public function getPendudukPerempuan()
+   {
+      $builder = $this->db->table($this->table);
+      $builder->selectSum('R401B');
+      $query = $builder->get();
+
+      return $query->getRow()->R401B;
+   }
+
+   public function getTotalPopulation()
+   {
+      $builder = $this->db->table($this->table);
+      $builder->selectSum('CAST(R401A AS UNSIGNED) + CAST(R401B AS UNSIGNED)', 'total_population');
+      $query = $builder->get();
+
+      return $query->getRow()->total_population;
+   }
+
+   public function getBekerjaData()
+   {
+      return $this->selectSum('R403A1')
+                  ->selectSum('R403A2')
+                  ->selectSum('R403A3')
+                  ->selectSum('R403A4')
+                  ->selectSum('R403A5')
+                  ->selectSum('R403A6')
+                  ->selectSum('R403A7')
+                  ->selectSum('R403A8')
+                  ->selectSum('R403A9')
+                  ->selectSum('R403A10')
+                  ->selectSum('R403A11')
+                  ->selectSum('R403A12')
+                  ->selectSum('R403A13')
+                  ->selectSum('R403A14')
+                  ->selectSum('R403A15')
+                  ->selectSum('R403A16')
+                  ->selectSum('R403A17')
+                  ->selectSum('R403A18')
+                  ->selectSum('R403A19')
+                  ->selectSum('R403A20')
+                  ->selectSum('R403A21')
+                  ->get()
+                  ->getRowArray();
    }
 }

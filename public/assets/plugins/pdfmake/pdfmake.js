@@ -17995,7 +17995,7 @@ var STANDARD_FONTS = {
     return fs.readFileSync(__dirname + '/data/Times-BoldItalic.afm', 'utf8');
   },
   Symbol: function Symbol() {
-    return fs.readFileSync(__dirname + '/data/Symbol.afm', 'utf8');
+    return fs.readFileSync(__dirname + '/data/symbol.afm', 'utf8');
   },
   ZapfDingbats: function ZapfDingbats() {
     return fs.readFileSync(__dirname + '/data/ZapfDingbats.afm', 'utf8');

@@ -61,8 +61,9 @@
         <div class="row gy-4">
             <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <h1>Prospera Cantik</h1>
+                <h4>Profil Potensi Pekon/Kelurahan Cinta Statistik</h4> <br/>
                 <p style="text-align: justify;">
-                    Sistem Prospera merupakan suatu sistem yang mengumpulkan dan menyajikan beragam informasi, baik yang bersifat potensi yang dimiliki desa/kelurahan maupun informasi terkait kerawanan atau tantangan yang dihadapi desa/kelurahan.</p>
+                    Sistem Prospera Cantik merupakan suatu sistem yang mengumpulkan dan menyajikan beragam informasi, baik yang bersifat potensi yang dimiliki desa/kelurahan maupun informasi terkait kerawanan atau tantangan yang dihadapi desa/kelurahan.</p>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img">
                 <img src="<?php echo base_url('assets')?>/dist/img/20944100.png" class="img-fluid animated" alt="">

@@ -26,7 +26,7 @@
                 <?php } ?>
                 <div class="card">
                     <div class="card-body">
-                        <form action="<?php echo base_url('User/save') ?>" method="POST">
+                        <form action="<?php echo base_url('user/save') ?>" method="POST">
                             <div class="form-group">
                                 <label>Username</label>
                                 <input type="text" class="form-control" name="username" placeholder="Masukkan Username Pengguna" required>

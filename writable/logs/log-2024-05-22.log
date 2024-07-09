@@ -26,7 +26,7 @@ INFO - 2024-05-22 00:53:20 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-22 00:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-22 00:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-22 00:53:37 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
-[Method: POST, Route: Data/save2/9]
+[Method: POST, Route: data/save2/9]
 in SYSTEMPATH\BaseModel.php on line 1833.
  1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
  2 SYSTEMPATH\BaseModel.php(997): CodeIgniter\BaseModel->transformDataToArray([], 'update')

@@ -115,7 +115,9 @@ class User extends BaseController
             'user_name' => $this->request->getPost('name'),
             'user_email' => $this->request->getPost('email'),
             'user_password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-            'user_role' => $this->request->getPost('role')
+            'user_role' => $this->request->getPost('role'),
+            'kecamatan' => $this->request->getPost('kec'),
+            'desa' => $this->request->getPost('desa')
         ]);
 
         //flash message

@@ -701,7 +701,7 @@ INFO - 2024-05-21 02:11:15 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-21 02:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 02:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:11:39 --> ArgumentCountError: Too few arguments to function App\Controllers\Data::save(), 0 passed in C:\xampp\htdocs\prospera\system\CodeIgniter.php on line 933 and exactly 1 expected
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 73.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -712,7 +712,7 @@ in APPPATH\Controllers\Data.php on line 73.
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:12:12 --> ErrorException: Undefined variable $data_id
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 80.
  1 APPPATH\Controllers\Data.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_id', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 80)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -727,7 +727,7 @@ INFO - 2024-05-21 02:12:43 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-21 02:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 02:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:15:16 --> ArgumentCountError: Too few arguments to function App\Controllers\Data::save(), 0 passed in C:\xampp\htdocs\prospera\system\CodeIgniter.php on line 933 and exactly 1 expected
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 73.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -738,7 +738,7 @@ in APPPATH\Controllers\Data.php on line 73.
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:15:39 --> ErrorException: Undefined variable $id
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 81.
  1 APPPATH\Controllers\Data.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 81)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -750,7 +750,7 @@ in APPPATH\Controllers\Data.php on line 81.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:16:32 --> ErrorException: Undefined property: App\Controllers\Data::$uri
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 78.
  1 APPPATH\Controllers\Data.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Data::$uri', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 78)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -762,7 +762,7 @@ in APPPATH\Controllers\Data.php on line 78.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:17:35 --> ErrorException: Undefined property: App\Controllers\Data::$uri
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 79.
  1 APPPATH\Controllers\Data.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Data::$uri', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 79)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -774,7 +774,7 @@ in APPPATH\Controllers\Data.php on line 79.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:17:50 --> ErrorException: Undefined property: App\Controllers\Data::$uri
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 80.
  1 APPPATH\Controllers\Data.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Data::$uri', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 80)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -786,7 +786,7 @@ in APPPATH\Controllers\Data.php on line 80.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:18:11 --> Error: Cannot access protected property CodeIgniter\HTTP\IncomingRequest::$uri
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 79.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -797,7 +797,7 @@ in APPPATH\Controllers\Data.php on line 79.
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:19:30 --> Error: Call to undefined method CodeIgniter\HTTP\URI::segment()
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 79.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -808,7 +808,7 @@ in APPPATH\Controllers\Data.php on line 79.
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:20:07 --> Error: Call to undefined method CodeIgniter\HTTP\URI::segment()
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 79.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -850,7 +850,7 @@ in APPPATH\Controllers\Data.php on line 19.
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:33:58 --> ErrorException: Undefined property: App\Controllers\Data::$uri
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 80.
  1 APPPATH\Controllers\Data.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Data::$uri', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 80)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -862,7 +862,7 @@ in APPPATH\Controllers\Data.php on line 80.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:35:42 --> ErrorException: Undefined variable $uri
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 80.
  1 APPPATH\Controllers\Data.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uri', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 80)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -874,7 +874,7 @@ in APPPATH\Controllers\Data.php on line 80.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:35:58 --> ErrorException: Undefined variable $uri
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 80.
  1 APPPATH\Controllers\Data.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uri', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 80)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -886,7 +886,7 @@ in APPPATH\Controllers\Data.php on line 80.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 02:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 02:36:18 --> ErrorException: Undefined variable $uri
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 80.
  1 APPPATH\Controllers\Data.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uri', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 80)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
@@ -2122,7 +2122,7 @@ Stack trace:
 #14 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
 #15 {main}
 CRITICAL - 2024-05-21 08:01:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'R303D' in 'field list'
-[Method: POST, Route: Data/save1/9]
+[Method: POST, Route: data/save1/9]
 in SYSTEMPATH\Database\BaseConnection.php on line 676.
  1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `data` SET `R101` = :R101:, `R102` = :R102:, `R103` = :R103:, `R104` = :R104:, `R106A` = :R106A:, `R303D` = :R303D:, `R304` = :R304:, `R307B1` = :R307B1:, `R307B1_LAT` = :R307B1_LAT:, `R307B1_LA0` = :R307B1_LA0:, `R307B1_LON` = :R307B1_LON:, `R307B2` = :R307B2:
 WHERE `data`.`data_id` IN :data.data_id:', [...], false)
@@ -2220,7 +2220,7 @@ INFO - 2024-05-21 08:23:51 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-21 08:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 08:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 08:24:20 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
-[Method: POST, Route: Data/save2/9]
+[Method: POST, Route: data/save2/9]
 in SYSTEMPATH\BaseModel.php on line 1833.
  1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
  2 SYSTEMPATH\BaseModel.php(997): CodeIgniter\BaseModel->transformDataToArray([], 'update')

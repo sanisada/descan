@@ -58,7 +58,7 @@ INFO - 2024-05-17 08:34:22 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-17 08:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-17 08:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-17 08:34:34 --> Error: Class "App\Controllers\data_model" not found
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in APPPATH\Controllers\Data.php on line 39.
  1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->save()
  2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
@@ -87,7 +87,7 @@ Stack trace:
 #14 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
 #15 {main}
 CRITICAL - 2024-05-17 08:35:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'R103' cannot be null
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in SYSTEMPATH\Database\BaseConnection.php on line 676.
  1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data` (`R103`, `R104`, `R106A`) VALUES (:R103:, :R104:, :R106A:)', [...], false)
  2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
@@ -154,7 +154,7 @@ Stack trace:
 #14 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
 #15 {main}
 CRITICAL - 2024-05-17 08:36:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'R103' cannot be null
-[Method: POST, Route: Data/save]
+[Method: POST, Route: data/save]
 in SYSTEMPATH\Database\BaseConnection.php on line 676.
  1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data` (`R103`, `R104`, `R106A`) VALUES (:R103:, :R104:, :R106A:)', [...], false)
  2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()

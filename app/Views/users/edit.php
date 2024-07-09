@@ -26,7 +26,7 @@
                 <?php } ?>
                 <div class="card">
                     <div class="card-body">
-                        <form action="<?php echo base_url('User/update/').$user['user_id'] ?>" method="POST">
+                        <form action="<?php echo base_url('user/update/').$user['user_id'] ?>" method="POST">
                             <div class="form-group">
                                 <label>Username</label>
                                 <input type="text" class="form-control" name="username" value="<?php echo $user['user_username'] ?>"  placeholder="Masukkan Username Pengguna" required>

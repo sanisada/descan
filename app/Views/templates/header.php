@@ -1,3 +1,13 @@
+<?php
+  if (session()->get('user_id') == "" or session()->get('user_username') == "" or session()->get('user_name') == ""){
+    ?>
+    <script>
+      document.location = "<?= base_url('/login'); ?>";
+    </script>
+    <?php
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +37,7 @@
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed sidebar-collapse">
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -47,7 +57,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('Login/logout'); ?>" role="button">
+        <a class="nav-link" href="<?= base_url('login/logout'); ?>" role="button">
           Logout
         </a>
       </li>
@@ -58,8 +68,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <base href="<?php echo base_url('/')?>/">
-    <a href="<?= base_url('/'); ?>" class="brand-link">
+    <base href="<?php echo base_url('/data_podes')?>/">
+    <a href="<?= base_url('/data_podes'); ?>" class="brand-link">
       <img  src="<?php echo base_url('assets')?>/dist/img/logo.png" alt="logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">PROSPERA CANTIK</span>
     </a>
@@ -72,7 +82,7 @@
           <img  src="<?php echo base_url('assets')?>/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= base_url('/'); ?>" class="d-block"><?php $session = session();
+          <a href="<?= base_url('/data_podes'); ?>" class="d-block"><?php $session = session();
             echo $session->get('user_name'); ?></a>
         </div>
       </div>

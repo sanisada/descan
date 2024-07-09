@@ -1,4 +1,3 @@
-<!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -13,15 +12,13 @@
         </div>
     </div><!-- /.container-fluid -->
 </section>
-<body>
-
 
 <section class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-tambah">
-                        <i class="fas fa-plus-square"></i> Data Potensi Desa
+                    <i class="fas fa-plus-square"></i> Data Potensi Desa
                 </button>
                 <div class="card mt-3">
                     <div class="card-header">
@@ -43,50 +40,44 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <?php $no = 1; ?>
-                                        <?php foreach($datas as $key => $data) : ?>
-                                        <tr>
-                                            <td class="text-center"><?= $no++; ?></td>
-                                            <td><?php echo $data->desa ?></td>
-                                            <td><?php echo $data->kecamatan ?></td>
-                                            <td style="text-align:center;"><?php echo $data->Tahun ?></td>
-                                            <td style="text-align:center;"><?php echo $data->status ?></td>
-                                            <td class="text-center">
-                                                <ul class="list-inline m-0">
-                                                    <li class="list-inline-item">
-                                                        <a href="<?php echo base_url('Data/detail/').$data->data_id?>"  class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i></a>
-                                                        <!-- <button class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-eye"></i></button> -->
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <!-- <button class="btn btn-success btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Edit"> -->
-                                                        <a href="<?php echo base_url('Data/edit/').$data->data_id?>"  class="btn btn-success btn-sm" type="button"><i class="fa fa-edit"></i></a>
-                                                    <!-- </button> -->
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <a href="<?php echo base_url('Data/delete/'.$data->data_id) ?>">
-                                                        <button  onclick="return confirm('Apakah Anda yakin akan menghapus data ini?')" class="btn btn-danger btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                        <i class="fa fa-trash"></i></button></a>
-                                                    </li>
-                                                </ul>
-                                                <!-- <button type="button" class="btn btn-default" data-toggle="dropdown">
-                                                    <i class="fas fa-cog"></i>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a href="detail_penduduk" class="dropdown-item">Lihat</a>
-                                                    <a href="edit_data_kependudukan/" class="dropdown-item">Edit</a>
-                                                    <form action="data_kependudukan" method="POST">
-                                                        <input type="hidden" name="nik" value="">
-                                                        <button class="dropdown-item" type="submit" name="hapus_data" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</button>
-                                                    </form>
-                                                </div> -->
-                                            </td>
-                                        </tr>
-                                        <?php endforeach ?>
+                                    <?php $no = 1; ?>
+                                    <?php foreach ($datas as $key => $data) : ?>
+                                    <tr>
+                                        <td class="text-center"><?= $no++; ?></td>
+                                        <td><?php echo $data->desa; ?></td>
+                                        <td><?php echo $data->kecamatan; ?></td>
+                                        <td style="text-align:center;"><?php echo $data->Tahun; ?></td>
+                                        <td style="text-align:center;"><?php echo $data->status; ?></td>
+                                        <td class="text-center">
+                                            <ul class="list-inline m-0">
+                                                <li class="list-inline-item">
+                                                    <a href="<?php echo base_url('data/detail/') . $data->data_id; ?>" class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i></a>
+                                                </li>
+                                                <?php $session = session(); ?>
+                                                <?php if ($session->get('user_role') !== 'Viewer'): ?>
+                                                <li class="list-inline-item">
+                                                    <a href="<?php echo base_url('data/edit/') . $data->data_id; ?>" class="btn btn-success btn-sm" type="button"><i class="fa fa-edit"></i></a>
+                                                </li>
+                                                
+                                                <li class="list-inline-item">
+                                                    <a href="<?php echo base_url('data/delete/' . $data->data_id); ?>">
+                                                        <button onclick="return confirm('Apakah Anda yakin akan menghapus data ini?')" class="btn btn-danger btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </a>
+                                                </li>
+                                                <?php endif; ?>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
                     </div>
+                    <!-- /.card-body -->
                 </div>
+                <!-- /.card -->
             </div>
         </div>
     </div>
@@ -101,14 +92,14 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?php echo base_url('Data/tambah_data') ?>" method="POST">
+            <form action="<?php echo base_url('data/tambah_data'); ?>" method="POST">
                 <div class="modal-body">
                     <label for="tahun">Tahun</label><br>
                     <select name="tahun" id="tahun" class="custom-select custom-select-md mb-3">
-                        <?php echo " ". PHP_EOL;
-                            for($i = date("Y")-3; $i <=date("Y"); $i++){
-                                echo '<option value="' . $i . '">' . $i . '</option>' . PHP_EOL;
-                            }
+                        <?php
+                        for ($i = date("Y") - 3; $i <= date("Y"); $i++) {
+                            echo '<option value="' . $i . '">' . $i . '</option>' . PHP_EOL;
+                        }
                         ?>
                     </select>
                 </div>
@@ -123,4 +114,3 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-</body>

@@ -17,4 +17,9 @@ class user_model extends Model{
       // $result = json_decode($query, true);
       // return $result;
    }
+
+   public function getRole($user_id)
+   {
+      return $this->where('user_id', $user_id)->first();
+   }
 }
