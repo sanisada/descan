@@ -957,7 +957,7 @@ INFO - 2024-05-21 02:49:25 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-21 02:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 03:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 03:02:03 --> ErrorException: Undefined variable $dataModel
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in APPPATH\Controllers\Data.php on line 27.
  1 APPPATH\Controllers\Data.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataModel', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 27)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->index()
@@ -969,7 +969,7 @@ in APPPATH\Controllers\Data.php on line 27.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 03:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 03:02:27 --> ErrorException: Undefined variable $dataModel
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in APPPATH\Controllers\Data.php on line 28.
  1 APPPATH\Controllers\Data.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataModel', 'C:\\xampp\\htdocs\\prospera\\app\\Controllers\\Data.php', 28)
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Data->index()
@@ -981,7 +981,7 @@ in APPPATH\Controllers\Data.php on line 28.
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 03:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 03:03:11 --> ErrorException: Undefined variable $data
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in APPPATH\Views\data\data_view.php on line 46.
  1 APPPATH\Views\data\data_view.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php', 46)
  2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php')
@@ -1015,7 +1015,7 @@ Stack trace:
 #12 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
 #13 {main}
 CRITICAL - 2024-05-21 03:20:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'dt.desa' in 'on clause'
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in SYSTEMPATH\Database\BaseConnection.php on line 676.
  1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
 FROM `data` `dt`
@@ -1082,7 +1082,7 @@ JOIN `kec` `k` ON `k`.`kode_kec` = `dt`.`kecamatan`', [], false)
 13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
 INFO - 2024-05-21 03:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 03:21:12 --> Error: Cannot use object of type stdClass as array
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in APPPATH\Views\data\data_view.php on line 49.
  1 SYSTEMPATH\View\View.php(234): include()
  2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
@@ -1158,7 +1158,7 @@ INFO - 2024-05-21 03:36:33 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-21 03:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 03:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 03:37:38 --> ErrorException: Undefined variable $datas
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in APPPATH\Views\data\data_view.php on line 47.
  1 APPPATH\Views\data\data_view.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datas', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php', 47)
  2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php')
@@ -1182,7 +1182,7 @@ INFO - 2024-05-21 03:42:28 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-21 03:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 03:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 03:48:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view.php"
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view.php')
  2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('view', [], true)
@@ -1239,7 +1239,7 @@ INFO - 2024-05-21 03:54:51 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-21 03:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-21 03:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-21 03:55:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view.php"
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view.php')
  2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('view', [], true)

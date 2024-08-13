@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_podes">Data Potensi Desa</a></li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
                     <li class="breadcrumb-item active">Edit Data Potensi Desa</li>
                 </ol>
             </div>
@@ -24,7 +24,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="background-color: #042165;">
-                        <h3 class="card-title text-white">VII. PENGGUNAAN LAHAN</h3>
+                        <h3 class="card-title text-white">IX. PENGGUNAAN LAHAN</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -57,12 +57,12 @@
 
                 <div class="card">
                     <div class="card-header" style="background-color: #042165;">
-                        <h3 class="card-title text-white">VIII. EKONOMI</h3>
+                        <h3 class="card-title text-white">X. EKONOMI</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <h5>Industri mikro dan kecil (memiliki tenaga kerja kurang dari 20 pekerja) menurut jenis produk :</h5>
+                                <h5>1001. Industri mikro dan kecil (memiliki tenaga kerja kurang dari 20 pekerja) menurut jenis produk :</h5>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <?php for ($i = 414; $i < 422; $i++): ?>
@@ -81,12 +81,14 @@
                                         <?php endfor?>
                                     </div>
                                 </div>
+                                <hr/>
                                 <div class="form-group">
                                     <label><?php echo $ques[430]['ques_label']?></label>
                                     <input type="number" name="<?php echo $ques[430]['dataKey']?>" value="<?php echo ($data[$ques[430]['dataKey']])?>" class="form-control">
                                 </div>
+                                <hr/>
                                 <div class="form-group">
-                                    <label>Keberadaan produk barang unggulan/utama di desa/kelurahan</label>
+                                    <label>1003. Keberadaan produk barang unggulan/utama di desa/kelurahan</label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
                                             <input class="form-check-input" type="radio" name="R1203A" value="1" <?php if ($data['R1203A'] == 1) echo "checked"; ?>>
@@ -99,7 +101,7 @@
                                     </div>
                                 </div>
                                 <hr/>
-                                <h5>Jumlah bank yang beroperasi di desa/kelurahan</h5>
+                                <h5>1004. Jumlah bank yang beroperasi di desa/kelurahan</h5>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <?php for ($i = 432; $i < 434; $i++): ?>
@@ -111,13 +113,13 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label><?php echo $ques[435]['ques_label']?></label>
-                                            <input type="number" name="<?php echo $ques[435]['dataKey']?>" value="<?php echo ($data[$ques[435]['dataKey']])?>" class="form-control">
+                                            <label><?php echo $ques[434]['ques_label']?></label>
+                                            <input type="number" name="<?php echo $ques[434]['dataKey']?>" value="<?php echo ($data[$ques[434]['dataKey']])?>" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                                 <hr/>
-                                <h5>Jumlah koperasi di desa/kelurahan yang masih aktif</h5>
+                                <h5>1005. Jumlah koperasi di desa/kelurahan yang masih aktif</h5>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <?php for ($i = 435; $i < 437; $i++): ?>
@@ -137,7 +139,7 @@
                                     </div>
                                 </div>
                                 <hr/>
-                                <h5>Keberadaan sarana penunjang ekonomi di desa/kelurahan</h5>
+                                <h5>1006. Keberadaan sarana penunjang ekonomi di desa/kelurahan</h5>
                                 <table class="table table-bordered">
                                     <thead style="text-align:center;vertical-align: middle;">
                                         <tr>
@@ -193,7 +195,7 @@
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <h5>Jumlah sarana dan prasarana ekonomi di desa/kelurahan</h5>
+                                <h5>1007. Jumlah sarana dan prasarana ekonomi di desa/kelurahan</h5>
                                 <table class="table table-bordered">
                                     <thead style="text-align:center;vertical-align: middle;">
                                         <tr>

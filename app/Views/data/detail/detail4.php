@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_podes">Data Potensi Desa</a></li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
                     <li class="breadcrumb-item active">Detail Data Potensi Desa</li>
                 </ol>
             </div>
@@ -29,15 +29,15 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <h5>Kejadian/bencana alam (mengganggu kehidupan dan menyebabkan kerugian bagi masyarakat) yang terjadi pada tahun 2023 dan 2024 (Januari-April)</h5>
+                                <h5>501. Kejadian/bencana alam (mengganggu kehidupan dan menyebabkan kerugian bagi masyarakat) yang terjadi pada tahun <?php echo ($data['Tahun']-1)?> dan <?php echo $data['Tahun']?> (Januari-April)</h5>
                                 <label>Kejadian/Bencana Alam<i> (beri tanda cek jika ada)</i></label>
                                 <table class="table table-bordered">
                                     <thead style="text-align:center;vertical-align: middle;">
                                         <tr>
                                             <th rowspan="2" style="text-align:center;vertical-align: middle;">Kejadian/Bencana Alam</th>
                                             <th rowspan="2" style="text-align:center;vertical-align: middle;">Kejadian</th>
-                                            <th colspan="3" style="text-align:center;vertical-align: middle;">Tahun 2023</th>
-                                            <th colspan="3" style="text-align:center;vertical-align: middle;">Tahun 2024</th>
+                                            <th colspan="3" style="text-align:center;vertical-align: middle;">Tahun <?php echo ($data['Tahun']-1)?></th>
+                                            <th colspan="3" style="text-align:center;vertical-align: middle;">Tahun <?php echo $data['Tahun']?></th>
                                         </tr>
                                         <tr>
                                             <th style="text-align:center;vertical-align: middle;">Banyaknya kejadian</th>
@@ -100,18 +100,18 @@
                                 </table>
                                 <hr/>
                                 <div class="form-group">
-                                    <h5>Fasilitas/upaya antisipasi/mitigasi bencana alam yang ada di desa/kelurahan</h5>
+                                    <h5>502. Fasilitas/upaya antisipasi/mitigasi bencana alam yang ada di desa/kelurahan</h5>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>a. Sistem peringatan dini bencana alam</label>
                                                 <div style="margin-bottom:-9.5px;">
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604A" value="1" <?php if ($data['R604A'] == 1) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502A" value="1" <?php if ($data['R502A'] == 1) echo "checked"; ?>>
                                                         <label class="form-check-label">Ada</label>
                                                     </div>
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604A" value="2" <?php if ($data['R604A'] == 2) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502A" value="2" <?php if ($data['R502A'] == 2) echo "checked"; ?>>
                                                         <label class="form-check-label">Tidak ada</label>
                                                     </div>
                                                 </div>
@@ -120,15 +120,15 @@
                                                 <label>b. Sistem peringatan dini khusus tsunami</label>
                                                 <div style="margin-bottom:-9.5px;">
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604B" value="1" <?php if ($data['R604B'] == 1) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502B" value="1" <?php if ($data['R502B'] == 1) echo "checked"; ?>>
                                                         <label class="form-check-label">Ada</label>
                                                     </div>
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604B" value="2" <?php if ($data['R604B'] == 2) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502B" value="2" <?php if ($data['R502B'] == 2) echo "checked"; ?>>
                                                         <label class="form-check-label">Tidak ada</label>
                                                     </div>
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604B" value="3" <?php if ($data['R604B'] == 3) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502B" value="3" <?php if ($data['R502B'] == 3) echo "checked"; ?>>
                                                         <label class="form-check-label">Bukan wilayah potensi tsunami</label>
                                                     </div>
                                                 </div>
@@ -137,11 +137,11 @@
                                                 <label>c. Perlengkapan keselamatan (perahu karet, tenda, masker, dll)</label>
                                                 <div style="margin-bottom:-9.5px;">
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604C" value="1" <?php if ($data['R604C'] == 1) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502C" value="1" <?php if ($data['R502C'] == 1) echo "checked"; ?>>
                                                         <label class="form-check-label">Ada</label>
                                                     </div>
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604C" value="2" <?php if ($data['R604C'] == 2) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502C" value="2" <?php if ($data['R502C'] == 2) echo "checked"; ?>>
                                                         <label class="form-check-label">Tidak ada</label>
                                                     </div>
                                                 </div>
@@ -152,11 +152,11 @@
                                                 <label>d. Rambu-rambu dan jalur evakuasi bencana</label>
                                                 <div style="margin-bottom:-9.5px;">
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604D" value="1" <?php if ($data['R604D'] == 1) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502D" value="1" <?php if ($data['R502D'] == 1) echo "checked"; ?>>
                                                         <label class="form-check-label">Ada</label>
                                                     </div>
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604D" value="2" <?php if ($data['R604D'] == 2) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502D" value="2" <?php if ($data['R502D'] == 2) echo "checked"; ?>>
                                                         <label class="form-check-label">Tidak ada</label>
                                                     </div>
                                                 </div>
@@ -165,11 +165,11 @@
                                                 <label>e. Pembuatan, perawatan, atau normalisasi: sungai, kanal, tanggul, parit, drainase, waduk, pantai, dll.</label>
                                                 <div style="margin-bottom:-9.5px;">
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604E" value="1" <?php if ($data['R604E'] == 1) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502E" value="1" <?php if ($data['R502E'] == 1) echo "checked"; ?>>
                                                         <label class="form-check-label">Ada</label>
                                                     </div>
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="R604E" value="2" <?php if ($data['R604E'] == 2) echo "checked"; ?>>
+                                                        <input class="form-check-input" type="radio" name="R502E" value="2" <?php if ($data['R502E'] == 2) echo "checked"; ?>>
                                                         <label class="form-check-label">Tidak ada</label>
                                                     </div>
                                                 </div>
@@ -178,7 +178,7 @@
                                     </div>
                                 </div>
                                 <hr/>
-                                <h5>Apakah Desa/RT/RW di bawahnya termasuk dalam:</h5>
+                                <h5>503. Apakah Desa/RT/RW di bawahnya termasuk dalam:</h5>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <?php for ($i = 196; $i < 199; $i++): ?>

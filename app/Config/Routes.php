@@ -7,10 +7,13 @@ use CodeIgniter\Router\RouteCollection;
  */
 // $routes->get('/', 'Home::index',['filter' => 'redirectifauthenticated']);
 $routes->get('/', 'Home::index');
+$routes->get('/Home/filter', 'Home::filter');
+$routes->get('/Home/show_data(:any)','Home::show_data/$1');
 // $routes->get('/dashboard', 'Dashboard::index');
 
 // route pengaturan user
 $routes->get('/pengaturan', 'User::index');
+$routes->get('/metadata', 'Metadata::index');
 $routes->get('/user/create', 'User::create');
 $routes->post('/user/save', 'User::save');
 $routes->get('/user/edit/(:num)', 'User::edit/$1');
@@ -18,7 +21,7 @@ $routes->post('/user/update/(:num)', 'User::update/$1');
 $routes->get('/user/delete/(:num)', 'User::delete/$1');
 
 // route data podes
-$routes->get('/data_podes', 'Data::index');
+$routes->get('/data_prospera', 'Data::index');
 $routes->post('/data/tambah_data', 'Data::tambah_data');
 
 $routes->get('/data/create/(:num)', 'Data::create/$1');

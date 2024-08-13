@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_podes">Data Potensi Desa</a></li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
                     <li class="breadcrumb-item active">Edit Data Potensi Desa</li>
                 </ol>
             </div>
@@ -24,12 +24,12 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="background-color: #042165;">
-                        <h3 class="card-title text-white">VIII. KEAMANAN</h3>
+                        <h3 class="card-title text-white">xI. KEAMANAN</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <h5>Tindak kejahatan yang terjadi di desa/kelurahan selama setahun terakhir</h5>
+                                <h5>1101. Tindak kejahatan yang terjadi di desa/kelurahan selama setahun terakhir</h5>
                                 <table class="table table-bordered">
                                     <thead style="text-align:center;vertical-align: middle;">
                                         <tr>
@@ -84,28 +84,31 @@
                                         <?php endfor ?>
                                     </tbody>
                                 </table>
+                                <hr/>
                                 <div class="form-group">
-                                    <label>Jumlah anggota linmas/hansip di desa/kelurahan</label>
-                                    <input type="number" name="R1305" value="<?php echo $data['R1305']?>" class="form-control">
+                                    <label>1102. Jumlah anggota linmas/hansip di desa/kelurahan</label>
+                                    <input type="number" name="R1102" value="<?php echo $data['R1102']?>" class="form-control">
                                 </div>
+                                <hr/>
                                 <div class="form-group">
-                                    <label>Keberadaan pos polisi (termasuk kantor polisi) di desa/kelurahan</label>
+                                    <label>1103. Keberadaan pos polisi (termasuk kantor polisi) di desa/kelurahan</label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" oninput='on_change1(event)' name="R1306A" value="1" <?php if ($data['R1306A'] == 1) echo "checked"; ?>>
+                                            <input class="form-check-input" type="radio" oninput='on_change1(event)' name="R1103" value="1" <?php if ($data['R1103'] == 1) echo "checked"; ?>>
                                             <label class="form-check-label">Ada</label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" oninput='on_change1(event)' name="R1306A" value="2" <?php if ($data['R1306A'] == 2) echo "checked"; ?>>
+                                            <input class="form-check-input" type="radio" oninput='on_change1(event)' name="R1103" value="2" <?php if ($data['R1103'] == 2) echo "checked"; ?>>
                                             <label class="form-check-label">Tidak ada</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div id="R1306A2" class="form-group" style="display:none;">
+                                <div id="R1103S" class="form-group" style="display:none;">
                                     <label for="">Sebutkan alamatnya</label>
-                                    <input type="text" name="R1306A2" value="<?php echo $data['R1306A2']?>" class="form-control">
+                                    <input type="text" name="R1103S" value="<?php echo $data['R1103S']?>" class="form-control">
                                 </div>
-                                <h5>Jumlah korban bunuh diri dan pembunuhan selama setahun terakhir di desa/kelurahan:</h5>
+                                <hr/>
+                                <label>1104. Jumlah korban bunuh diri dan pembunuhan selama setahun terakhir di desa/kelurahan:</label>
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -144,13 +147,13 @@
                 </div>
                 <div class="card">
                     <div class="card-header" style="background-color: #042165;">
-                        <h3 class="card-title text-white">IX. KEUANGAN DAN ASET DESA</h3>
+                        <h3 class="card-title text-white">XII. KEUANGAN DAN ASET DESA</h3>
                     </div>
                     <div class="card-body">
-                        <h5>Kepemilikan badan usaha dan aset desa</h5>
+                        <h5>1201. Kepemilikan badan usaha dan aset desa</h5>
                         <div class="form-group col-md-6">
-                            <label>Jumlah unit usaha BUMDes</label>
-                            <input type="number" name="R1403A" value="<?php echo $data['R1403A']?>" class="form-control">
+                            <label>a. Jumlah unit usaha BUMDes</label>
+                            <input type="number" name="R1201A" value="<?php echo $data['R1201A']?>" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-md-6">
@@ -189,6 +192,7 @@
                             </div>
                         </div>
                         <hr/>
+                        <h5>1202. </h5>
                         <div class="row">
                             <?php for ($i = 534; $i < 536; $i++): ?>
                                 <div class="col-md-6">
@@ -215,6 +219,10 @@
                                     </div>
                                 </div>
                             <?php endfor ?>
+                            
+                        </div>
+                        <hr/>
+                            <div class="row">
                             <?php for ($i = 538; $i < 540; $i++): ?>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -232,66 +240,72 @@
                                     </div>
                                 </div>
                             <?php endfor ?>
+                            </div>
+                            <hr/>
+                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Keberadaan pendamping lokal desa</label>
+                                    <label>1204. Keberadaan pendamping lokal desa</label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change2(event)' type="radio" name="R1406" value="1" <?php if ($data['R1406'] == 1) echo "checked"; ?>>
+                                            <input class="form-check-input" oninput='on_change2(event)' type="radio" name="R1204" value="1" <?php if ($data['R1204'] == 1) echo "checked"; ?>>
                                             <label class="form-check-label">Ada, aktif</label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change2(event)' type="radio" name="R1406" value="2" <?php if ($data['R1406'] == 2) echo "checked"; ?>>
+                                            <input class="form-check-input" oninput='on_change2(event)' type="radio" name="R1204" value="2" <?php if ($data['R1204'] == 2) echo "checked"; ?>>
                                             <label class="form-check-label">Ada, tidak aktif</label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change2(event)' type="radio" name="R1406" value="3" <?php if ($data['R1406'] == 3) echo "checked"; ?>>
+                                            <input class="form-check-input" oninput='on_change2(event)' type="radio" name="R1204" value="3" <?php if ($data['R1204'] == 3) echo "checked"; ?>>
                                             <label class="form-check-label">Tidak ada</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div id="R1406A" class="form-group" style="display:none;">
+                                <div id="R1204S" class="form-group" style="display:none;">
                                     <label for="">Sebutkan namanya</label>
-                                    <input type="text" name="R14061" value="<?php echo $data['R14061']?>" class="form-control">
+                                    <input type="text" name="R1204S" value="<?php echo $data['R1204S']?>" class="form-control">
                                 </div>
                             </div>
+                            </div>
+                            <hr/>
+                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Keberadaan Pembangunan Manusia (KPM)</label>
+                                    <label>1205. Keberadaan Pembangunan Manusia (KPM)</label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change3(event)' type="radio" name="R1407A" value="1" <?php if ($data['R1407A'] == 1) echo "checked"; ?>>
+                                            <input class="form-check-input" oninput='on_change3(event)' type="radio" name="R1205A" value="1" <?php if ($data['R1205A'] == 1) echo "checked"; ?>>
                                             <label class="form-check-label">Ada, aktif</label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change3(event)' type="radio" name="R1407A" value="2" <?php if ($data['R1407A'] == 2) echo "checked"; ?>>
+                                            <input class="form-check-input" oninput='on_change3(event)' type="radio" name="R1205A" value="2" <?php if ($data['R1205A'] == 2) echo "checked"; ?>>
                                             <label class="form-check-label">Ada, tidak aktif</label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" oninput='on_change3(event)' type="radio" name="R1407A" value="3" <?php if ($data['R1407A'] == 3) echo "checked"; ?>>
+                                            <input class="form-check-input" oninput='on_change3(event)' type="radio" name="R1205A" value="3" <?php if ($data['R1205A'] == 3) echo "checked"; ?>>
                                             <label class="form-check-label">Tidak ada</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div id="R1407A1" class="form-group" style="display:none;">
+                                <div id="R1205AS" class="form-group" style="display:none;">
                                     <label for="">Sebutkan namanya</label>
-                                    <input type="text" name="R1407A1" value="<?php echo $data['R1407A1']?>"class="form-control">
+                                    <input type="text" name="R1205AS" value="<?php echo $data['R1205AS']?>"class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div id="R1407B" class="form-group" style="display:none;">
+                                <div id="R1205B" class="form-group" style="display:none;">
                                     <label for="">Jika ada, apakah ada KPM yang mendapatkan pembinaan dari pemerintah kabupaten/kota?</label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="R1407B" value="1" <?php if ($data['R1407B'] == 1) echo "checked"; ?>>
+                                            <input class="form-check-input" type="radio" name="R1205B" value="1" <?php if ($data['R1205B'] == 1) echo "checked"; ?>>
                                             <label class="form-check-label">Ada</label>
                                         </div>
                                         <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="R1407B" value="2" <?php if ($data['R1407B'] == 2) echo "checked"; ?>>
+                                            <input class="form-check-input" type="radio" name="R1205B" value="2" <?php if ($data['R1205B'] == 2) echo "checked"; ?>>
                                             <label class="form-check-label">Tidak ada</label>
                                         </div>
                                     </div>
@@ -313,39 +327,38 @@
     </div>
 </section>
 
-
 <script>
     function on_change1(el){
         var selectedOption = el.target.value;
         if (selectedOption === '1') {
-        document.getElementById('R1306A2').style.display = 'block';
+        document.getElementById('R1103S').style.display = 'block';
         } else {
-        document.getElementById('R1306A2').style.display = 'none'; // Hide el
+        document.getElementById('R1103S').style.display = 'none'; // Hide el
         }
-        window.localStorage.setItem('R1306A2', selectedOption);
+        window.localStorage.setItem('R1103S', selectedOption);
     }
 
     function on_change2(el){
         var selectedOption = el.target.value;
         if (selectedOption === '1' || selectedOption === '2') {
-        document.getElementById('R1406A').style.display = 'block';
+        document.getElementById('R1204S').style.display = 'block';
         } else {
-        document.getElementById('R1406A').style.display = 'none'; // Hide el
+        document.getElementById('R1204S').style.display = 'none'; // Hide el
         }
-        window.localStorage.setItem('R1406A', selectedOption);
+        window.localStorage.setItem('R1204S', selectedOption);
     }
 
     function on_change3(el){
         var selectedOption = el.target.value;
         if (selectedOption === '1' || selectedOption === '2') {
-        document.getElementById('R1407A1').style.display = 'block';
-        document.getElementById('R1407B').style.display = 'block';
+        document.getElementById('R1205AS').style.display = 'block';
+        document.getElementById('R1205B').style.display = 'block';
         } else {
-        document.getElementById('R1407A1').style.display = 'none'; // Hide el
-        document.getElementById('R1407B').style.display = 'none';
+        document.getElementById('R1205AS').style.display = 'none'; // Hide el
+        document.getElementById('R1205B').style.display = 'none';
         }
-        window.localStorage.setItem('R1407A1', selectedOption);
-        window.localStorage.setItem('R1407B', selectedOption);
+        window.localStorage.setItem('R1205AS', selectedOption);
+        window.localStorage.setItem('R1205B', selectedOptionB);
     }
 
     function onRadioChange(index, isAda) {
@@ -361,33 +374,34 @@
     }
 
     window.onload = function() {
-        var selectedOption = window.localStorage.getItem('R1306A2');
-        var selectedOption1 = window.localStorage.getItem('R1406A');
-        var selectedOption2 = window.localStorage.getItem('R1407A1');
+        var selectedOption = window.localStorage.getItem('R1103S');
+        var selectedOption1 = window.localStorage.getItem('R1204S');
+        var selectedOption2 = window.localStorage.getItem('R1205AS');
+        var selectedOptionB = window.localStorage.getItem('R1205B');
 
         if (selectedOption === '1') {
-        document.getElementById('R1306A2').style.display = 'block';
+        document.getElementById('R1103S').style.display = 'block';
         } else {
-        document.getElementById('R1306A2').style.display = 'none'; // Hide el
+        document.getElementById('R1103S').style.display = 'none'; // Hide el
         }
-        window.localStorage.setItem('R1306A2', selectedOption);
+        window.localStorage.setItem('R1103S', selectedOption);
 
         if (selectedOption1 === '1' || selectedOption1 === '2') {
-        document.getElementById('R1406A').style.display = 'block';
+        document.getElementById('R1204S').style.display = 'block';
         } else {
-        document.getElementById('R1406A').style.display = 'none'; // Hide el
+        document.getElementById('R1204S').style.display = 'none'; // Hide el
         }
-        window.localStorage.setItem('R1406A', selectedOption1);
+        window.localStorage.setItem('R1204S', selectedOption1);
 
         if (selectedOption2 === '1' || selectedOption2 === '2') {
-            document.getElementById('R1407A1').style.display = 'block';
-            document.getElementById('R1407B').style.display = 'block';
+            document.getElementById('R1205AS').style.display = 'block';
+            document.getElementById('R1205B').style.display = 'block';
         } else {
-            document.getElementById('R1407A1').style.display = 'none'; // Hide el
-            document.getElementById('R1407B').style.display = 'none';
+            document.getElementById('R1205AS').style.display = 'none'; // Hide el
+            document.getElementById('R1205B').style.display = 'none';
         }
-        window.localStorage.setItem('R1407A1', selectedOption);
-        window.localStorage.setItem('R1407B', selectedOption);
+        window.localStorage.setItem('R1205AS', selectedOption);
+        window.localStorage.setItem('R1205B', selectedOptionB);
 
         <?php for ($i = 496; $i < 518; $i += 2): ?>
             var isAdaChecked = document.getElementById('kejadian-<?php echo $i ?>').checked;

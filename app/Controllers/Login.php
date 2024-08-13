@@ -38,7 +38,7 @@ class Login extends BaseController
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/data_podes');
+                return redirect()->to('/data_prospera');
             }else{
                 $session->setFlashdata('msg', 'Password salah');
                 return redirect()->to('/login');

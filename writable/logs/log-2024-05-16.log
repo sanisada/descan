@@ -6,7 +6,7 @@ INFO - 2024-05-16 00:46:59 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-16 00:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-16 00:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-16 00:49:50 --> ErrorException: Undefined array key 4
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in APPPATH\Views\data\data_view.php on line 27.
  1 APPPATH\Views\data\data_view.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php', 27)
  2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php')
@@ -24,7 +24,7 @@ INFO - 2024-05-16 00:50:02 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-16 00:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-16 00:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-16 00:50:11 --> ErrorException: Undefined array key 4
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in APPPATH\Views\data\data_view.php on line 27.
  1 APPPATH\Views\data\data_view.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php', 27)
  2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php')
@@ -43,7 +43,7 @@ INFO - 2024-05-16 00:52:14 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-16 00:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-16 00:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2024-05-16 00:52:56 --> ErrorException: Undefined array key 4
-[Method: GET, Route: data_podes]
+[Method: GET, Route: data_prospera]
 in APPPATH\Views\data\data_view.php on line 27.
  1 APPPATH\Views\data\data_view.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php', 27)
  2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\data\\data_view.php')

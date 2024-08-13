@@ -1,5 +1,5 @@
     <?php $session = session(); ?>
-    <?php if ($session->get('user_role') == 'Admin'): ?>
+    
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
@@ -12,10 +12,18 @@
             </a>
           </li> -->
           <li class="nav-item">
-            <a href="/data_podes" class="nav-link">
+            <a href="/data_prospera" class="nav-link">
               <i class="nav-icon fa fa-newspaper"></i>
               <p>
                 Data Potensi Desa
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/metadata" class="nav-link">
+              <i class="nav-icon fa fa-table"></i>
+              <p>
+                Metadata
               </p>
             </a>
           </li>
@@ -27,6 +35,7 @@
               </p>
             </a>
           </li> -->
+          <?php if ($session->get('user_role') == 'Admin'): ?>
           <li class="nav-item">
             <a href="/pengaturan" class="nav-link">
               <i class="nav-icon fa fa-wrench"></i>
@@ -35,11 +44,11 @@
               </p>
             </a>
           </li>
-          
+          <?php endif; ?>
           
         </ul>
       </nav>
-      <?php endif; ?>
+      
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->

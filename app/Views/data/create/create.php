@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_podes">Data Potensi Desa</a></li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
                     <li class="breadcrumb-item active">Tambah Data Potensi Desa</li>
                 </ol>
             </div>
@@ -28,15 +28,15 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="">Provinsi</label>
+                                <label for="">101. Provinsi</label>
                                 <input type="text" name="prov" class="form-control" id="" value="Lampung" readonly required>
                             </div>
                             <div class="form-group">
-                                <label for="">Kabupaten</label>
+                                <label for="">102. Kabupaten</label>
                                 <input type="text" name="kab" class="form-control" id="" value="Pringsewu" readonly required>
                             </div>
                             <div class="form-group">
-                                <label for="">Kecamatan</label>
+                                <label for="">103. Kecamatan</label>
                                 <select id="kec" class="form-control" name="R103" required>
                                     <?php echo "<option hidden>--Pilih Kecamatan--</option>" . PHP_EOL; foreach ($kecamatan as $key => $kec) {
                                         echo '<option value="' . $kec['kode_kec'] . '"';
@@ -47,7 +47,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Desa</label>
+                                <label>104. Pekon/Kelurahan</label>
                                 <select id="desa" class="form-control" name="R104" required>
                                     <option value="">Pilih Desa</option>
                                     <?php foreach ($desa as $row) : ?>
@@ -57,14 +57,14 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>SK pembentukan/pengesahan desa/kelurahan</label>
-                                <select name="R106A" class="form-control" style="width: 100%;" required>
+                                <label>105. SK pembentukan/pengesahan desa/kelurahan</label>
+                                <select name="R105" class="form-control" style="width: 100%;" required>
                                     <option hidden>--Pilih SK--</option>
-                                    <option value="1" <?php if ($data['R106A'] == 1) echo "selected"; ?>>Permendagri/Kepmendagri</option>
-                                    <option value="2" <?php if ($data['R106A'] == 2) echo "selected"; ?>>Perda Provinsi</option>
-                                    <option value="3" <?php if ($data['R106A'] == 3) echo "selected"; ?>>Perda Kabupaten</option>
-                                    <option value="4" <?php if ($data['R106A'] == 4) echo "selected"; ?>>SK Gubernur/Bupati</option>
-                                    <option value="5" <?php if ($data['R106A'] == 5) echo "selected"; ?>>Lainnya</option>
+                                    <option value="1" <?php if ($data['R105'] == 1) echo "selected"; ?>>Permendagri/Kepmendagri</option>
+                                    <option value="2" <?php if ($data['R105'] == 2) echo "selected"; ?>>Perda Provinsi</option>
+                                    <option value="3" <?php if ($data['R105'] == 3) echo "selected"; ?>>Perda Kabupaten</option>
+                                    <option value="4" <?php if ($data['R105'] == 4) echo "selected"; ?>>SK Gubernur/Bupati</option>
+                                    <option value="5" <?php if ($data['R105'] == 5) echo "selected"; ?>>Lainnya</option>
                                 </select>
                             </div>
                         </div>
@@ -78,13 +78,13 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <h5>Daftar RT/RW di Desa/Kelurahan</h5>
+                                <label>201. Daftar RT/RW di Desa/Kelurahan</label>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12 form_sec_outer_task border">
                                             <div class="row">
                                                 <div class="col-md-5">
-                                                    <label>Kode RT/RW</label>
+                                                    <label>No.</label>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>Nama RT/RW</label>
@@ -98,10 +98,10 @@
                                                                 <input type="hidden" name="sls[<?= $index ?>][sls_id]" value="<?= esc($slsItem['sls_id']) ?>">
                                                                 <input type="hidden" name="sls[<?= $index ?>][data_id]" value="<?= esc($slsItem['data_id']) ?>">
                                                                 <div class="form-group col-md-5">
-                                                                    <input type="text" class="form-control w_90" name="sls[<?= $index ?>][kode_sls]" id="kode_sls_<?= $index ?>" value="<?= esc($slsItem['kode_sls']) ?>" placeholder="Masukkan Kode SLS/Non SLS" required />
+                                                                    <input type="text" class="form-control w_90" name="sls[<?= $index ?>][kode_sls]" id="kode_sls_<?= $index ?>" value="<?= esc($slsItem['kode_sls']) ?>" placeholder="Masukkan Nomor Urut" required />
                                                                 </div>
                                                                 <div class="form-group col-md-6">
-                                                                    <input type="text" class="form-control w_90" name="sls[<?= $index ?>][nama_sls]" id="nama_sls_<?= $index ?>" value="<?= esc($slsItem['nama_sls']) ?>" placeholder="Masukkan Nama SLS/Non SLS" required />
+                                                                    <input type="text" class="form-control w_90" name="sls[<?= $index ?>][nama_sls]" id="nama_sls_<?= $index ?>" value="<?= esc($slsItem['nama_sls']) ?>" placeholder="Masukkan Nama RT/RW" required />
                                                                 </div>
                                                                 <div class="form-group col-md-1">
                                                                     <a href="<?php echo base_url('data/deleteSls/' . $slsItem['sls_id']) ?>/<?= ($slsItem['data_id']) ?>" class="removeInput btn btn-sm btn-danger" type="button" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
@@ -125,12 +125,46 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php for ($i = 6; $i < 12; $i++): ?>
+                            <?php $i = 6;?>
                                 <div class="form-group">
                                     <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
                                     <input type="number" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
                                 </div>
-                            <?php endfor ?>
+                            <?php ?>
+                            <label>203. Koordinat lokasi kegiatan pemerintahan desa/kelurahan<br/>
+                            &ensp; 1. Koordinat
+                            </label>
+                            <?php $i = 8;?>
+                                <div class="form-group">
+                                &ensp; &ensp; <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
+                                    <input type="number" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
+                                </div>
+                            <?php ?>
+                            <div class="form-group">
+                                <!-- <label>Garis Lintang</label> -->
+                                <div style="margin-bottom:-9.5px;">
+                                &ensp; &ensp; <div class="form-check-inline">
+                                    <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R203B1_LA0" value="1" <?php if ($data['R203B1_LA0'] == 1) echo "checked"; ?>>
+                                        <label class="form-check-label">Lintang Utara (LU)</label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R203B1_LA0" value="2" <?php if ($data['R203B1_LA0'] == 2) echo "checked"; ?>>
+                                        <label class="form-check-label">Lintang Selatan (LS)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php $i = 10;?>
+                                <div class="form-group">
+                                &ensp;&ensp;  <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
+                                    <input type="number" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
+                                </div>
+                            <?php ?>
+                            <?php $i = 11;?>
+                                <div class="form-group">
+                                &ensp; <label for="">2. <?php echo $ques[$i]['ques_label'] ?></label>
+                                    <input type="number" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
+                                </div>
+                            <?php ?>
                         </div>
                     </div>
                 </div>
@@ -179,7 +213,7 @@
             e.preventDefault();
             if(x < max_fields){ //max input box allowed
                 x++; //text box increment
-                $(wrapper).append('<div id="row'+x+'" class="col-md-12 p-0"><div class="col-md-12 form_field_outer p-0"><div class="row form_field_outer_row"><div class="form-group col-md-5"><input type="text" class="form-control w_90" name="new_sls['+x+'][kode_sls]" id="kd" placeholder="Masukkan Kode SLS/Non SLS" required /></div><div class="form-group col-md-6"><input type="text" class="form-control w_90" name="new_sls['+x+'][nama_sls]" id="nm" placeholder="Masukkan Nama SLS/Non SLS" required /></div><div class="form-group col-md-1"><button id="'+x+'" class="removeInput btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button></div></div></div></div>'); //add input box
+                $(wrapper).append('<div id="row'+x+'" class="col-md-12 p-0"><div class="col-md-12 form_field_outer p-0"><div class="row form_field_outer_row"><div class="form-group col-md-5"><input type="text" class="form-control w_90" name="new_sls['+x+'][kode_sls]" id="kd" placeholder="Masukkan Nomor Urut" required /></div><div class="form-group col-md-6"><input type="text" class="form-control w_90" name="new_sls['+x+'][nama_sls]" id="nm" placeholder="Masukkan Nama RT/RW" required /></div><div class="form-group col-md-1"><button id="'+x+'" class="removeInput btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button></div></div></div></div>'); //add input box
             }
         });
 

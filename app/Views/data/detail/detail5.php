@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_podes">Data Potensi Desa</a></li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
                     <li class="breadcrumb-item active">Detail Data Potensi Desa</li>
                 </ol>
             </div>
@@ -19,7 +19,6 @@
 <section class="content">
     <div class="container-fluid">
         <!-- Default box -->
-        <form action="<?php echo base_url('data/save5/').$data['data_id']  ?>" method="POST">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -30,7 +29,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <h5>Keberadaan sarana pendidikan menurut jenjang pendidikan di desa/kelurahan</h5>
+                                    <h5>601. Keberadaan sarana pendidikan menurut jenjang pendidikan di desa/kelurahan</h5>
                                 </div>
                                 <table class="table table-bordered">
                                     <thead style="text-align:center;vertical-align: middle;">
@@ -41,34 +40,50 @@
                                     </thead>
                                     <tbody>
                                         <?php 
-                                        $interval = 4; 
+                                        $interval = 4;
+                                        $k = 603;
                                         for ($i = 201; $i < 258; $i += $interval): 
                                             if ($i == 253) {
                                                 $interval = 1;
+                                            } else if ($i >= 240 && $i < 253) {
+                                                $interval = 2;
                                             }
                                         ?>
                                         <tr>
+                                            <!-- Input Left -->
                                             <td>
                                                 <?php if ($i == 253 || $i == 254): ?>
                                                     <!-- Kosongkan kolom input-left untuk $i == 253 -->
                                                 <?php else: ?>
                                                     <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
-                                                    <input type="number" id="input-lefts-<?php echo $i ?>" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" oninput="checkInputs(<?php echo $i ?>)">
+                                                    <input type="number" id="input-lefts-<?php echo $i ?>" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" oninput="checkInputs(<?php echo $i ?>, <?php echo $k ?>, <?php echo $k + 1 ?>)">
                                                 <?php endif; ?>
+                                                <!-- Input below Left -->
+                                                <div id="input-below-left-<?php echo $k ?>" style="display: none; margin-top: 10px;">
+                                                    <label for=""><?php echo $ques[$k]['ques_label'] ?></label>
+                                                    <input type="text" id="input-lefts-below-<?php echo $k ?>" name="<?php echo $ques[$k]['dataKey']?>" value="<?php echo $data[$ques[$k]['dataKey']] ?>" class="form-control">
+                                                </div>
                                             </td>
+
+                                            <!-- Input Right -->
                                             <td>
                                                 <?php if ($i == 253): ?>
                                                     <!-- Tampilkan input-left di kolom input-right untuk $i == 253 -->
                                                     <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
-                                                    <input type="number" id="input-rights-<?php echo $i ?>" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" oninput="checkInputs(<?php echo $i ?>)">
+                                                    <input type="number" id="input-rights-<?php echo $i ?>" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" oninput="checkInputs(<?php echo $i ?>, <?php echo $k ?>, <?php echo $k + 1 ?>)">
                                                 <?php elseif ($i == 254): ?>
                                                     <!-- Tampilkan input-left di kolom input-right untuk $i == 255, di bawah $i == 253 -->
                                                     <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
-                                                    <input type="number" id="input-rights-<?php echo $i ?>" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" oninput="checkInputs(<?php echo $i ?>)">
+                                                    <input type="number" id="input-rights-<?php echo $i ?>" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" oninput="checkInputs(<?php echo $i ?>, <?php echo $k ?>, <?php echo $k + 1 ?>)">
                                                 <?php else: ?>
                                                     <label for=""><?php echo $ques[$i+1]['ques_label'] ?></label>
-                                                    <input type="number" id="input-rights-<?php echo $i ?>" name="<?php echo $ques[$i + 1]['dataKey']?>" value="<?php echo $data[$ques[$i + 1]['dataKey']] ?>" class="form-control" oninput="checkInputs(<?php echo $i ?>)">
+                                                    <input type="number" id="input-rights-<?php echo $i ?>" name="<?php echo $ques[$i + 1]['dataKey']?>" value="<?php echo $data[$ques[$i + 1]['dataKey']] ?>" class="form-control" oninput="checkInputs(<?php echo $i ?>, <?php echo $k ?>, <?php echo $k + 1 ?>)">
                                                 <?php endif; ?>
+                                                <!-- Input below Right -->
+                                                <div id="input-below-right-<?php echo $k + 1 ?>" style="display: none; margin-top: 10px;">
+                                                    <label for=""><?php echo $ques[$k + 1]['ques_label'] ?></label>
+                                                    <input type="text" id="input-rights-below-<?php echo $k + 1 ?>" name="<?php echo $ques[$k + 1]['dataKey']?>" value="<?php echo $data[$ques[$k + 1]['dataKey']] ?>" class="form-control">
+                                                </div>
                                             </td>
                                             <td id="pendidikan-<?php echo $i ?>" class="pendidikan" style="display:none;">
                                                 <?php if ($i < 244 || $i > 256): ?>
@@ -104,21 +119,29 @@
                                                     </div>
                                                 </div>
                                                 <?php endif; ?>
-                                            </td>
                                         </tr>
                                         <?php 
-                                            if ($i >= 246 && $i < 253) {
+                                            if ($i >= 244 && $i < 253) {
                                                 $interval = 2;
                                             } elseif ($i == 253) {
                                                 $interval = 1;
                                             } else {
                                                 $interval = 4;
                                             }
+
+                                            // Increment $k to match the required mapping
+                                            $intervalK = 2;
+                                            
+                                            if ($k >= 631) {
+                                                $intervalK = 1;
+                                            }
+                                            $k += $intervalK;
                                         ?>
                                         <?php endfor ?>
                                     </tbody>
                                 </table>
                                 <hr/>
+                                <h5>602. </h5>
                                 <?php for ($i = 256; $i < 259; $i++): ?>
                                     <div class="form-group">
                                         <label><?php echo $ques[$i]['ques_label']?></label>
@@ -135,7 +158,7 @@
                                     </div>
                                 <?php endfor?>
                                 <hr/>
-                                <h5>Keberadaan sarana/prasarana keterampilan di desa/kelurahan, sebutkan namanya</h5>
+                                <h5>603. Keberadaan sarana/prasarana keterampilan di desa/kelurahan, sebutkan namanya</h5>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <?php for ($i = 259; $i < 263; $i++): ?>
@@ -156,8 +179,30 @@
                                 </div>
                                 <hr/>
                                 <div class="form-group">
-                                    <h5>Keberadaan sarana kesehatan di desa/kelurahan</h5>
-                                    <div class="row">
+                                    <h5>604. Keberadaan sarana kesehatan di desa/kelurahan</h5>
+                                    <table class="table table-bordered">
+                                        <thead style="text-align:center;vertical-align: middle;">
+                                            <tr>
+                                                <th style="width: 33%;">Jumlah sarana kesehatan</th>
+                                                <th style="width: 67%;">Sebutkan namanya</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php for ($i = 266; $i < 279; $i ++): ?>
+                                            <tr>
+                                                <td class="col-4">
+                                                    <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
+                                                    <input type="number" id="jumlah-<?php echo $i ?>" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" oninput="checkInput(<?php echo $i ?>)">
+                                                </td>
+                                                <td class="col-8" id="name-<?php echo $i ?>" style="display: none;">
+                                                    <label for=""><?php echo $ques[$i + 370]['ques_label'] ?></label>
+                                                    <input type="text" id="nama-<?php echo $i ?>" name="<?php echo $ques[$i + 370]['dataKey']?>" value="<?php echo $data[$ques[$i + 370]['dataKey']] ?>" class="form-control">
+                                                </td>
+                                            </tr>
+                                            <?php endfor ?>
+                                        </tbody>
+                                    </table>
+                                    <!-- <div class="row">
                                         <div class="col-md-6">
                                             <?php for ($i = 266; $i < 273; $i++): ?>
                                             <div class="form-group">
@@ -174,11 +219,11 @@
                                             </div>
                                             <?php endfor?>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <hr/>
                                 <div class="form-group">
-                                    <h5>Jumlah Upaya Kesehatan Bersumberdaya Masyarakat (UKBM) selama <b>setahun terakhir</b></h5>
+                                    <h5>605. Jumlah Upaya Kesehatan Bersumberdaya Masyarakat (UKBM) selama <b>setahun terakhir</b></h5>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <?php for ($i = 279; $i < 282; $i++): ?>
@@ -200,7 +245,7 @@
                                 </div>
                                 <hr/>
                                 <div class="form-group">
-                                    <h5>Tenaga kesehatan yang tinggal/menetap di desa/kelurahan</h5>
+                                    <h5>606. Tenaga kesehatan yang tinggal/menetap di desa/kelurahan</h5>
                                     <div class="row">
                                         <?php for ($i = 284; $i < 294; $i += 2): ?>
                                             <div class="col-md-12 input-pair">
@@ -216,8 +261,9 @@
                                         <?php endfor ?>
                                     </div>
                                 </div>
+                                <hr/>
                                 <div class="form-group">
-                                    <label>Keberadaan Bidan Di Desa (BDD)</label>
+                                    <label>607. Keberadaan Bidan Di Desa (BDD)</label>
                                     <div style="margin-bottom:-9.5px;">
                                         <div class="form-check-inline">
                                             <input class="form-check-input" oninput='on_change1(event)' type="radio" name="R707" value="1" <?php if ($data['R707'] == 1) echo "checked"; ?>>
@@ -229,6 +275,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr/>
                                 <div class="form-group">
                                     <?php for ($i = 295; $i < 298; $i++): ?>
                                     <div class="form-group">
@@ -293,38 +340,10 @@
                 <a href="<?php echo base_url('data/detail6/'.$data['data_id'])?>"><button type="button" name="next" class="btn btn-md btn-info float-md-right">Selanjutnya&ensp;<i class="fas fa-arrow-right"></i></button></a>
             </div>
         </div>
-        </form>
     </div>
 </section>
 
-<script>
-    function checkValue(index) {
-        // Ambil nilai dari input kiri
-        var leftInput = document.getElementById('input-' + index).value;
-
-        // Ambil elemen input kanan
-        var rightInput = document.getElementById('right-input-' + (index + 1));
-
-        // Jika nilai lebih besar dari 1, tampilkan input kanan, jika tidak, sembunyikan
-        if (leftInput > 0) {
-            rightInput.style.display = 'block';
-        } else {
-            rightInput.style.display = 'none';
-        }
-    }
-
-    function checkInputs(index) {
-        var leftInput = document.getElementById('input-lefts-' + index) ? document.getElementById('input-lefts-' + index).value : 0;
-        var rightInput = document.getElementById('input-rights-' + index) ? document.getElementById('input-rights-' + index).value : 0;
-        var pendidikan = document.getElementById('pendidikan-' + index);
-
-        if ((index < 247 || index > 256) && leftInput == 0 && rightInput == 0) {
-            pendidikan.style.display = 'table-cell';
-        } else {
-            pendidikan.style.display = 'none';
-        }
-    }
-
+<script> 
     // Jalankan fungsi checkInputs pada awal saat halaman dimuat untuk memastikan kondisi awal
     window.onload = function() {
         let inputs = document.querySelectorAll('input');
@@ -341,7 +360,7 @@
         <?php endfor ?>
 
         <?php for ($i = 201; $i < 257; $i += 4): ?>
-            checkInputs(<?php echo $i ?>);
+            checkInputs(<?php echo $i ?>, <?php echo $i + 402 ?>, <?php echo $i + 403 ?>);
         <?php endfor ?>
 
         <?php for ($i = 298; $i < 328; $i += 3): ?>
@@ -354,7 +373,73 @@
             }
         <?php endfor ?>
     };
+    function checkValue(index) {
+        // Ambil nilai dari input kiri
+        var leftInput = document.getElementById('input-' + index).value;
 
+        // Ambil elemen input kanan
+        var rightInput = document.getElementById('right-input-' + (index + 1));
+
+        // Jika nilai lebih besar dari 1, tampilkan input kanan, jika tidak, sembunyikan
+        if (leftInput > 0) {
+            rightInput.style.display = 'block';
+        } else {
+            rightInput.style.display = 'none';
+        }
+    }
+
+    // function checkInputs(index) {
+    //     var leftInput = document.getElementById('input-lefts-' + index) ? document.getElementById('input-lefts-' + index).value : 0;
+    //     var rightInput = document.getElementById('input-rights-' + index) ? document.getElementById('input-rights-' + index).value : 0;
+    //     var pendidikan = document.getElementById('pendidikan-' + index);
+
+    //     if ((index < 247 || index > 256) && leftInput == 0 && rightInput == 0) {
+    //         pendidikan.style.display = 'table-cell';
+    //     } else {
+    //         pendidikan.style.display = 'none';
+    //     }
+    // }
+    function checkInputs(index, kLeft, kRight) {
+        // Get the main input elements
+        var leftInput = document.getElementById('input-lefts-' + index);
+        var rightInput = document.getElementById('input-rights-' + index);
+
+        // Get the below input elements corresponding to the main inputs
+        var leftBelowInput = document.getElementById('input-below-left-' + kLeft);
+        var rightBelowInput = document.getElementById('input-below-right-' + kRight);
+        var pendidikan = document.getElementById('pendidikan-' + index);
+
+        // console.log("Checking inputs for index: " + index);
+        // console.log("Left Input Value: ", leftInput ? leftInput.value : "N/A");
+        // console.log("Right Input Value: ", rightInput ? rightInput.value : "N/A");
+
+        // Handle the pendidikan row display
+        if ((index < 247 || index > 256) && ((!leftInput.value && !rightInput.value) || (leftInput.value == 0 && rightInput.value == 0))) {
+            pendidikan.style.display = 'table-cell';
+            // console.log("Pendidikan row shown for index: " + index);
+        } else {
+            pendidikan.style.display = 'none';
+            // console.log("Pendidikan row hidden for index: " + index);
+        }
+
+        // Show/hide the leftBelowInput based on the leftInput's value
+        if (leftInput && leftBelowInput) {
+            if (leftInput.value > 0) {
+                leftBelowInput.style.display = 'block';
+            } else {
+                leftBelowInput.style.display = 'none';
+            }
+        }
+
+        // Show/hide the rightBelowInput based on the rightInput's value
+        if (rightInput && rightBelowInput) {
+            if (rightInput.value > 0) {
+                rightBelowInput.style.display = 'block';
+            } else {
+                rightBelowInput.style.display = 'none';
+            }
+        }
+    }
     function onRadioChange(index, isAda) {
         // Ambil elemen berdasarkan index
         var penderita = document.getElementById('jumlah-penderita-' + index);
@@ -369,6 +454,25 @@
             meninggal.style.display = 'none';
         }
     }
+
+    function checkInput(index) {
+        var jumlahInput = document.getElementById('jumlah-' + index);
+        var nameCell = document.getElementById('name-' + index);
+
+        if (jumlahInput.value > 0) {
+            nameCell.style.display = 'table-cell';
+        } else {
+            nameCell.style.display = 'none';
+        }
+    }
+
+    // Initialize the display state based on existing values
+    document.addEventListener('DOMContentLoaded', function() {
+        <?php for ($i = 266; $i < 279; $i ++): ?>
+            checkInput(<?php echo $i; ?>);
+        <?php endfor; ?>
+    });
+
 </script>
 
 <style>

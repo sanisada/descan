@@ -68,8 +68,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <base href="<?php echo base_url('/data_podes')?>/">
-    <a href="<?= base_url('/data_podes'); ?>" class="brand-link">
+    <base href="<?php echo base_url('/data_prospera')?>/">
+    <a href="<?= base_url('/data_prospera'); ?>" class="brand-link">
       <img  src="<?php echo base_url('assets')?>/dist/img/logo.png" alt="logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">PROSPERA CANTIK</span>
     </a>
@@ -82,7 +82,7 @@
           <img  src="<?php echo base_url('assets')?>/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= base_url('/data_podes'); ?>" class="d-block"><?php $session = session();
+          <a href="<?= base_url('/data_prospera'); ?>" class="d-block"><?php $session = session();
             echo $session->get('user_name'); ?></a>
         </div>
       </div>

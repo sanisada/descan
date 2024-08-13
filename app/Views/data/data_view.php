@@ -97,7 +97,8 @@
                     <label for="tahun">Tahun</label><br>
                     <select name="tahun" id="tahun" class="custom-select custom-select-md mb-3">
                         <?php
-                        for ($i = date("Y") - 3; $i <= date("Y"); $i++) {
+                        $currentYear = date("Y");
+                        for ($i = 2021; $i <= $currentYear; $i++) {
                             echo '<option value="' . $i . '">' . $i . '</option>' . PHP_EOL;
                         }
                         ?>
