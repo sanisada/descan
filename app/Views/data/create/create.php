@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Tambah Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Tambah Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Tambah Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Tambah Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -128,7 +128,7 @@
                             <?php $i = 6;?>
                                 <div class="form-group">
                                     <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
-                                    <input type="number" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
+                                    <input type="text" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
                                 </div>
                             <?php ?>
                             <label>203. Koordinat lokasi kegiatan pemerintahan desa/kelurahan<br/>
@@ -137,7 +137,7 @@
                             <?php $i = 8;?>
                                 <div class="form-group">
                                 &ensp; &ensp; <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
-                                    <input type="number" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
+                                    <input type="text" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
                                 </div>
                             <?php ?>
                             <div class="form-group">
@@ -156,13 +156,13 @@
                             <?php $i = 10;?>
                                 <div class="form-group">
                                 &ensp;&ensp;  <label for=""><?php echo $ques[$i]['ques_label'] ?></label>
-                                    <input type="number" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
+                                    <input type="text" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
                                 </div>
                             <?php ?>
                             <?php $i = 11;?>
                                 <div class="form-group">
                                 &ensp; <label for="">2. <?php echo $ques[$i]['ques_label'] ?></label>
-                                    <input type="number" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
+                                    <input type="text" name="<?php echo $ques[$i]['dataKey'] ?>" value="<?php echo $data[$ques[$i]['dataKey']] ?>" class="form-control" required>
                                 </div>
                             <?php ?>
                         </div>

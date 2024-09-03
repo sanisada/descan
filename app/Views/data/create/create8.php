@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Tambah Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Tambah Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Tambah Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Tambah Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="background-color: #042165;">
-                        <h3 class="card-title text-white">xI. KEAMANAN</h3>
+                        <h3 class="card-title text-white">XI. KEAMANAN</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">

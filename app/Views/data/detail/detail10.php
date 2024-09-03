@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Detail Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Detail Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Detail Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Detail Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -215,8 +215,28 @@
     </div>
 </section>
 
-
 <script>
+    function onRadioChange(event, rowNumber) {
+        const value = event.target.value;
+        const row = document.querySelector(`tr[data-row="${rowNumber}"]`);
+        const extraColumns = row.querySelectorAll('.extra-column');
+
+        if (value == "1") { // Jika "Ada" dipilih
+            extraColumns.forEach(column => column.classList.remove('hidden'));
+        } else { // Jika "Tidak ada" dipilih
+            extraColumns.forEach(column => column.classList.add('hidden'));
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Inisialisasi tampilan kolom berdasarkan nilai yang sudah ada saat memuat halaman
+        document.querySelectorAll('tr[data-row]').forEach(row => {
+            const radioAda = row.querySelector('input[type="radio"][value="1"]');
+            if (radioAda.checked) {
+                onRadioChange({ target: radioAda }, row.getAttribute('data-row'));
+            }
+        });
+    });
 
     function checkValue(index) {
         // Ambil nilai dari input kiri
@@ -233,6 +253,16 @@
         }
     }
 
+    function on_change3(el){
+        var selectedOption = el.target.value;
+        if (selectedOption === '1') {
+        document.getElementById('R1404').style.display = 'block';
+        } else {
+        document.getElementById('R1404').style.display = 'none'; // Hide el
+        }
+        window.localStorage.setItem('R1404', selectedOption);
+    }
+
     window.onload = function() {
         let inputs = document.querySelectorAll('input');
         inputs.forEach(input => {
@@ -242,7 +272,7 @@
                 input.readOnly = true;
             }
         });
-
+        // Jalankan fungsi checkValue pada awal saat halaman dimuat untuk memastikan kondisi awal
         <?php for ($i = 590; $i < 597; $i += 2): ?>
             checkValue(<?php echo $i ?>);
         <?php endfor ?>

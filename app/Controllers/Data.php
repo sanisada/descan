@@ -5,11 +5,14 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\data_model;
+use App\Models\data2_model;
 use App\Models\kec_model;
 use App\Models\desa_model;
 use App\Models\ques_model;
 use App\Models\sls_model;
 use App\Models\user_model;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Data extends BaseController
 {
@@ -166,17 +169,26 @@ class Data extends BaseController
     public function detail5($id)
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
-            'sls' => $this->slsModel->getSlsByDesaId($id),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
+
 
         return view('templates/header')
                 . view('templates/menu')
@@ -187,17 +199,26 @@ class Data extends BaseController
     public function detail6($id)
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
-            'sls' => $this->slsModel->getSlsByDesaId($id),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
+
 
         return view('templates/header')
                 . view('templates/menu')
@@ -208,17 +229,26 @@ class Data extends BaseController
     public function detail7($id)
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
-            'sls' => $this->slsModel->getSlsByDesaId($id),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
+
 
         return view('templates/header')
                 . view('templates/menu')
@@ -229,17 +259,25 @@ class Data extends BaseController
     public function detail8($id)
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
-            'sls' => $this->slsModel->getSlsByDesaId($id),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -250,17 +288,25 @@ class Data extends BaseController
     public function detail9($id)
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
-            'sls' => $this->slsModel->getSlsByDesaId($id),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -271,17 +317,25 @@ class Data extends BaseController
     public function detail10($id)
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
-            'sls' => $this->slsModel->getSlsByDesaId($id),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -365,14 +419,23 @@ class Data extends BaseController
     public function create5($data_id)
     {
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($data_id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];    
 
         return view('templates/header')
                 . view('templates/menu')
@@ -383,14 +446,23 @@ class Data extends BaseController
     public function create6($data_id)
     {
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($data_id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -401,14 +473,23 @@ class Data extends BaseController
     public function create7($data_id)
     {
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($data_id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -419,14 +500,23 @@ class Data extends BaseController
     public function create8($data_id)
     {
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($data_id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -437,14 +527,23 @@ class Data extends BaseController
     public function create9($data_id)
     {
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($data_id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -455,14 +554,23 @@ class Data extends BaseController
     public function create10($data_id)
     {
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($data_id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
             'kecamatan' => $this->kecamatanModel->findAll(),
             'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -472,21 +580,40 @@ class Data extends BaseController
 
     public function tambah_data()
     {
-        //load helper form and URL
+        // Load helper form and URL
         helper(['form', 'url']);
         $dataModel = new data_model();
+        $data2Model = new data2_model(); // Make sure you have a model for the 'data2' table
         
-        //insert data into database
-        $dataModel->insert([
-            'Tahun'   => $this->request->getPost('tahun'),
-        ]);
-        
-        $data_id = $dataModel->getInsertID();
+        // Generate a unique ID
+        $uniqueId = $this->generateUniqueId();
 
-        //flash message
+        // Insert data into the first table
+        $data = [
+            'data_id'     => $uniqueId, // Use the generated unique ID
+            'Tahun'  => $this->request->getPost('tahun'),
+            // Add other fields as necessary
+        ];
+        
+        $dataModel->insert($data);
+
+        // Insert data into the second table
+        $data2Model->insert([
+            'data_id' => $uniqueId, // Use the same unique ID for the foreign key in 'data2'
+            // Add other columns from the 'data2' table here
+        ]);
+
+        // Flash message
         session()->setFlashdata('message', 'Data Berhasil Disimpan');
 
-        return redirect()->to(base_url('data/create/'.$data_id));
+        // Redirect using the unique ID
+        return redirect()->to(base_url('data/create/'.$uniqueId));
+    }
+
+    // Example of a method to generate a unique ID
+    private function generateUniqueId()
+    {
+        return uniqid('', true); // This generates a unique ID based on the current time in microseconds
     }
 
     public function save1($data_id)
@@ -494,29 +621,21 @@ class Data extends BaseController
         // Load model
         $dataModel = new data_model();
 
-        // // Load Form Validation Library
-        // $validation = \Config\Services::validation();
+        // Ambil data dari form
+        $kode_kec = (string)$this->request->getPost('R103');
+        $kode_desa = (string)$this->request->getPost('R104');
+        
+        $kecamatanModel = $this->kecamatanModel;
+        // Ambil label dari data kecamatan berdasarkan kode_kec
+        $kecamatan = $kecamatanModel->where('kode_kec', $kode_kec)->first();
 
-        // // Set validation rules
-        // $validation->setRules([
-        //     'R103' => 'required',
-        //     'R104' => 'required',
-        //     'R105' => 'required',
-        //     'R201' => 'required',
-        //     'R202' => 'required',
-        //     'R203B1_LAT' => 'required',
-        //     'R203B1_LA0' => 'required',
-        //     'R203B1_LON' => 'required',
-        //     'R203B2' => 'required'
-        // ]);
-
-        // // Run validation
-        // if (!$validation->withRequest($this->request)->run()) {
-        //     // Validation failed, load the form again with validation errors
-        //     return view('your_form_view', [
-        //         'validation' => $validation
-        //     ]);
-        // }
+        $desaModel = $this->desaModel;
+        // Ambil label dari data kecamatan berdasarkan kode_kec
+        $desa = $desaModel->where('kode_desa', $kode_desa)->first();
+        
+        if (!$kecamatan) {
+            throw new \Exception('Kecamatan tidak ditemukan '  . $kecamatan['kecamatan']);
+        }
 
         // Validation passed, proceed to update data in the database
         $requestData = $this->request->getPost();
@@ -524,7 +643,9 @@ class Data extends BaseController
             'R101'   => 'Lampung',
             'R102'   => 'Pringsewu',
             'R103'   => $requestData['R103'],
+            'R103N'  => $kecamatan['kecamatan'],
             'R104' => $requestData['R104'],
+            'R104N'  => $desa['desa'],
             'R105' => $requestData['R105'],
             'R202'   => $requestData['R202'],
             // 'R203B1'   => $requestData['R203B1'],
@@ -857,11 +978,17 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
-        // $data_id = $this->uri->getSegment(3);
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        //insert data into database
-        $dataModel->update($data_id, [
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+        try {
+            $updateData = [
             'R601AK2'   => $this->request->getPost('R601AK2'),
             'R601AK3'   => $this->request->getPost('R601AK3'),
             'R601AK4'   => $this->request->getPost('R601AK4'),
@@ -1034,7 +1161,15 @@ class Data extends BaseController
             'R604KK2S'   => $this->request->getPost('R604KK2S'),
             'R604LK2S'   => $this->request->getPost('R604LK2S'),
             'R604MK2S'   => $this->request->getPost('R604MK2S')
-        ]);
+        ];
+        print_r($updateData);
+    
+        // Insert data into the database
+        $data2Model->update($data_id, $updateData);
+        echo "Data berhasil diupdate.";
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/create6/'.$data_id));
     }
@@ -1043,7 +1178,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
@@ -1140,7 +1275,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
@@ -1251,33 +1386,33 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
         $dataModel->update($data_id, [
-            'R110301K3'   => $this->request->getPost('R110301K3'),
-            'R110301K4'   => $this->request->getPost('R110301K4'),
-            'R110302K3'   => $this->request->getPost('R110302K3'),
-            'R110302K4'   => $this->request->getPost('R110302K4'),
-            'R110303K3'   => $this->request->getPost('R110303K3'),
-            'R110303K4'   => $this->request->getPost('R110303K4'),
-            'R110304K3'   => $this->request->getPost('R110304K3'),
-            'R110304K4'   => $this->request->getPost('R110304K4'),
-            'R110305K3'   => $this->request->getPost('R110305K3'),
-            'R110305K4'   => $this->request->getPost('R110305K4'),
-            'R110306K3'   => $this->request->getPost('R110306K3'),
-            'R110306K4'   => $this->request->getPost('R110306K4'),
-            'R110307K3'   => $this->request->getPost('R110307K3'),
-            'R110307K4'   => $this->request->getPost('R110307K4'),
-            'R110308K3'   => $this->request->getPost('R110308K3'),
-            'R110308K4'   => $this->request->getPost('R110308K4'),
-            'R110309K3'   => $this->request->getPost('R110309K3'),
-            'R110309K4'   => $this->request->getPost('R110309K4'),
-            'R110310K3'   => $this->request->getPost('R110310K3'),
-            'R110310K4'   => $this->request->getPost('R110310K4'),
-            'R110311K3'   => $this->request->getPost('R110311K3'),
-            'R110311K4'   => $this->request->getPost('R110311K4'),
+            'R110101K3'   => $this->request->getPost('R110101K3'),
+            'R110101K4'   => $this->request->getPost('R110101K4'),
+            'R110102K3'   => $this->request->getPost('R110102K3'),
+            'R110102K4'   => $this->request->getPost('R110102K4'),
+            'R110103K3'   => $this->request->getPost('R110103K3'),
+            'R110103K4'   => $this->request->getPost('R110103K4'),
+            'R110104K3'   => $this->request->getPost('R110104K3'),
+            'R110104K4'   => $this->request->getPost('R110104K4'),
+            'R110105K3'   => $this->request->getPost('R110105K3'),
+            'R110105K4'   => $this->request->getPost('R110105K4'),
+            'R110106K3'   => $this->request->getPost('R110106K3'),
+            'R110106K4'   => $this->request->getPost('R110106K4'),
+            'R110107K3'   => $this->request->getPost('R110107K3'),
+            'R110107K4'   => $this->request->getPost('R110107K4'),
+            'R110108K3'   => $this->request->getPost('R110108K3'),
+            'R110108K4'   => $this->request->getPost('R110108K4'),
+            'R110109K3'   => $this->request->getPost('R110109K3'),
+            'R110109K4'   => $this->request->getPost('R110109K4'),
+            'R110110K3'   => $this->request->getPost('R110110K3'),
+            'R110110K4'   => $this->request->getPost('R110110K4'),
+            'R110111K3'   => $this->request->getPost('R110111K3'),
+            'R110111K4'   => $this->request->getPost('R110111K4'),
             'R1102'   => $this->request->getPost('R1102'),
             'R1103'   => $this->request->getPost('R1103'),
             'R1103S'   => $this->request->getPost('R1103S'),
@@ -1314,7 +1449,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
@@ -1361,7 +1496,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
@@ -1477,14 +1612,25 @@ class Data extends BaseController
     public function edit5()
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
+            'kecamatan' => $this->kecamatanModel->findAll(),
+            'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -1495,14 +1641,25 @@ class Data extends BaseController
     public function edit6()
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
+            'kecamatan' => $this->kecamatanModel->findAll(),
+            'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -1513,14 +1670,25 @@ class Data extends BaseController
     public function edit7()
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
+            'kecamatan' => $this->kecamatanModel->findAll(),
+            'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -1531,14 +1699,25 @@ class Data extends BaseController
     public function edit8()
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
+            'kecamatan' => $this->kecamatanModel->findAll(),
+            'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -1549,14 +1728,25 @@ class Data extends BaseController
     public function edit9()
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
+            'kecamatan' => $this->kecamatanModel->findAll(),
+            'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -1567,14 +1757,25 @@ class Data extends BaseController
     public function edit10()
     {
         $request = $this->request;
-        $id = $request->getUri()->getSegment(3);
+        $data_id = $request->getUri()->getSegment(3);
         // model initialize
-        $dataModel = new data_model();
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
-        $data = array(
-            'data' => $dataModel->find($id),
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+    
+        // Prepare the data array for the view
+        $data = [
+            'data' => $joinedData,
+            'kecamatan' => $this->kecamatanModel->findAll(),
+            'desa' => $this->desaModel->findAll(),
             'ques' => $this->quesModel->findAll()
-        );
+        ];   
 
         return view('templates/header')
                 . view('templates/menu')
@@ -1926,11 +2127,18 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
-        // $data_id = $this->uri->getSegment(3);
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
 
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+        try {
         //insert data into database
-        $dataModel->update($data_id, [
+        $data2Model->update($data_id, [
             'R601AK2'   => $this->request->getPost('R601AK2'),
             'R601AK3'   => $this->request->getPost('R601AK3'),
             'R601AK4'   => $this->request->getPost('R601AK4'),
@@ -2105,6 +2313,10 @@ class Data extends BaseController
             'R604LK2S'   => $this->request->getPost('R604LK2S'),
             'R604MK2S'   => $this->request->getPost('R604MK2S')
         ]);
+            echo "Data berhasil diupdate.";
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/edit6/'.$data_id));
     }
@@ -2113,7 +2325,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
@@ -2210,7 +2422,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
@@ -2310,33 +2522,33 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
         $dataModel->update($data_id, [
-            'R110301K3'   => $this->request->getPost('R110301K3'),
-            'R110301K4'   => $this->request->getPost('R110301K4'),
-            'R110302K3'   => $this->request->getPost('R110302K3'),
-            'R110302K4'   => $this->request->getPost('R110302K4'),
-            'R110303K3'   => $this->request->getPost('R110303K3'),
-            'R110303K4'   => $this->request->getPost('R110303K4'),
-            'R110304K3'   => $this->request->getPost('R110304K3'),
-            'R110304K4'   => $this->request->getPost('R110304K4'),
-            'R110305K3'   => $this->request->getPost('R110305K3'),
-            'R110305K4'   => $this->request->getPost('R110305K4'),
-            'R110306K3'   => $this->request->getPost('R110306K3'),
-            'R110306K4'   => $this->request->getPost('R110306K4'),
-            'R110307K3'   => $this->request->getPost('R110307K3'),
-            'R110307K4'   => $this->request->getPost('R110307K4'),
-            'R110308K3'   => $this->request->getPost('R110308K3'),
-            'R110308K4'   => $this->request->getPost('R110308K4'),
-            'R110309K3'   => $this->request->getPost('R110309K3'),
-            'R110309K4'   => $this->request->getPost('R110309K4'),
-            'R110310K3'   => $this->request->getPost('R110310K3'),
-            'R110310K4'   => $this->request->getPost('R110310K4'),
-            'R110311K3'   => $this->request->getPost('R110311K3'),
-            'R110311K4'   => $this->request->getPost('R110311K4'),
+            'R110101K3'   => $this->request->getPost('R110101K3'),
+            'R110101K4'   => $this->request->getPost('R110101K4'),
+            'R110102K3'   => $this->request->getPost('R110102K3'),
+            'R110102K4'   => $this->request->getPost('R110102K4'),
+            'R110103K3'   => $this->request->getPost('R110103K3'),
+            'R110103K4'   => $this->request->getPost('R110103K4'),
+            'R110104K3'   => $this->request->getPost('R110104K3'),
+            'R110104K4'   => $this->request->getPost('R110104K4'),
+            'R110105K3'   => $this->request->getPost('R110105K3'),
+            'R110105K4'   => $this->request->getPost('R110105K4'),
+            'R110106K3'   => $this->request->getPost('R110106K3'),
+            'R110106K4'   => $this->request->getPost('R110106K4'),
+            'R110107K3'   => $this->request->getPost('R110107K3'),
+            'R110107K4'   => $this->request->getPost('R110107K4'),
+            'R110108K3'   => $this->request->getPost('R110108K3'),
+            'R110108K4'   => $this->request->getPost('R110108K4'),
+            'R110109K3'   => $this->request->getPost('R110109K3'),
+            'R110109K4'   => $this->request->getPost('R110109K4'),
+            'R110110K3'   => $this->request->getPost('R110110K3'),
+            'R110110K4'   => $this->request->getPost('R110110K4'),
+            'R110111K3'   => $this->request->getPost('R110111K3'),
+            'R110111K4'   => $this->request->getPost('R110111K4'),
             'R1102'   => $this->request->getPost('R1102'),
             'R1103'   => $this->request->getPost('R1103'),
             'R1103S'   => $this->request->getPost('R1103S'),
@@ -2373,7 +2585,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
@@ -2420,7 +2632,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data_model();
+        $dataModel = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
@@ -2469,4 +2681,64 @@ class Data extends BaseController
             return redirect()->to(base_url('data_prospera'));
         }
     }
+
+    public function exportToExcel($data_id)
+    {
+        // Initialize models
+        $data1Model = new data_model();
+        $data2Model = new data2_model();
+
+        // Fetch joined data
+        $joinedData = $data1Model->getJoinedData($data_id);
+
+        // Error handling if no data is found
+        if (!$joinedData) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
+        }
+
+        $data = $joinedData;
+
+        // Create a new Spreadsheet object
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+
+        // Set header for Excel columns dynamically
+        $headers = array_keys($data); // Get headers from the first record
+        $col = 'A';
+        foreach ($headers as $header) {
+            $sheet->setCellValue($col . '1', $header);
+            $col++;
+        }
+
+        // Populate the spreadsheet with data
+        $row = 2;
+        $entry = $joinedData;
+        $col = 'A';
+        foreach ($headers as $header) {
+            $sheet->setCellValue($col . $row, $entry[$header]);
+            $col++;
+        }
+
+        $writer = new Xlsx($spreadsheet);
+        $fileName = 'data_prospera_export_' . date('Y-m-d') . '.xlsx';
+        $fileName = preg_replace('/[^a-zA-Z0-9_\-\.]/', '_', $fileName); // Sanitize filename
+
+        // Set headers for file download
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment; filename="' . $fileName . '"');
+        header('Cache-Control: max-age=0');
+
+        // Write file to output
+        try {
+            $writer->save('php://output');
+        } catch (\Exception $e) {
+            // Handle exceptions (e.g., log the error)
+            throw new \RuntimeException('Failed to generate Excel file: ' . $e->getMessage());
+        }
+        exit;
+    }
+
 }

@@ -1,4 +1,3 @@
-<!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -17,7 +16,6 @@
 <body>
     <div class="row">
         <div class="col-md-12">
-
             <?php if (!empty(session()->getFlashdata('message'))) : ?>
                 <div class="alert alert-success">
                     <?= session()->getFlashdata('message'); ?>
@@ -35,26 +33,30 @@
                 </div>
             </form>
 
-            <table class="table table-bordered table-striped" id="metadataTable">
-                <thead class="thead-dark">
-                    <tr>
-                        <th style="text-align:center;">#</th>
-                        <th style="text-align:center;">Rincian</th>
-                        <th style="text-align:center;">Pertanyaan</th>
-                        <th style="text-align:center;">Definisi</th>
-                    </tr>
-                </thead>
-                <tbody id="metadataTableBody">
-                    <?php foreach ($metadata as $key => $data): ?>
-                        <tr>
-                            <td><?= $key + 1 + ($currentPage - 1) * $rowsPerPage; ?></td>
-                            <td><?= esc($data['dataKey']) ?></td>
-                            <td><?= esc($data['label']) ?></td>
-                            <td><?= esc($data['definisi']) ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+            <!-- Accordion for Metadata -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="list-group" id="metadataAccordion">
+                        <?php foreach ($metadata as $key => $data): ?>
+                            <a href="#" class="list-group-item list-group-item-action" id="heading<?= $key ?>" data-toggle="collapse" data-target="#collapse<?= $key ?>" aria-expanded="false" aria-controls="collapse<?= $key ?>">
+                                <p style="white-space: pre-wrap;"><?= esc($data['dataKey']) ?> - <?= esc($data['label']) ?></p>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="accordion" id="metadataAccordionRight">
+                        <?php foreach ($metadata as $key => $data): ?>
+                            <div id="collapse<?= $key ?>" class="collapse" aria-labelledby="heading<?= $key ?>" data-parent="#metadataAccordionRight">
+                                <div class="card card-body">
+                                    <p style="white-space: pre-wrap;"><strong>Pertanyaan:</strong> <?= esc($data['dataKey']) ?> - <?= esc($data['label']) ?></p>
+                                    <p style="white-space: pre-wrap;"><strong>Definisi:</strong> <?= esc($data['definisi']) ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
 
             <div class="pagination">
                 <?= $pager->links('group', 'bootstrap_full') ?>

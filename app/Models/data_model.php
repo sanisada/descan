@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use Ramsey\Uuid\Uuid;
+
+$uuid = Uuid::uuid4()->toString();
 
 class data_model extends Model{
    protected $table = 'data';
@@ -13,7 +16,9 @@ class data_model extends Model{
       'R101',
       'R102',
       'R103',
+      'R103N',
       'R104',
+      'R104N',
       'R105',
       'R201',
       'R202',
@@ -507,28 +512,28 @@ class data_model extends Model{
       'R1007JK2',
       'R1007JK3',
       'R1007JK4',
-      'R110301K3',
-      'R110301K4',
-      'R110302K3',
-      'R110302K4',
-      'R110303K3',
-      'R110303K4',
-      'R110304K3',
-      'R110304K4',
-      'R110305K3',
-      'R110305K4',
-      'R110306K3',
-      'R110306K4',
-      'R110307K3',
-      'R110307K4',
-      'R110308K3',
-      'R110308K4',
-      'R110309K3',
-      'R110309K4',
-      'R110310K3',
-      'R110310K4',
-      'R110311K3',
-      'R110311K4',
+      'R110101K3',
+      'R110101K4',
+      'R110102K3',
+      'R110102K4',
+      'R110103K3',
+      'R110103K4',
+      'R110104K3',
+      'R110104K4',
+      'R110105K3',
+      'R110105K4',
+      'R110106K3',
+      'R110106K4',
+      'R110107K3',
+      'R110107K4',
+      'R110108K3',
+      'R110108K4',
+      'R110109K3',
+      'R110109K4',
+      'R110110K3',
+      'R110110K4',
+      'R110111K3',
+      'R110111K4',
       'R1102',
       'R1103',
       'R1103S',
@@ -672,6 +677,13 @@ class data_model extends Model{
       'R1006HK2S',
       'R1006IK2S'
    ];
+   public function getJoinedData($data_id)
+   {
+      return $this->select('data.*, data2.*')
+                  ->join('data2', 'data2.data_id = data.data_id')
+                  ->where('data.data_id', $data_id)
+                  ->first(); // Or use find() if you expect multiple rows
+   }
 
    public function getAll()
    {
@@ -787,4 +799,14 @@ class data_model extends Model{
                   ->get()
                   ->getRowArray();
    }
+
+   // protected $beforeInsert = ['generateUUID'];
+
+   //  protected function generateUUID(array $data)
+   //  {
+   //      if (empty($data['data']['id'])) {
+   //          $data['data']['id'] = Uuid::uuid4()->toString();
+   //      }
+   //      return $data;
+   //  }
 }

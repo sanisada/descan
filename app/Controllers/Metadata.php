@@ -22,7 +22,7 @@ class Metadata extends BaseController
         
         // Determine the current page and rows per page
         $currentPage = $this->request->getVar('page_group') ?? 1;
-        $rowsPerPage = 10; // Set the number of rows per page
+        $rowsPerPage = 20; // Set the number of rows per page
     
         // Start building the query
         $query = $this->metadataModel->select('*');

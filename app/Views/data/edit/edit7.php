@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Edit Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Edit Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Edit Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Edit Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -37,7 +37,7 @@
                                         <?php for ($i = 410; $i < 412; $i++): ?>
                                             <div class="form-group">
                                                 <label><?php echo $ques[$i]['ques_label']?></label>
-                                                <input type="number" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo ($data[$ques[$i]['dataKey']])?>" class="form-control">
+                                                <input type="number" step="any" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo ($data[$ques[$i]['dataKey']])?>" class="form-control">
                                             </div>
                                         <?php endfor?>
                                     </div>
@@ -45,7 +45,7 @@
                                         <?php for ($i = 412; $i < 414; $i++): ?>
                                             <div class="form-group">
                                                 <label><?php echo $ques[$i]['ques_label']?></label>
-                                                <input type="number" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo ($data[$ques[$i]['dataKey']])?>" class="form-control">
+                                                <input type="number" step="any" name="<?php echo $ques[$i]['dataKey']?>" value="<?php echo ($data[$ques[$i]['dataKey']])?>" class="form-control">
                                             </div>
                                         <?php endfor?>
                                     </div>

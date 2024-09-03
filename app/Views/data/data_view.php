@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Data Potensi Desa</h3>
+                <h3>Data Potensi Pekon</h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item active">Data Potensi Desa</li>
+                    <li class="breadcrumb-item active">Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -14,15 +14,20 @@
 </section>
 
 <section class="content">
+    <?php if (!empty(session()->getFlashdata('message'))) : ?>
+        <div class="alert alert-success">
+            <?= session()->getFlashdata('message'); ?>
+        </div>
+    <?php endif ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-tambah">
-                    <i class="fas fa-plus-square"></i> Data Potensi Desa
+                    <i class="fas fa-plus-square"></i> Tambah Data
                 </button>
                 <div class="card mt-3">
                     <div class="card-header">
-                        <h3 class="card-title">Daftar Data Potensi Desa</h3>
+                        <h3 class="card-title">Daftar Data Potensi Pekon</h3>
                     </div>
                     
                     <!-- /.card-header -->
@@ -35,7 +40,7 @@
                                         <th style="text-align:center;">Desa</th>
                                         <th style="text-align:center;">Kecamatan</th>
                                         <th style="text-align:center;">Tahun</th>
-                                        <th style="text-align:center;">Status</th>
+                                        <!-- <th style="text-align:center;">Status</th> -->
                                         <th style="text-align:center;">Aksi</th>
                                     </tr>
                                 </thead>
@@ -47,18 +52,20 @@
                                         <td><?php echo $data->desa; ?></td>
                                         <td><?php echo $data->kecamatan; ?></td>
                                         <td style="text-align:center;"><?php echo $data->Tahun; ?></td>
-                                        <td style="text-align:center;"><?php echo $data->status; ?></td>
+                                        <!-- <td style="text-align:center;"><?php echo $data->status; ?></td> -->
                                         <td class="text-center">
                                             <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
-                                                    <a href="<?php echo base_url('data/detail/') . $data->data_id; ?>" class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i></a>
+                                                    <a href="<?php echo base_url('data/detail/' . $data->data_id); ?>" class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i></a>
                                                 </li>
                                                 <?php $session = session(); ?>
                                                 <?php if ($session->get('user_role') !== 'Viewer'): ?>
                                                 <li class="list-inline-item">
-                                                    <a href="<?php echo base_url('data/edit/') . $data->data_id; ?>" class="btn btn-success btn-sm" type="button"><i class="fa fa-edit"></i></a>
+                                                    <a href="<?php echo base_url('data/edit/' . $data->data_id); ?>" class="btn btn-success btn-sm" type="button"><i class="fa fa-edit"></i></a>
                                                 </li>
-                                                
+                                                <li class="list-inline-item">
+                                                    <a href="<?= base_url('data/export/' . $data->data_id); ?>" class="btn btn-info btn-sm"><i class="fa fa-download"></i></a>
+                                                    </li>
                                                 <li class="list-inline-item">
                                                     <a href="<?php echo base_url('data/delete/' . $data->data_id); ?>">
                                                         <button onclick="return confirm('Apakah Anda yakin akan menghapus data ini?')" class="btn btn-danger btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="Delete">

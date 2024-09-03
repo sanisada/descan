@@ -26,7 +26,7 @@ class CreateMetadataTable extends Migration
             ],
             'definisi'     => [
                 'type'           => 'VARCHAR',
-				'constraint'     => '600'
+				'constraint'     => '10700'
             ]
             ]);
         

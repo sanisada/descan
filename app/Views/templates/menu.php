@@ -15,15 +15,23 @@
             <a href="/data_prospera" class="nav-link">
               <i class="nav-icon fa fa-newspaper"></i>
               <p>
-                Data Potensi Desa
+                Data Potensi Pekon
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="/metadata" class="nav-link">
-              <i class="nav-icon fa fa-table"></i>
+              <i class="nav-icon fa fa-list"></i>
               <p>
                 Metadata
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/panduan" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Panduan
               </p>
             </a>
           </li>

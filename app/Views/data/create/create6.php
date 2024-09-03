@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Tambah Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Tambah Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Tambah Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Tambah Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -220,22 +220,23 @@
                                         <div style="margin-bottom:-9.5px;">
                                             <div class="form-check-inline">
                                                 <input id="input-radio-ada-<?php echo $i ?>" class="form-check-input" onchange='onRadioChange(<?php echo $i ?>, true)' type="radio" name="<?php echo $ques[$i]['dataKey'] ?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
-                                                <label class="form-check-label">Ada baik</label>
+                                                <label class="form-check-label" for="input-radio-ada-<?php echo $i ?>-1">Ada baik</label>
                                             </div>
                                             <div class="form-check-inline">
                                                 <input id="input-radio-ada-<?php echo $i ?>" class="form-check-input" onchange='onRadioChange(<?php echo $i ?>, true)' type="radio" name="<?php echo $ques[$i]['dataKey'] ?>" value="2" <?php if ($data[$ques[$i]['dataKey']] == 2) echo "checked"; ?>>
-                                                <label class="form-check-label">Ada, rusak sedang</label>
+                                                <label class="form-check-label" for="input-radio-ada-<?php echo $i ?>-2">Ada, rusak sedang</label>
                                             </div>
                                             <div class="form-check-inline">
                                                 <input id="input-radio-ada-<?php echo $i ?>" class="form-check-input" onchange='onRadioChange(<?php echo $i ?>, true)' type="radio" name="<?php echo $ques[$i]['dataKey'] ?>" value="3" <?php if ($data[$ques[$i]['dataKey']] == 3) echo "checked"; ?>>
-                                                <label class="form-check-label">Ada, rusak parah</label>
+                                                <label class="form-check-label" for="input-radio-ada-<?php echo $i ?>-3">Ada, rusak parah</label>
                                             </div>
                                             <div class="form-check-inline">
                                                 <input id="input-radio-tidak-<?php echo $i ?>" class="form-check-input" onchange='onRadioChange(<?php echo $i ?>, false)' type="radio" name="<?php echo $ques[$i]['dataKey'] ?>" value="4" <?php if ($data[$ques[$i]['dataKey']] == 4) echo "checked"; ?>>
-                                                <label class="form-check-label">Tidak ada</label>
+                                                <label class="form-check-label" for="input-radio-ada-<?php echo $i ?>-4">Tidak ada</label>
                                             </div>
                                         </div>
                                     </td>
+
                                     <!-- Activity Group -->
                                     <td id="kelompok-<?php echo $i ?>" class="kelompok">
                                         <div style="margin-bottom:-9.5px;">
@@ -251,6 +252,7 @@
                                     </td>
                                     <!-- Facility Address -->
                                     <td id="alamat-<?php echo $i ?>" class="alamat" style="display:none;">
+                                    <!-- <label for=""><?php echo $ques[$i]['dataKey'] ?></label> -->
                                         <input type="text" name="<?php echo $ques[$i + 2]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 2]['dataKey']] ?>" class="form-control">
                                     </td>
                                 </tr>
@@ -341,20 +343,27 @@
     }
 
     function onRadioChange(index, isFacility) {
-        // Get the element to show/hide based on the radio selection
+        // Try to find the element with the ID 'alamat-' + index
         var alamatElement = document.getElementById('alamat-' + index);
+        console.log("Checking: " + isFacility);
+        // Check if the element exists before trying to access its properties
+        if (alamatElement) {
+            console.log("Checking inputs for index: " + index);
 
-        if (isFacility) {
-            // Get the selected radio button value
-            var radioElement = document.querySelector('input[name="<?php echo $ques[$i]['dataKey']?>"]:checked');
+            if (isFacility) {
+                var selectedRadio = document.getElementById('input-radio-ada-' + index);
+                console.log("Checking inputs for: " + selectedRadio);
 
-            // Check if the radio element exists
-            if (radioElement) {
-                var radioValue = radioElement.value;
+                if (selectedRadio) {
+                    var radioValue = selectedRadio.value;
+                    console.log("radioValue: " + radioValue);
 
-                // Show or hide the address field based on the radio button value
-                if (radioValue == "1" || radioValue == "2" || radioValue == "3") {
-                    alamatElement.style.display = 'table-cell';
+
+                    if (radioValue == '1' || radioValue == '2' || radioValue == '3') {
+                        alamatElement.style.display = 'table-cell';
+                    } else {
+                        alamatElement.style.display = 'none';
+                    }
                 } else {
                     alamatElement.style.display = 'none';
                 }
@@ -362,28 +371,10 @@
                 alamatElement.style.display = 'none';
             }
         } else {
-            alamatElement.style.display = 'none';
+            console.error('Element with ID "alamat-' + index + '" not found.');
         }
     }
 
-    // function onRadioChange(index, isFacility) {
-    //     var alamatElement = document.getElementById('alamat-' + index);
-    //     console.log("Checking inputs for index: " + index);
-    //     if (isFacility) {
-    //         // Get the selected radio button value
-    //         var radioValue = document.querySelector('input[name="<?php echo $ques[$i]['dataKey']?>"]:checked').value;
-    //         if (radioValue == '1' || radioValue == '2' || radioValue == '3') {
-    //             // Display the address field if a valid radio button is selected
-    //             alamatElement.style.display = 'table-cell';
-    //         } else {
-    //             // Hide the address field for other cases
-    //             alamatElement.style.display = 'none';
-    //         }
-    //     } else {
-    //         // Hide the address field if no valid radio button is selected
-    //         alamatElement.style.display = 'none';
-    //     }
-    // }
 
     window.onload = function() {
         var selectedOption = window.localStorage.getItem('inputsR707S');
@@ -409,13 +400,15 @@
         window.localStorage.setItem('R803S', R803S);
 
         <?php for ($i = 372; $i < 408; $i+= 3): ?>
-            var isAdaChecked = document.querySelector('input[name="<?php echo $ques[$i]['dataKey']?>"]:checked').value;
-            if (isAdaChecked != 4) {
-                // If a radio button is checked, pass 'true' to onRadioChange
-                onRadioChange(<?php echo $i ?>, true);
-            } else {
-                // If no radio button is checked, pass 'false' to onRadioChange
-                onRadioChange(<?php echo $i ?>, false);
+            var selectedRadio = document.querySelector('input[name="<?php echo $ques[$i]['dataKey'] ?>"]:checked');
+
+            if (selectedRadio) {
+                var isAdaChecked = selectedRadio.value;
+                    if (isAdaChecked != 4) {
+                    onRadioChange(<?php echo $i ?>, true);
+                } else {
+                    onRadioChange(<?php echo $i ?>, false);
+                }
             }
         <?php endfor ?>
     }

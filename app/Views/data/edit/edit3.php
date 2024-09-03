@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Edit Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Edit Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Edit Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Edit Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -133,32 +133,28 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>
-                                                    <label>Keberadaan</label>
-                                                </td>
+                                                <td><label>Keberadaan</label></td>
                                                 <?php for ($i = 58; $i < 62; $i++): ?>
                                                     <td style="text-align:center;">
                                                         <div style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
-                                                                <input class="form-check-input" onchange='onRadioChange(<?php echo $i ?>, true)' type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
+                                                                <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?> onclick="toggleUsageInput(<?php echo $i - 58; ?>, true)">
                                                                 <label class="form-check-label">Ada</label>
                                                             </div>
                                                             <div class="form-check-inline">
-                                                                <input class="form-check-input" onchange='onRadioChange(<?php echo $i ?>, true)' type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="2" <?php if ($data[$ques[$i]['dataKey']] == 2) echo "checked"; ?>>
+                                                                <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="2" <?php if ($data[$ques[$i]['dataKey']] == 2) echo "checked"; ?> onclick="toggleUsageInput(<?php echo $i - 58; ?>, false)">
                                                                 <label class="form-check-label">Tidak ada</label>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 <?php endfor ?>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <label>Penggunaan<br>
-                                                    &emsp;1. Mandi/cuci</label>
-                                                </td>
+                                            <tr class="usage-row">
+                                                <td><label>Penggunaan<br>&emsp;1. Mandi/cuci</label></td>
                                                 <?php for ($i = 62; $i < 66; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column-<?php echo $i - 62; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input" style="margin-bottom:-9.5px;">
+                                                        <!-- <label for=""><?php echo $ques[$i]['ques_label']?></label> -->
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -171,14 +167,12 @@
                                                     </td>
                                                 <?php endfor ?>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <label>
-                                                    &emsp;2. Sumber air minum/masak</label>
-                                                </td>
+                                            <tr class="usage-row">
+                                                <td><label>&emsp;2. Sumber air minum/masak</label></td>
                                                 <?php for ($i = 66; $i < 70; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column1-<?php echo $i - 66; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input1" style="margin-bottom:-9.5px;">
+                                                        <!-- <label for=""><?php echo $ques[$i]['ques_label']?></label> -->
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -197,8 +191,8 @@
                                                     &emsp;3. Bahan baku air minum</label>
                                                 </td>
                                                 <?php for ($i = 70; $i < 74; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column2-<?php echo $i - 70; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input2" style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -217,8 +211,8 @@
                                                     &emsp;4. Pengairan/irigasi lahan pertanian</label>
                                                 </td>
                                                 <?php for ($i = 74; $i < 78; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column3-<?php echo $i - 74; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input3" style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -237,8 +231,8 @@
                                                     &emsp;5. Pariwisata (komersial)</label>
                                                 </td>
                                                 <?php for ($i = 78; $i < 82; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column4-<?php echo $i - 78; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input4" style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -257,8 +251,8 @@
                                                     &emsp;6. Perikanan</label>
                                                 </td>
                                                 <?php for ($i = 82; $i < 86; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column5-<?php echo $i - 82; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input5" style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -277,8 +271,8 @@
                                                     &emsp;7. Transportasi</label>
                                                 </td>
                                                 <?php for ($i = 86; $i < 89; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column6-<?php echo $i - 86; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input6" style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -297,8 +291,8 @@
                                                     &emsp;8. Pembangkit listrik</label>
                                                 </td>
                                                 <?php for ($i = 90; $i < 94; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column7-<?php echo $i - 90; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input7" style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -316,8 +310,8 @@
                                                     <label>
                                                     &emsp;9. Industri/pabrik</label>
                                                 </td>
-                                                <td style="text-align:center;vertical-align: middle;">
-                                                    <div style="margin-bottom:-9.5px;">
+                                                <td id="usage-column8-<?php echo $i - 94; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input8" style="margin-bottom:-9.5px;">
                                                         <div class="form-check-inline">
                                                             <input class="form-check-input" type="radio" name="<?php echo $ques[94]['dataKey']?>" value="1" <?php if ($data[$ques[94]['dataKey']] == 1) echo "checked"; ?>>
                                                             <label class="form-check-label">Ya</label>
@@ -330,8 +324,8 @@
                                                 </td>
                                                 <td>&emsp;</td>
                                                 <?php for ($i = 96; $i < 98; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column8-<?php echo $i - 94; ?>" style="text-align:center;vertical-align: middle;">
+                                                    <div class="usage-input8" style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -349,8 +343,8 @@
                                                     <label>
                                                     &emsp;10. Lainnya</label>
                                                 </td>
-                                                <td style="text-align:center;vertical-align: middle;">
-                                                    <div style="margin-bottom:-9.5px;">
+                                                <td id="usage-column9-<?php echo $i - 98; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input9" style="margin-bottom:-9.5px;">
                                                         <div class="form-check-inline">
                                                             <input class="form-check-input" type="radio" name="<?php echo $ques[98]['dataKey']?>" value="1" <?php if ($data[$ques[98]['dataKey']] == 1) echo "checked"; ?>>
                                                             <label class="form-check-label">Ya</label>
@@ -363,8 +357,8 @@
                                                 </td>
                                                 <td>&emsp;</td>
                                                 <?php for ($i = 100; $i < 102; $i++): ?>
-                                                    <td style="text-align:center;vertical-align: middle;">
-                                                        <div style="margin-bottom:-9.5px;">
+                                                    <td id="usage-column9-<?php echo $i - 98; ?>" style="text-align:center;vertical-align: middle;">
+                                                        <div class="usage-input9" style="margin-bottom:-9.5px;">
                                                             <div class="form-check-inline">
                                                                 <input class="form-check-input" type="radio" name="<?php echo $ques[$i]['dataKey']?>" value="1" <?php if ($data[$ques[$i]['dataKey']] == 1) echo "checked"; ?>>
                                                                 <label class="form-check-label">Ya</label>
@@ -558,9 +552,9 @@
         var selectedOption6 = window.localStorage.getItem('var6');
 
         if (selectedOption === '1' || selectedOption === '2') {
-        document.getElementById('R504C1').style.display = 'block';
+        document.getElementById('R402S').style.display = 'block';
         } else {
-        document.getElementById('R504C1').style.display = 'none'; // Hide el
+        document.getElementById('R402S').style.display = 'none'; // Hide el
         }
         window.localStorage.setItem('var', selectedOption);
 
@@ -586,9 +580,9 @@
         window.localStorage.setItem('var3', selectedOption3);
 
         if (selectedOption4 === '1') {
-        document.getElementById('R407S').style.display = 'block';
+        document.getElementById('R406B').style.display = 'block';
         } else {
-        document.getElementById('R407S').style.display = 'none'; // Hide el
+        document.getElementById('R406B').style.display = 'none'; // Hide el
         }
         window.localStorage.setItem('var4', selectedOption4);
 
@@ -615,11 +609,55 @@
         });
     }
 
-    // Initialize the display state based on the initial checkbox states
-    document.addEventListener("DOMContentLoaded", function() {
+    function toggleUsageInput(index, show) {
+        // Mengontrol visibilitas input dalam setiap kolom penggunaan
+        const usageInput = document.querySelector(`#usage-column-${index} .usage-input`);
+        const usageInput1 = document.querySelector(`#usage-column1-${index} .usage-input1`);
+        const usageInput2 = document.querySelector(`#usage-column2-${index} .usage-input2`);
+        const usageInput3 = document.querySelector(`#usage-column3-${index} .usage-input3`);
+        const usageInput4 = document.querySelector(`#usage-column4-${index} .usage-input4`);
+        const usageInput5 = document.querySelector(`#usage-column5-${index} .usage-input5`);
+        const usageInput6 = document.querySelector(`#usage-column6-${index} .usage-input6`);
+        const usageInput7 = document.querySelector(`#usage-column7-${index} .usage-input7`);
+        const usageInput8 = document.querySelector(`#usage-column8-${index} .usage-input8`);
+        const usageInput9 = document.querySelector(`#usage-column9-${index} .usage-input9`);
+
+        if (usageInput) {
+            usageInput.style.display = show ? '' : 'none';
+        }
+        if (usageInput1) {
+            usageInput1.style.display = show ? '' : 'none';
+        }
+        if (usageInput2) {
+            usageInput2.style.display = show ? '' : 'none';
+        }
+        if (usageInput3) {
+            usageInput3.style.display = show ? '' : 'none';
+        }
+        if (usageInput4) {
+            usageInput4.style.display = show ? '' : 'none';
+        }
+        if (usageInput5) {
+            usageInput5.style.display = show ? '' : 'none';
+        }
+        if (usageInput6) {
+            usageInput6.style.display = show ? '' : 'none';
+        }
+        if (usageInput7) {
+            usageInput7.style.display = show ? '' : 'none';
+        }
+        if (usageInput8) {
+            usageInput8.style.display = show ? '' : 'none';
+        }
+        if (usageInput9) {
+            usageInput9.style.display = show ? '' : 'none';
+        }
+    }
+
+    // Inisialisasi untuk menyembunyikan input saat halaman dimuat jika "Tidak ada" dipilih
+    document.addEventListener('DOMContentLoaded', () => {
         <?php for ($i = 58; $i < 62; $i++): ?>
-            var isChecked = document.querySelector('input[name="<?php echo $ques[$i]['dataKey']?>"]:checked');
-                onRadioChange(i, isChecked && isChecked.value === "1");
+            toggleUsageInput(<?php echo $i - 58; ?>, <?php echo ($data[$ques[$i]['dataKey']] == 1) ? 'true' : 'false'; ?>);
         <?php endfor; ?>
     });
 </script>

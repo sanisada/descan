@@ -35,7 +35,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R202',
-                'ques_label' => '202. Luas wilayah desa/kelurahan (1 Ha= 0,01 km2 )'
+                'ques_label' => '202. Luas wilayah desa/kelurahan (1 Ha= 0,01 km2 )\r\n(dalam satuan kilometer persegi)'
             ],
             [
                 'dataKey' => 'R203',
@@ -55,7 +55,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R203B2',
-                'ques_label' => 'Ketinggian letak (Altitude) lokasi kegiatan pemerintahan desa/kelurahan dari permukaan air laut (dpal)'
+                'ques_label' => 'Ketinggian letak (Altitude) lokasi kegiatan pemerintahan desa/kelurahan dari permukaan air laut (dpal)\r\n............................... m'
             ],
             [
                 'dataKey' => 'R301',
@@ -1033,7 +1033,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R601R',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R602A',
@@ -1153,7 +1153,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R606A1S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R606A2',
@@ -1161,7 +1161,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R606A2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R606B',
@@ -1169,7 +1169,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R606BS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R606C',
@@ -1177,7 +1177,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R606CS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R606D',
@@ -1185,7 +1185,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R606DS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R607',
@@ -1449,7 +1449,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R707S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R708A',
@@ -1457,7 +1457,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R708AS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R708B',
@@ -1465,7 +1465,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R708BS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R708C',
@@ -1473,7 +1473,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R708CS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R708D',
@@ -1481,7 +1481,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R708DS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R708E',
@@ -1489,7 +1489,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R708ES',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R708F',
@@ -1497,7 +1497,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R708FS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R801AK2',
@@ -2068,19 +2068,19 @@ class Ques extends Seeder
                 'ques_label' => 'Kecenderungan tindak pembunuhan dibanding setahun lalu'
             ],
             [
-                'dataKey' => 'R110310K3',
+                'dataKey' => 'R110110K3',
                 'ques_label' => 'Kejadian tindak perdagangan orang (trafficking) yang terjadi di desa/kelurahan selama setahun terakhir :'
             ],
             [
-                'dataKey' => 'R110310K4',
+                'dataKey' => 'R110110K4',
                 'ques_label' => 'Kecenderungan tindak perdagangan orang (trafficking) dibanding setahun lalu'
             ],
             [
-                'dataKey' => 'R110311K3',
+                'dataKey' => 'R110111K3',
                 'ques_label' => 'Kejadian tindak Korupsi yang terjadi di desa/kelurahan selama setahun terakhir :'
             ],
             [
-                'dataKey' => 'R110311K4',
+                'dataKey' => 'R110111K4',
                 'ques_label' => 'Kecenderungan tindak korupsi dibanding setahun lalu'
             ],
             [
@@ -2177,7 +2177,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1204S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1205A',
@@ -2185,7 +2185,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1205AS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1205B',
@@ -2329,7 +2329,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1401AK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1401AK3',
@@ -2353,7 +2353,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1401BK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1401BK3',
@@ -2377,7 +2377,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1402A1',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1402B',
@@ -2385,7 +2385,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1402B1',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1402C',
@@ -2393,7 +2393,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1402C1',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1402D',
@@ -2401,7 +2401,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1402D1',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1403',
@@ -2425,183 +2425,183 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R601AK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601AK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601BK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601BK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601CK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601CK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601DK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601DK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601EK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601EK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601FK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601FK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601GK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601GK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601HK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601HK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601IK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601IK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601JK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601JK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601KK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601KK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601LK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601LK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601MK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601MK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601NK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601NK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601OK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601OK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601PK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R601QK3S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604AK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604BK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604CK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604DK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604EK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604FK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604GK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604HK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604IK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604JK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604KK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604LK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R604MK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R803S',
@@ -2609,47 +2609,47 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1001PS',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1005A4S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006AK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006BK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006CK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006DK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006EK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006FK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006GK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006HK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
             [
                 'dataKey' => 'R1006IK2S',
-                'ques_label' => 'Sebutkan namanya'
+                'ques_label' => 'Sebutkan namanya (jika > 1 pisahkan dengan tanda koma ,)'
             ],
 
         ];

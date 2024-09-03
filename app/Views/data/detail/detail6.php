@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Detail Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Detail Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Detail Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Detail Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="form-group">
                             <h5>702. Agama/kepercayaan yang dianut oleh sebagian besar warga di desa/kelurahan</h5>
-                            <select name="R702" class="form-control" style="width: 100%;">
+                            <select name="R702" class="form-control" style="width: 100%;" disabled="true">
                                 <option hidden></option>
                                     <option value="1" <?php if ($data['R702'] == 1) echo "selected"; ?>>Islam</option>
                                     <option value="2" <?php if ($data['R702'] == 2) echo "selected"; ?>>Kristen</option>

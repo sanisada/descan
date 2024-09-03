@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Tambah Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Tambah Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Tambah Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Tambah Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -82,7 +82,7 @@
                                                 <?php endif; ?>
                                                 <!-- Input below Right -->
                                                 <div id="input-below-right-<?php echo $k + 1 ?>" style="display: none; margin-top: 10px;">
-                                                    <label for=""><?php echo $ques[$k + 1]['ques_label'] ?></label>
+                                                    <label for=""><?php echo $ques[$k + 1]['dataKey'] ?></label>
                                                     <input type="text" id="input-rights-below-<?php echo $k + 1 ?>" name="<?php echo $ques[$k + 1]['dataKey']?>" value="<?php echo $data[$ques[$k + 1]['dataKey']] ?>" class="form-control">
                                                 </div>
                                             </td>
@@ -421,9 +421,19 @@
             checkValue(<?php echo $i ?>);
         <?php endfor ?>
 
-        <?php for ($i = 201; $i < 257; $i += 4): ?>
-            checkInputs(<?php echo $i ?>, <?php echo $i + 402 ?>, <?php echo $i + 403 ?>);
-        <?php endfor ?>
+        <?php
+            $k = 603; // Inisialisasi variabel $k sebelum loop 
+
+            for ($i = 201; $i < 257; $i += 4) :
+                if ($k >= 631) {
+                    $intervalK = 1; // Jika $k >= 631, set intervalK menjadi 1
+                } else {
+                    $intervalK = 2; // Jika tidak, set intervalK menjadi 2
+                } ?>
+                checkInputs(<?php echo $i ?>, <?php echo $k ?>, <?php echo $k + 1 ?>); // Panggil fungsi checkInputs dengan $i, $k, dan $k + 1
+                <?php $k += $intervalK; // Tingkatkan $k berdasarkan interval
+         endfor ?>
+
 
         <?php for ($i = 298; $i < 328; $i += 3): ?>
             var isAdaChecked = document.getElementById('input-radio-ada-<?php echo $i ?>').checked;

@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h3>Detail Data Potensi Desa Tahun <?php echo $data['Tahun']?></h3>
+                <h3>Detail Data Potensi Pekon Tahun <?php echo $data['Tahun']?></h3>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Desa</a></li>
-                    <li class="breadcrumb-item active">Detail Data Potensi Desa</li>
+                    <li class="breadcrumb-item"><a href="../data_prospera">Data Potensi Pekon</a></li>
+                    <li class="breadcrumb-item active">Detail Data Potensi Pekon</li>
                 </ol>
             </div>
         </div>
@@ -104,7 +104,7 @@
                                         <input type="number" name="R1301CK3" value="<?php echo $data['R1301CK3'] ?>" class="form-control">
                                     </td>
                                     <td class="extra-column hidden">
-                                        <input type="number" name="R1301CK4" value="<?php echo $data['R1301CK4'] ?>" class="form-control">
+                                        <!-- <input type="number" name="R1301CK4" value="<?php echo $data['R1301CK4'] ?>" class="form-control"> -->
                                     </td>
                                     <td class="extra-column hidden">
                                         <input type="number" name="R1301CK5" value="<?php echo $data['R1301CK5'] ?>" class="form-control">
