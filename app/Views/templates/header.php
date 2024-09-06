@@ -13,7 +13,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prospera Cantik</title>
+  <title>Prospera</title>
   <link rel="icon" type="images/x-icon" href="<?php echo base_url('assets')?>/dist/img/logo.png" />
   <base href="<?php echo base_url('assets')?>/">
   <!-- Google Font: Source Sans Pro -->

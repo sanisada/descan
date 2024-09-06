@@ -6,8 +6,9 @@ use CodeIgniter\Model;
 
 class data2_model extends Model{
    protected $table = 'data2';
-   protected $primaryKey = 'data_id';
+   protected $primaryKey = 'id';
    protected $allowedFields = [
+      'data_id',
       'R601AK2',
       'R601AK3',
       'R601AK4',
@@ -468,4 +469,609 @@ class data2_model extends Model{
       'R1006HK2S',
       'R1006IK2S'
    ];
+
+   public function updateByDataId($data_id, $data): bool
+   {
+      // Find the primary key id based on data_id
+      $record = $this->where('data_id', $data_id)->first();
+      if (!$record) {
+         return false; // No record found to update
+      }
+
+      // Use the primary key id to update the record
+      return $this->update($record['id'], $data);
+   }
+
+   public function getmasjidbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703A AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }
+  }
+
+   public function getsuraubypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703B AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getkristenbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703C AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }
+   }
+
+   public function getkatolikbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703D AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getkapelbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703E AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getpurabypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703F AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getwiharabypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703G AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getkelentengbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703H AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getbasarahbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703I AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getlainnyabypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R703J AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function gethansipbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R1102 AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getpolisibypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R1103 AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getthpilkadesbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R1404B AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getcalonpilkadesbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R1404C AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getsuarapilkadesbypekon($region, $tahun) {
+      // SQL query to join data and data2 tables based on the foreign key data_id
+      // and applying the conditions on the data table
+      $query = $this->db->query("
+         SELECT data2.R1404D AS total
+         FROM data 
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+         $result = $query->getRow();
+      if ($result) {
+         return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }  
+   }
+
+   public function getsarpendbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT SUM(data2.R601AK2 + data2.R601AK3) AS count_a, SUM(data2.R601BK2 + data2.R601BK3) AS count_b, SUM(data2.R601CK2 + data2.R601CK3) AS count_c,
+            SUM(data2.R601DK2 + data2.R601DK3) AS count_d, SUM(data2.R601EK2 + data2.R601EK3) AS count_e, SUM(data2.R601FK2 + data2.R601FK3) AS count_f,
+            SUM(data2.R601GK2 + data2.R601GK3) AS count_g, SUM(data2.R601HK2 + data2.R601HK3) AS count_h, SUM(data2.R601IK2 + data2.R601IK3) AS count_i,
+            SUM(data2.R601JK2 + data2.R601JK3) AS count_j, SUM(data2.R601KK2 + data2.R601KK3) AS count_k, SUM(data2.R601LK2 + data2.R601LK3) AS count_l,
+            SUM(data2.R601MK2 + data2.R601MK3) AS count_m, SUM(data2.R601NK2 + data2.R601NK3) AS count_n, SUM(data2.R601OK2 + data2.R601OK3) AS count_o,
+            data2.R601PK3 AS count_p, data2.R601QK3 AS count_q
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k,
+            'count_l' => $result->count_l,
+            'count_m' => $result->count_m,
+            'count_n' => $result->count_n,
+            'count_o' => $result->count_o,
+            'count_p' => $result->count_p,
+            'count_q' => $result->count_q
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0,
+            'count_l' => 0,
+            'count_m' => 0,
+            'count_n' => 0,
+            'count_o' => 0,
+            'count_p' => 0,
+            'count_q' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getsarkesbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k,
+            'count_l' => $result->count_l,
+            'count_m' => $result->count_m
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0,
+            'count_l' => 0,
+            'count_m' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getbankbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R1004A1 AS count_a, data2.R1004A2 AS count_b, data2.R1004A3 AS count_c
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getkoperasibypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R1005A1 AS count_a, data2.R1005A2 AS count_b, data2.R1005A3 AS count_c, data2.R1005A4 AS count_d
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getsarpekbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R1006AK2 AS count_a, data2.R1006BK2 AS count_b, data2.R1006CK2 AS count_c, data2.R1006DK2 AS count_d,
+               data2.R1006EK2 AS count_e, data2.R1006FK2 AS count_f, data2.R1006GK2 AS count_g, data2.R1006HK2 AS count_h,
+               data2.R1006IK2 AS count_i
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getsarprasebypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R1007AK2 AS count_a, data2.R1007BK2 AS count_b, data2.R1007CK2 AS count_c, data2.R1007DK2 AS count_d,
+               data2.R1007EK2 AS count_e, data2.R1007FK2 AS count_f, data2.R1007GK2 AS count_g, data2.R1007HK2 AS count_h,
+               data2.R1007IK2 AS count_i, data2.R1007JK2 AS count_j
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getolahragabypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R801AK2 AS count_a, data2.R801BK2 AS count_b, data2.R801CK2 AS count_c, data2.R801DK2 AS count_d,
+               data2.R801EK2 AS count_e, data2.R801FK2 AS count_f, data2.R801GK2 AS count_g, data2.R801HK2 AS count_h,
+               data2.R801IK2 AS count_i, data2.R801JK2 AS count_j, data2.R801KK2 AS count_k, data2.R801LK2 AS count_l
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k,
+            'count_l' => $result->count_l
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0,
+            'count_l' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+  
 }

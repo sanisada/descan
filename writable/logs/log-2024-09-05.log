@@ -1,0 +1,1153 @@
+INFO - 2024-09-05 02:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 02:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-05 02:14:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 02:14:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 02:14:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 02:14:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 02:14:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 02:14:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 02:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 02:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-05 02:14:25 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Metadata.php on line 21.
+ 1 APPPATH\Controllers\Metadata.php(21): trim(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Metadata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Metadata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 02:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-05 02:14:35 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Metadata.php on line 21.
+ 1 APPPATH\Controllers\Metadata.php(21): trim(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Metadata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Metadata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 02:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-05 02:19:16 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Metadata.php on line 21.
+ 1 APPPATH\Controllers\Metadata.php(21): trim(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Metadata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Metadata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 02:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 03:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 03:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 03:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 03:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 03:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 03:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 04:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-05 04:26:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:26:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:26:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:26:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:26:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:26:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 04:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 04:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-05 04:33:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:33:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:33:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:33:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:33:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+WARNING - 2024-09-05 04:33:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 04:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 04:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 04:41:33 --> ErrorException: Undefined variable $tahun
+[Method: GET, Route: /]
+in APPPATH\Views\home.php on line 225.
+ 1 APPPATH\Views\home.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 225)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('home', [...])
+ 6 APPPATH\Controllers\Home.php(16): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 04:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 04:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 04:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 06:08:36 --> BadMethodCallException: Call to undefined method App\Models\data_model::gettpsbypekon
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Home.php(45): CodeIgniter\Model->__call('gettpsbypekon', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 06:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 06:28:39 --> ErrorException: Undefined variable $columns
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 287.
+ 1 APPPATH\Views\home.php(287): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $columns', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 287)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:38:49 --> ErrorException: Undefined variable $columns
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 288.
+ 1 APPPATH\Views\home.php(288): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $columns', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 288)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 06:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 06:50:34 --> BadMethodCallException: Call to undefined method App\Models\data_model::getmasjidbypekon
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Home.php(48): CodeIgniter\Model->__call('getmasjidbypekon', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+ERROR - 2024-09-05 06:50:49 --> mysqli_sql_exception: Unknown column 'data.id' in 'on clause' in C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php(308): mysqli->query('\r\n          SEL...', 0)
+#1 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\r\n          SEL...')
+#2 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n          SEL...')
+#3 C:\xampp\htdocs\prospera\app\Models\data2_model.php(488): CodeIgniter\Database\BaseConnection->query('\r\n          SEL...', Array)
+#4 C:\xampp\htdocs\prospera\app\Controllers\Home.php(48): App\Models\data2_model->getmasjidbypekon('1810030011', '2024')
+#5 C:\xampp\htdocs\prospera\system\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+#6 C:\xampp\htdocs\prospera\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\prospera\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\prospera\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\prospera\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\prospera\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-09-05 06:50:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'data.id' in 'on clause'
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\data2_model.php(488): CodeIgniter\Database\BaseConnection->query('
+          SELECT data2.R703A 
+          FROM data 
+          JOIN data2 ON data.id = data2.data_id 
+          WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 2 APPPATH\Controllers\Home.php(48): App\Models\data2_model->getmasjidbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:50:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'data.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+          SELECT data2.R703A 
+          FROM data 
+          JOIN data2 ON data.id = data2.data_id 
+          WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+          SELECT data2.R703A 
+          FROM data 
+          JOIN data2 ON data.id = data2.data_id 
+          WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 APPPATH\Models\data2_model.php(488): CodeIgniter\Database\BaseConnection->query('
+          SELECT data2.R703A 
+          FROM data 
+          JOIN data2 ON data.id = data2.data_id 
+          WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 4 APPPATH\Controllers\Home.php(48): App\Models\data2_model->getmasjidbypekon('1810030011', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:50:49 --> [Caused by] mysqli_sql_exception: Unknown column 'data.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('
+          SELECT data2.R703A 
+          FROM data 
+          JOIN data2 ON data.id = data2.data_id 
+          WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+          SELECT data2.R703A 
+          FROM data 
+          JOIN data2 ON data.id = data2.data_id 
+          WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+          SELECT data2.R703A 
+          FROM data 
+          JOIN data2 ON data.id = data2.data_id 
+          WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 4 APPPATH\Models\data2_model.php(488): CodeIgniter\Database\BaseConnection->query('
+          SELECT data2.R703A 
+          FROM data 
+          JOIN data2 ON data.id = data2.data_id 
+          WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 5 APPPATH\Controllers\Home.php(48): App\Models\data2_model->getmasjidbypekon('1810030011', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:51:31 --> ErrorException: Array to string conversion
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 395.
+ 1 APPPATH\Views\home.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 395)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(68): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:52:59 --> ErrorException: Undefined property: stdClass::$total
+[Method: GET, Route: Home/show_data]
+in APPPATH\Models\data2_model.php on line 497.
+ 1 APPPATH\Models\data2_model.php(497): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$total', 'C:\\xampp\\htdocs\\prospera\\app\\Models\\data2_model.php', 497)
+ 2 APPPATH\Controllers\Home.php(48): App\Models\data2_model->getmasjidbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:53:50 --> ErrorException: Array to string conversion
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 395.
+ 1 APPPATH\Views\home.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 395)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(68): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:53:52 --> ErrorException: Array to string conversion
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 395.
+ 1 APPPATH\Views\home.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 395)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(68): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:54:45 --> ErrorException: Undefined variable $result
+[Method: GET, Route: Home/show_data]
+in APPPATH\Models\data2_model.php on line 494.
+ 1 APPPATH\Models\data2_model.php(494): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'C:\\xampp\\htdocs\\prospera\\app\\Models\\data2_model.php', 494)
+ 2 APPPATH\Controllers\Home.php(48): App\Models\data2_model->getmasjidbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:55:07 --> ErrorException: Array to string conversion
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 395.
+ 1 APPPATH\Views\home.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 395)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(68): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:55:09 --> ErrorException: Array to string conversion
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 395.
+ 1 APPPATH\Views\home.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 395)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(68): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:55:10 --> ErrorException: Array to string conversion
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 395.
+ 1 APPPATH\Views\home.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 395)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(68): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:55:10 --> ErrorException: Array to string conversion
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 395.
+ 1 APPPATH\Views\home.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 395)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(68): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 06:58:45 --> ErrorException: Array to string conversion
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 395.
+ 1 APPPATH\Views\home.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 395)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(68): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 07:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 07:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 08:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 08:07:54 --> BadMethodCallException: Call to undefined method App\Models\data2_model::getbencanabypekon
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Home.php(59): CodeIgniter\Model->__call('getbencanabypekon', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:20:43 --> ErrorException: Undefined variable $getbencanasekarangbypekon
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 643.
+ 1 APPPATH\Views\home.php(643): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getbencanasekarangbypekon', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 643)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:21:57 --> ErrorException: Undefined variable $getbencanasekarangbypekon
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 643.
+ 1 APPPATH\Views\home.php(643): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getbencanasekarangbypekon', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 643)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(109): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:21:59 --> ErrorException: Undefined variable $getbencanasekarangbypekon
+[Method: GET, Route: Home/show_data]
+in APPPATH\Views\home.php on line 643.
+ 1 APPPATH\Views\home.php(643): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getbencanasekarangbypekon', 'C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php', 643)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\prospera\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(109): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 08:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 08:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 08:37:18 --> BadMethodCallException: Call to undefined method App\Models\data_model::getsarkesbypekon
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Home.php(62): CodeIgniter\Model->__call('getsarkesbypekon', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+ERROR - 2024-09-05 08:37:38 --> mysqli_sql_exception: Unknown column 'R604AK2' in 'field list' in C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php(308): mysqli->query('\r\n         SELE...', 0)
+#1 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\r\n         SELE...')
+#2 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n         SELE...')
+#3 C:\xampp\htdocs\prospera\app\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('\r\n         SELE...', Array)
+#4 C:\xampp\htdocs\prospera\app\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+#5 C:\xampp\htdocs\prospera\system\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+#6 C:\xampp\htdocs\prospera\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\prospera\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\prospera\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\prospera\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\prospera\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-09-05 08:37:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'R604AK2' in 'field list'
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 2 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:37:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'R604AK2' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 3 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 4 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:37:38 --> [Caused by] mysqli_sql_exception: Unknown column 'R604AK2' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 4 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 5 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+ERROR - 2024-09-05 08:38:34 --> mysqli_sql_exception: Unknown column 'R104' in 'where clause' in C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php(308): mysqli->query('\r\n         SELE...', 0)
+#1 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\r\n         SELE...')
+#2 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n         SELE...')
+#3 C:\xampp\htdocs\prospera\app\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('\r\n         SELE...', Array)
+#4 C:\xampp\htdocs\prospera\app\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+#5 C:\xampp\htdocs\prospera\system\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+#6 C:\xampp\htdocs\prospera\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\prospera\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\prospera\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\prospera\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\prospera\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-09-05 08:38:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'R104' in 'where clause'
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 2 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:38:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'R104' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 3 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 4 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:38:34 --> [Caused by] mysqli_sql_exception: Unknown column 'R104' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 4 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 5 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+ERROR - 2024-09-05 08:38:35 --> mysqli_sql_exception: Unknown column 'R104' in 'where clause' in C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php(308): mysqli->query('\r\n         SELE...', 0)
+#1 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\r\n         SELE...')
+#2 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n         SELE...')
+#3 C:\xampp\htdocs\prospera\app\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('\r\n         SELE...', Array)
+#4 C:\xampp\htdocs\prospera\app\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+#5 C:\xampp\htdocs\prospera\system\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+#6 C:\xampp\htdocs\prospera\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\prospera\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\prospera\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\prospera\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\prospera\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-09-05 08:38:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'R104' in 'where clause'
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 2 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:38:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'R104' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 3 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 4 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:38:35 --> [Caused by] mysqli_sql_exception: Unknown column 'R104' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = \'1810030011\' AND Tahun = \'2024\'')
+ 4 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         WHERE R104 = ? AND Tahun = ?', [...])
+ 5 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+ERROR - 2024-09-05 08:39:02 --> mysqli_sql_exception: Not unique table/alias: 'data2' in C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php(308): mysqli->query('\r\n         SELE...', 0)
+#1 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\r\n         SELE...')
+#2 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n         SELE...')
+#3 C:\xampp\htdocs\prospera\app\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('\r\n         SELE...', Array)
+#4 C:\xampp\htdocs\prospera\app\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+#5 C:\xampp\htdocs\prospera\system\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+#6 C:\xampp\htdocs\prospera\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\prospera\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\prospera\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\prospera\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\prospera\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-09-05 08:39:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'data2'
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 2 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:39:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'data2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 4 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:39:02 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'data2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 4 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT R604AK2 AS count_a, R604BK2 AS count_b, R604CK2 AS count_c, R604DK2 AS count_d,
+               R604EK2 AS count_e, R604FK2 AS count_f, R604GK2 AS count_g, R604HK2 AS count_h,
+               R604IK2 AS count_i, R604JK2 AS count_j, R604KK2 AS count_k, R604LK2 AS count_l, R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 5 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+ERROR - 2024-09-05 08:39:40 --> mysqli_sql_exception: Not unique table/alias: 'data2' in C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php(308): mysqli->query('\r\n         SELE...', 0)
+#1 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\r\n         SELE...')
+#2 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n         SELE...')
+#3 C:\xampp\htdocs\prospera\app\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('\r\n         SELE...', Array)
+#4 C:\xampp\htdocs\prospera\app\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+#5 C:\xampp\htdocs\prospera\system\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+#6 C:\xampp\htdocs\prospera\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\prospera\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\prospera\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\prospera\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\prospera\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-09-05 08:39:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'data2'
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 2 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:39:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'data2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 4 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:39:40 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'data2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 4 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 5 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+ERROR - 2024-09-05 08:39:42 --> mysqli_sql_exception: Not unique table/alias: 'data2' in C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\prospera\system\Database\MySQLi\Connection.php(308): mysqli->query('\r\n         SELE...', 0)
+#1 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\r\n         SELE...')
+#2 C:\xampp\htdocs\prospera\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n         SELE...')
+#3 C:\xampp\htdocs\prospera\app\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('\r\n         SELE...', Array)
+#4 C:\xampp\htdocs\prospera\app\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+#5 C:\xampp\htdocs\prospera\system\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+#6 C:\xampp\htdocs\prospera\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\prospera\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\prospera\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\prospera\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\prospera\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\prospera\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-09-05 08:39:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'data2'
+[Method: GET, Route: Home/show_data]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 2 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:39:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'data2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 4 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+CRITICAL - 2024-09-05 08:39:42 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'data2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 4 APPPATH\Models\data2_model.php(727): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R604AK2 AS count_a, data2.R604BK2 AS count_b, data2.R604CK2 AS count_c, data2.R604DK2 AS count_d,
+               data2.R604EK2 AS count_e, data2.R604FK2 AS count_f, data2.R604GK2 AS count_g, data2.R604HK2 AS count_h,
+               data2.R604IK2 AS count_i, data2.R604JK2 AS count_j, data2.R604KK2 AS count_k, data2.R604LK2 AS count_l, data2.R604MK2 AS count_m
+         FROM data2
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 5 APPPATH\Controllers\Home.php(62): App\Models\data2_model->getsarkesbypekon('1810030011', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\prospera\\public\\index.php')
+INFO - 2024-09-05 08:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

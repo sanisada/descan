@@ -592,20 +592,20 @@ class Data extends BaseController
         $data = [
             'data_id'     => $uniqueId, // Use the generated unique ID
             'Tahun'  => $this->request->getPost('tahun'),
-            // Add other fields as necessary
         ];
         
         $dataModel->insert($data);
 
-        // Insert data into the second table
-        $data2Model->insert([
-            'data_id' => $uniqueId, // Use the same unique ID for the foreign key in 'data2'
-            // Add other columns from the 'data2' table here
-        ]);
-
-        // Flash message
-        session()->setFlashdata('message', 'Data Berhasil Disimpan');
-
+        $data2 = [
+            'data_id'     => $uniqueId,
+        ];
+    
+        if (!empty($data2)) {
+            $data2Model->insert($data2);
+        } else {
+            session()->setFlashdata('error', 'Tidak ada data untuk disimpan di tabel kedua.');
+            return redirect()->back()->withInput();
+        }
         // Redirect using the unique ID
         return redirect()->to(base_url('data/create/'.$uniqueId));
     }
@@ -978,15 +978,7 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $data1Model = new data_model();
         $data2Model = new data2_model();
-
-        $joinedData = $data1Model->getJoinedData($data_id);
-
-        // Error handling if no data is found
-        if (!$joinedData) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
-        }
         try {
             $updateData = [
             'R601AK2'   => $this->request->getPost('R601AK2'),
@@ -1162,11 +1154,13 @@ class Data extends BaseController
             'R604LK2S'   => $this->request->getPost('R604LK2S'),
             'R604MK2S'   => $this->request->getPost('R604MK2S')
         ];
-        print_r($updateData);
-    
-        // Insert data into the database
-        $data2Model->update($data_id, $updateData);
-        echo "Data berhasil diupdate.";
+        
+            if ($data2Model->updateByDataId($data_id, $updateData)) {
+                echo "Data berhasil diupdate.";
+            } else {
+                throw new \Exception('Failed to update data.');
+            }
+
         } catch (\Exception $e) {
             echo "Error: " . $e->getMessage();
         }
@@ -1178,95 +1172,101 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
-            'R701_1'   => $this->request->getPost('R701_1'),
-            'R701_2'   => $this->request->getPost('R701_2'),
-            'R701_3'   => $this->request->getPost('R701_3'),
-            'R701_4'   => $this->request->getPost('R701_4'),
-            'R701_5'   => $this->request->getPost('R701_5'),
-            'R701_6'   => $this->request->getPost('R701_6'),
-            'R701_7'   => $this->request->getPost('R701_7'),
-            'R702'   => $this->request->getPost('R702'),
-            'R703A'   => $this->request->getPost('R703A'),
-            'R703B'   => $this->request->getPost('R703B'),
-            'R703C'   => $this->request->getPost('R703C'),
-            'R703D'   => $this->request->getPost('R703D'),
-            'R703E'   => $this->request->getPost('R703E'),
-            'R703F'   => $this->request->getPost('R703F'),
-            'R703G'   => $this->request->getPost('R703G'),
-            'R703H'   => $this->request->getPost('R703H'),
-            'R703I'   => $this->request->getPost('R703I'),
-            'R703J'   => $this->request->getPost('R703J'),
-            'R704A'   => $this->request->getPost('R704A'),
-            'R704B'   => $this->request->getPost('R704B'),
-            'R705A'   => $this->request->getPost('R705A'),
-            'R705B'   => $this->request->getPost('R705B'),
-            'R705C'   => $this->request->getPost('R705C'),
-            'R705D'   => $this->request->getPost('R705D'),
-            'R705E'   => $this->request->getPost('R705E'),
-            'R705F'   => $this->request->getPost('R705F'),
-            'R705G'   => $this->request->getPost('R705G'),
-            'R705H'   => $this->request->getPost('R705H'),
-            'R705I'   => $this->request->getPost('R705I'),
-            'R706'   => $this->request->getPost('R706'),
-            'R707'   => $this->request->getPost('R707'),
-            'R707S'   => $this->request->getPost('R707S'),
-            'R708A'   => $this->request->getPost('R708A'),
-            'R708AS'   => $this->request->getPost('R708AS'),
-            'R708B'   => $this->request->getPost('R708B'),
-            'R708BS'   => $this->request->getPost('R708BS'),
-            'R708C'   => $this->request->getPost('R708C'),
-            'R708CS'   => $this->request->getPost('R708CS'),
-            'R708D'   => $this->request->getPost('R708D'),
-            'R708DS'   => $this->request->getPost('R708DS'),
-            'R708E'   => $this->request->getPost('R708E'),
-            'R708ES'   => $this->request->getPost('R708ES'),
-            'R708F'   => $this->request->getPost('R708F'),
-            'R708FS'   => $this->request->getPost('R708FS'),
-            'R801AK2'   => $this->request->getPost('R801AK2'),
-            'R801AK3'   => $this->request->getPost('R801AK3'),
-            'R801AK4'   => $this->request->getPost('R801AK4'),
-            'R801BK2'   => $this->request->getPost('R801BK2'),
-            'R801BK3'   => $this->request->getPost('R801BK3'),
-            'R801BK4'   => $this->request->getPost('R801BK4'),
-            'R801CK2'   => $this->request->getPost('R801CK2'),
-            'R801CK3'   => $this->request->getPost('R801CK3'),
-            'R801CK4'   => $this->request->getPost('R801CK4'),
-            'R801DK2'   => $this->request->getPost('R801DK2'),
-            'R801DK3'   => $this->request->getPost('R801DK3'),
-            'R801DK4'   => $this->request->getPost('R801DK4'),
-            'R801EK2'   => $this->request->getPost('R801EK2'),
-            'R801EK3'   => $this->request->getPost('R801EK3'),
-            'R801EK4'   => $this->request->getPost('R801EK4'),
-            'R801FK2'   => $this->request->getPost('R801FK2'),
-            'R801FK3'   => $this->request->getPost('R801FK3'),
-            'R801FK4'   => $this->request->getPost('R801FK4'),
-            'R801GK2'   => $this->request->getPost('R801GK2'),
-            'R801GK3'   => $this->request->getPost('R801GK3'),
-            'R801GK4'   => $this->request->getPost('R801GK4'),
-            'R801HK2'   => $this->request->getPost('R801HK2'),
-            'R801HK3'   => $this->request->getPost('R801HK3'),
-            'R801HK4'   => $this->request->getPost('R801HK4'),
-            'R801IK2'   => $this->request->getPost('R801IK2'),
-            'R801IK3'   => $this->request->getPost('R801IK3'),
-            'R801IK4'   => $this->request->getPost('R801IK4'),
-            'R801JK2'   => $this->request->getPost('R801JK2'),
-            'R801JK3'   => $this->request->getPost('R801JK3'),
-            'R801JK4'   => $this->request->getPost('R801JK4'),
-            'R801KK2'   => $this->request->getPost('R801KK2'),
-            'R801KK3'   => $this->request->getPost('R801KK3'),
-            'R801KK4'   => $this->request->getPost('R801KK4'),
-            'R801LK2'   => $this->request->getPost('R801LK2'),
-            'R801LK3'   => $this->request->getPost('R801LK3'),
-            'R801LK4'   => $this->request->getPost('R801LK4'),
-            'R802'   => $this->request->getPost('R802'),
-            'R803'   => $this->request->getPost('R803'),
-            'R803S'   => $this->request->getPost('R803S')
-        ]);
+        try {
+            $updateData = [
+                'R701_1'   => $this->request->getPost('R701_1'),
+                'R701_2'   => $this->request->getPost('R701_2'),
+                'R701_3'   => $this->request->getPost('R701_3'),
+                'R701_4'   => $this->request->getPost('R701_4'),
+                'R701_5'   => $this->request->getPost('R701_5'),
+                'R701_6'   => $this->request->getPost('R701_6'),
+                'R701_7'   => $this->request->getPost('R701_7'),
+                'R702'   => $this->request->getPost('R702'),
+                'R703A'   => $this->request->getPost('R703A'),
+                'R703B'   => $this->request->getPost('R703B'),
+                'R703C'   => $this->request->getPost('R703C'),
+                'R703D'   => $this->request->getPost('R703D'),
+                'R703E'   => $this->request->getPost('R703E'),
+                'R703F'   => $this->request->getPost('R703F'),
+                'R703G'   => $this->request->getPost('R703G'),
+                'R703H'   => $this->request->getPost('R703H'),
+                'R703I'   => $this->request->getPost('R703I'),
+                'R703J'   => $this->request->getPost('R703J'),
+                'R704A'   => $this->request->getPost('R704A'),
+                'R704B'   => $this->request->getPost('R704B'),
+                'R705A'   => $this->request->getPost('R705A'),
+                'R705B'   => $this->request->getPost('R705B'),
+                'R705C'   => $this->request->getPost('R705C'),
+                'R705D'   => $this->request->getPost('R705D'),
+                'R705E'   => $this->request->getPost('R705E'),
+                'R705F'   => $this->request->getPost('R705F'),
+                'R705G'   => $this->request->getPost('R705G'),
+                'R705H'   => $this->request->getPost('R705H'),
+                'R705I'   => $this->request->getPost('R705I'),
+                'R706'   => $this->request->getPost('R706'),
+                'R707'   => $this->request->getPost('R707'),
+                'R707S'   => $this->request->getPost('R707S'),
+                'R708A'   => $this->request->getPost('R708A'),
+                'R708AS'   => $this->request->getPost('R708AS'),
+                'R708B'   => $this->request->getPost('R708B'),
+                'R708BS'   => $this->request->getPost('R708BS'),
+                'R708C'   => $this->request->getPost('R708C'),
+                'R708CS'   => $this->request->getPost('R708CS'),
+                'R708D'   => $this->request->getPost('R708D'),
+                'R708DS'   => $this->request->getPost('R708DS'),
+                'R708E'   => $this->request->getPost('R708E'),
+                'R708ES'   => $this->request->getPost('R708ES'),
+                'R708F'   => $this->request->getPost('R708F'),
+                'R708FS'   => $this->request->getPost('R708FS'),
+                'R801AK2'   => $this->request->getPost('R801AK2'),
+                'R801AK3'   => $this->request->getPost('R801AK3'),
+                'R801AK4'   => $this->request->getPost('R801AK4'),
+                'R801BK2'   => $this->request->getPost('R801BK2'),
+                'R801BK3'   => $this->request->getPost('R801BK3'),
+                'R801BK4'   => $this->request->getPost('R801BK4'),
+                'R801CK2'   => $this->request->getPost('R801CK2'),
+                'R801CK3'   => $this->request->getPost('R801CK3'),
+                'R801CK4'   => $this->request->getPost('R801CK4'),
+                'R801DK2'   => $this->request->getPost('R801DK2'),
+                'R801DK3'   => $this->request->getPost('R801DK3'),
+                'R801DK4'   => $this->request->getPost('R801DK4'),
+                'R801EK2'   => $this->request->getPost('R801EK2'),
+                'R801EK3'   => $this->request->getPost('R801EK3'),
+                'R801EK4'   => $this->request->getPost('R801EK4'),
+                'R801FK2'   => $this->request->getPost('R801FK2'),
+                'R801FK3'   => $this->request->getPost('R801FK3'),
+                'R801FK4'   => $this->request->getPost('R801FK4'),
+                'R801GK2'   => $this->request->getPost('R801GK2'),
+                'R801GK3'   => $this->request->getPost('R801GK3'),
+                'R801GK4'   => $this->request->getPost('R801GK4'),
+                'R801HK2'   => $this->request->getPost('R801HK2'),
+                'R801HK3'   => $this->request->getPost('R801HK3'),
+                'R801HK4'   => $this->request->getPost('R801HK4'),
+                'R801IK2'   => $this->request->getPost('R801IK2'),
+                'R801IK3'   => $this->request->getPost('R801IK3'),
+                'R801IK4'   => $this->request->getPost('R801IK4'),
+                'R801JK2'   => $this->request->getPost('R801JK2'),
+                'R801JK3'   => $this->request->getPost('R801JK3'),
+                'R801JK4'   => $this->request->getPost('R801JK4'),
+                'R801KK2'   => $this->request->getPost('R801KK2'),
+                'R801KK3'   => $this->request->getPost('R801KK3'),
+                'R801KK4'   => $this->request->getPost('R801KK4'),
+                'R801LK2'   => $this->request->getPost('R801LK2'),
+                'R801LK3'   => $this->request->getPost('R801LK3'),
+                'R801LK4'   => $this->request->getPost('R801LK4'),
+                'R802'   => $this->request->getPost('R802'),
+                'R803'   => $this->request->getPost('R803'),
+                'R803S'   => $this->request->getPost('R803S')
+            ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/create7/'.$data_id));
     }
@@ -1275,11 +1275,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R901A1'   => $this->request->getPost('R901A1'),
             'R901A2'   => $this->request->getPost('R901A2'),
             'R901B'   => $this->request->getPost('R901B'),
@@ -1377,7 +1378,12 @@ class Data extends BaseController
             'R1007JK2'   => $this->request->getPost('R1007JK2'),
             'R1007JK3'   => $this->request->getPost('R1007JK3'),
             'R1007JK4'   => $this->request->getPost('R1007JK4')
-        ]);
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/create8/'.$data_id));
     }
@@ -1386,11 +1392,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R110101K3'   => $this->request->getPost('R110101K3'),
             'R110101K4'   => $this->request->getPost('R110101K4'),
             'R110102K3'   => $this->request->getPost('R110102K3'),
@@ -1440,7 +1447,12 @@ class Data extends BaseController
             'R1205A'   => $this->request->getPost('R1205A'),
             'R1205AS'   => $this->request->getPost('R1205AS'),
             'R1205B'   => $this->request->getPost('R1205B')
-        ]);
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/create9/'.$data_id));
     }
@@ -1449,11 +1461,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R1301AK2'   => $this->request->getPost('R1301AK2'),
             'R1301AK3'   => $this->request->getPost('R1301AK3'),
             'R1301AK4'   => $this->request->getPost('R1301AK4'),
@@ -1487,7 +1500,12 @@ class Data extends BaseController
             'R1304A'   => $this->request->getPost('R1304A'),
             'R1304B'   => $this->request->getPost('R1304B'),
             'R1304C'   => $this->request->getPost('R1304C')
-        ]);
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/create10/'.$data_id));
     }
@@ -1496,11 +1514,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R1401AK2'   => $this->request->getPost('R1401AK2'),
             'R1401AK2S'   => $this->request->getPost('R1401AK2S'),
             'R1401AK3'   => $this->request->getPost('R1401AK3'),
@@ -1526,9 +1545,14 @@ class Data extends BaseController
             'R1404B'   => $this->request->getPost('R1404B'),
             'R1404C'   => $this->request->getPost('R1404C'),
             'R1404D'   => $this->request->getPost('R1404D')
-        ]);
+        ];
+        $data2Model->updateByDataId($data_id, $updateData);
 
-        return redirect()->to(base_url('data_prospera'));
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
+
+        return  redirect()->to(base_url('data_prospera'));
     }
 
     /**
@@ -2127,18 +2151,11 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $data1Model = new data_model();
         $data2Model = new data2_model();
 
-        $joinedData = $data1Model->getJoinedData($data_id);
-
-        // Error handling if no data is found
-        if (!$joinedData) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data not found for ID ' . $data_id);
-        }
         try {
         //insert data into database
-        $data2Model->update($data_id, [
+        $updateData = [
             'R601AK2'   => $this->request->getPost('R601AK2'),
             'R601AK3'   => $this->request->getPost('R601AK3'),
             'R601AK4'   => $this->request->getPost('R601AK4'),
@@ -2312,8 +2329,9 @@ class Data extends BaseController
             'R604KK2S'   => $this->request->getPost('R604KK2S'),
             'R604LK2S'   => $this->request->getPost('R604LK2S'),
             'R604MK2S'   => $this->request->getPost('R604MK2S')
-        ]);
-            echo "Data berhasil diupdate.";
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
         } catch (\Exception $e) {
             echo "Error: " . $e->getMessage();
         }
@@ -2325,11 +2343,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R701_1'   => $this->request->getPost('R701_1'),
             'R701_2'   => $this->request->getPost('R701_2'),
             'R701_3'   => $this->request->getPost('R701_3'),
@@ -2413,7 +2432,12 @@ class Data extends BaseController
             'R802'   => $this->request->getPost('R802'),
             'R803'   => $this->request->getPost('R803'),
             'R803S'   => $this->request->getPost('R803S'),
-        ]);
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/edit7/'.$data_id));
     }
@@ -2422,11 +2446,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R901A1'   => $this->request->getPost('R901A1'),
             'R901A2'   => $this->request->getPost('R901A2'),
             'R901B'   => $this->request->getPost('R901B'),
@@ -2513,7 +2538,12 @@ class Data extends BaseController
             'R1007JK2'   => $this->request->getPost('R1007JK2'),
             'R1007JK3'   => $this->request->getPost('R1007JK3'),
             'R1007JK4'   => $this->request->getPost('R1007JK4')
-        ]);
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/edit8/'.$data_id));
     }
@@ -2522,11 +2552,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R110101K3'   => $this->request->getPost('R110101K3'),
             'R110101K4'   => $this->request->getPost('R110101K4'),
             'R110102K3'   => $this->request->getPost('R110102K3'),
@@ -2576,7 +2607,12 @@ class Data extends BaseController
             'R1205A'   => $this->request->getPost('R1205A'),
             'R1205AS'   => $this->request->getPost('R1205AS'),
             'R1205B'   => $this->request->getPost('R1205B')
-        ]);
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/edit9/'.$data_id));
     }
@@ -2585,11 +2621,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R1301AK2'   => $this->request->getPost('R1301AK2'),
             'R1301AK3'   => $this->request->getPost('R1301AK3'),
             'R1301AK4'   => $this->request->getPost('R1301AK4'),
@@ -2623,7 +2660,12 @@ class Data extends BaseController
             'R1304A'   => $this->request->getPost('R1304A'),
             'R1304B'   => $this->request->getPost('R1304B'),
             'R1304C'   => $this->request->getPost('R1304C')
-        ]);
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data/edit10/'.$data_id));
     }
@@ -2632,11 +2674,12 @@ class Data extends BaseController
     {
         //load helper form and URL
         helper(['form', 'url']);
-        $dataModel = new data2_model();
+        $data2Model = new data2_model();
         // $data_id = $this->uri->getSegment(3);
 
         //insert data into database
-        $dataModel->update($data_id, [
+        try {
+            $updateData = [
             'R1401AK2'   => $this->request->getPost('R1401AK2'),
             'R1401AK2S'  => $this->request->getPost('R1401AK2S'),
             'R1401AK3'   => $this->request->getPost('R1401AK3'),
@@ -2662,7 +2705,12 @@ class Data extends BaseController
             'R1404B'     => $this->request->getPost('R1404B'),
             'R1404C'     => $this->request->getPost('R1404C'),
             'R1404D'     => $this->request->getPost('R1404D')
-        ]);
+        ];
+            $data2Model->updateByDataId($data_id, $updateData);
+
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
 
         return redirect()->to(base_url('data_prospera'));
     }

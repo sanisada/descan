@@ -704,18 +704,9 @@ class data_model extends Model{
       return $query->getResult();
    }
 
-   public function getPendudukLakilaki()
-   {
-      $builder = $this->db->table($this->table);
-      $builder->selectSum('R401A1');
-      $query = $builder->get();
-
-      return $query->getRow()->R401A;
-   }
-
-   public function getPendudukLakilakiByRegion($region, $tahun) {
+   public function getsubsektorbypekon($region, $tahun) {
       // Query untuk menghitung jumlah penduduk berdasarkan pekon
-      $query = $this->db->query("SELECT SUM(R401A1) AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      $query = $this->db->query("SELECT R304A AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
       $result = $query->getRow(); // Mengambil satu baris hasil kueri
   
       if ($result) {
@@ -725,18 +716,21 @@ class data_model extends Model{
       }
    }
 
-   public function getPendudukPerempuan()
-   {
-      $builder = $this->db->table($this->table);
-      $builder->selectSum('R401B');
-      $query = $builder->get();
-
-      return $query->getRow()->R401B;
+   public function getkomoditasbypekon($region, $tahun) {
+      // Query untuk menghitung jumlah penduduk berdasarkan pekon
+      $query = $this->db->query("SELECT R304B AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      $result = $query->getRow(); // Mengambil satu baris hasil kueri
+  
+      if ($result) {
+          return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+          return '-'; // Jika tidak ada hasil, kembalikan nilai 0
+      }
    }
 
-   public function getPendudukPerempuanByRegion($region, $tahun) {
+   public function gettpsbypekon($region, $tahun) {
       // Query untuk menghitung jumlah penduduk berdasarkan pekon
-      $query = $this->db->query("SELECT SUM(R401B) AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      $query = $this->db->query("SELECT R402 AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
       $result = $query->getRow(); // Mengambil satu baris hasil kueri
   
       if ($result) {
@@ -746,67 +740,139 @@ class data_model extends Model{
       }
    }
 
-   public function countPopulationByRegion($region, $tahun) {
-      // Query untuk menghitung jumlah penduduk berdasarkan pekon
-      $query = $this->db->query("SELECT SUM(CAST(R401A1 AS UNSIGNED) + CAST(R401B AS UNSIGNED)) AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
-      $result = $query->getResult(); // Mengambil semua hasil kueri
+   public function getsungaibypekon($region, $tahun) {
+      // Query to select the specific columns from the table
+      $query = $this->db->query("
+         SELECT R404AK2, R404AK3, R404AK4, R404AK5
+         FROM data 
+         WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      
+      $result = $query->getRow(); // Get the result row
+      
+      // Initialize an empty array to store column names with value 1
+      $columnsWithOne = [];
 
-      if (!empty($result)) {
-         return $result[0]->total; // Mengambil nilai total dari hasil kueri pertama
-      } else {
-         return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      if ($result) {
+         // Check each column and add the column name to the array if the value is 1
+         if ($result->R404AK2 == 1) {
+            $columnsWithOne[] = '2';
+         }
+         if ($result->R404AK3 == 1) {
+            $columnsWithOne[] = '3';
+         }
+         if ($result->R404AK4 == 1) {
+            $columnsWithOne[] = '4';
+         }
+         if ($result->R404AK5 == 1) {
+            $columnsWithOne[] = '5';
+         }
       }
-  }
 
-   public function getTotalPopulation()
-   {
-      $builder = $this->db->table($this->table);
-      $builder->selectSum('CAST(R401A1 AS UNSIGNED) + CAST(R401B AS UNSIGNED)', 'total_population');
-      $query = $builder->get();
-
-      $row = $query->getRow(); // Mengambil satu baris hasil kueri
-
-      if ($row) {
-         return $row->total_population;
-      } else {
-         return 0; // Jika tidak ada hasil, kembalikan nilai 0
-      }
+      return $columnsWithOne; // Return the array of column names
    }
 
-   public function getBekerjaData()
-   {
-      return $this->selectSum('R403A')
-                  // ->selectSum('R403A2')
-                  // ->selectSum('R403A3')
-                  // ->selectSum('R403A4')
-                  // ->selectSum('R403A5')
-                  // ->selectSum('R403A6')
-                  // ->selectSum('R403A7')
-                  // ->selectSum('R403A8')
-                  // ->selectSum('R403A9')
-                  // ->selectSum('R403A10')
-                  // ->selectSum('R403A11')
-                  // ->selectSum('R403A12')
-                  // ->selectSum('R403A13')
-                  // ->selectSum('R403A14')
-                  // ->selectSum('R403A15')
-                  // ->selectSum('R403A16')
-                  // ->selectSum('R403A17')
-                  // ->selectSum('R403A18')
-                  // ->selectSum('R403A19')
-                  // ->selectSum('R403A20')
-                  // ->selectSum('R403A21')
-                  ->get()
-                  ->getRowArray();
+   public function getbencanabypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT R501AK3 AS count_a, R501BK3 AS count_b, R501CK3 AS count_c, R501DK3 AS count_d,
+               R501EK3 AS count_e, R501FK3 AS count_f, R501GK3 AS count_g, R501HK3 AS count_h,
+               R501IK3 AS count_i, R501JK3 AS count_j, R501KK3 AS count_k
+         FROM data
+         WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
    }
 
-   // protected $beforeInsert = ['generateUUID'];
+   public function getbencanasekarangbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT R501AK6 AS count_a, R501BK6 AS count_b, R501CK6 AS count_c, R501DK6 AS count_d,
+               R501EK6 AS count_e, R501FK6 AS count_f, R501GK6 AS count_g, R501HK6 AS count_h,
+               R501IK6 AS count_i, R501JK6 AS count_j, R501KK6 AS count_k
+         FROM data
+         WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
 
-   //  protected function generateUUID(array $data)
-   //  {
-   //      if (empty($data['data']['id'])) {
-   //          $data['data']['id'] = Uuid::uuid4()->toString();
-   //      }
-   //      return $data;
-   //  }
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+  
 }

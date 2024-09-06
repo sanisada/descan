@@ -3,16 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prospera Cantik</title>
-  <link rel="icon" type="images/x-icon" href="<?php echo base_url('assets')?>/dist/img/logo.png" />
+  <title>Prospera</title>
+  <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets')?>/dist/img/logo.png" />
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- AdminLTE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css">
-  <!-- Template -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/template/css/style.css') ?>">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+    }
+
+    /* Header and Navbar */
+    #header {
+      background: #2c3e50;
+      padding: 10px 0;
+    }
+
+    #header .logo a {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    #navbar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #navbar ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    #navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    #navbar ul li a:hover {
+      color: #ddd;
+    }
+
+    #navbar .getstarted {
+      background: #007bff;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    #navbar .getstarted:hover {
+      background: #0056b3;
+    }
+
+    /* Hero Section */
+    /* #hero {
+      background: linear-gradient(135deg, #6dd5ed, #2193b0);
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+    } */
+
+    #hero h1 {
+      font-size: 50px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    #hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    #hero .hero-img img {
+      max-width: 100%;
+      border-radius: 10px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-10px);
+      }
+    }
+
+    /* Sections */
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #444;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .section-title p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .filter {
+      /* padding: 60px 0; */
+      background: #f8f9fa;
+    }
+
+    .form-control {
+      border-radius: 0;
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
@@ -20,78 +148,57 @@
   <!-- Navbar -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
         <div class="logo">
             <h1 class="text-light">
-                <a href="<?php echo base_url('/')?>">
-                    <small>PROSPERA CANTIK</small>
-                </a>
+                <a href="<?php echo base_url('/')?>">PROSPERA</a>
             </h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
-
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto" href="#">Beranda</a></li>
                 <li><a class="nav-link scrollto" href="#filter">Filter</a></li>
-                <li class="dropdown"><a href="#"><span>Kependudukan</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown">
+                    <a href="#"><span>Data</span> <i class="fas fa-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#Demografi">Demografi Penduduk</a></li>
-                        <li><a href="#Pendidikan">Pendidikan</a></li>
-                        <li><a href="#Pekerjaan">Pekerjaan</a></li>
-                        <li><a href="#Kelompok">Kelompok Umur</a></li>
+                        <li><a href="#Ketenagakerjaan">Ketenagakerjaan</a></li>
+                        <li><a href="#Perumahan">Perumahan & Lingkungan Hidup</a></li>
+                        <li><a href="#Bencana">Bencana Alam</a></li>
+                        <li><a href="#Pendidikan">Pendidikan & Kesehatan</a></li>
                         <li><a href="#Agama">Agama</a></li>
-                        <li><a href="#Dusun">Dusun</a></li>
+                        <li><a href="#Olahraga">Olahraga</a></li>
+                        <li><a href="#Ekonomi">Ekonomi</a></li>
+                        <li><a href="#Keamanan">Keamanan</a></li>
+                        <li><a href="#Pemerintahan">Pemerintahan</a></li>
                     </ul>
                 </li>
-                <!-- <li><a class="nav-link scrollto" href="#contact">Kontak</a></li> -->
                 <li><a class="getstarted scrollto" href="/login">Login</a></li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-
+            <i class="fas fa-bars mobile-nav-toggle"></i>
+        </nav>
     </div>
-</header>
+  </header>
   <!-- /.navbar -->
 
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
-
+  <!-- Hero Section -->
+  <section id="hero" class="d-flex align-items-center">
     <div class="container">
         <div class="row gy-6">
             <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h1>Prospera Cantik</h1>
-                <h4>Profil Potensi Pekon/Kelurahan Cinta Statistik</h4> <br/>
-                <p style="text-align: justify;">
-                    Sistem Prospera Cantik merupakan suatu sistem yang mengumpulkan dan menyajikan beragam informasi, baik yang bersifat potensi yang dimiliki desa/kelurahan maupun informasi terkait kerawanan atau tantangan yang dihadapi desa/kelurahan.</p>
+                <h1>Prospera</h1>
+                <h4>Profil Potensi Pekon/Kelurahan</h4> 
+                <p>Sistem Prospera merupakan suatu sistem yang mengumpulkan dan menyajikan beragam informasi, baik yang bersifat potensi yang dimiliki desa/kelurahan maupun informasi terkait kerawanan atau tantangan yang dihadapi desa/kelurahan.</p>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img">
                 <img src="<?php echo base_url('assets')?>/dist/img/20944100.png" class="img-fluid animated" alt="">
             </div>
         </div>
-
     </div>
+  </section>
+  <!-- End Hero -->
 
-</section><!-- End Hero -->
-
-<main id="main">
-    <!-- ======= About Section ======= -->
+  <main id="main">
+    <!-- Filter Section -->
     <section id="filter" class="filter">
-        <!-- <div class="container text-center">
-            <h2>Tentang Kami</h2>
-        </div>
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-2 d-flex align-items-center justify-content-center about-img pb-3">
-                <img src="<?php echo base_url('assets')?>/dist/img/Artboard.png" style="width: 300px !important;" alt="" data-aos="zoom-in">
-            </div>
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-7 text-center">
-                    <p style="text-align: justify;">Informasi terkait potensi desa/kelurahan meliputi : ketenagakerjaan, pendidikan, kesehatan, sosial budaya, olahraga dan hiburan, angkutan, komunikasi dan informasi, ekonomi, keamanan, pembangunan dan pemberdayaan masyarakat desa/kelurahan. Informasi terkait kerawanan atau tantangan meliputi bencana alam, pencemaran lingkungan, permasalahan sosial dan kesehatan di masyarakat, dan gangguan keamanan yang terjadi di desa/kelurahan.
-                    </p>
-                </div>
-            </div>
-        </div> -->
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>Filter</h2>
@@ -103,10 +210,12 @@
                     <div class="form-group col-md-6">
                         <label for="wilayah">Pekon:</label>
                         <select class="form-control" id="wilayah" name="wilayah">
-                            <option value="1810030011" <?php echo ($wilayah == '1810030011') ? 'selected' : ''; ?>>Panutan</option>
-                            <option value="1810030010" <?php echo ($wilayah == '1810030010') ? 'selected' : ''; ?>>Lugusari</option>
-                            <option value="1810040024" <?php echo ($wilayah == '1810040024') ? 'selected' : ''; ?>>Fajar Agung</option>
-                            <option value="1810050023" <?php echo ($wilayah == '1810050023') ? 'selected' : ''; ?>>Wonodadi Utara</option>
+                            <?php echo "<option hidden>--Pilih Kecamatan--</option>" . PHP_EOL; foreach ($desa as $key => $desa) {
+                                echo '<option value="' . $desa['kode_desa'] . '"';
+                                if ($wilayah == $desa['kode_desa']) echo "selected";
+                                echo '>' . $desa['desa'] . '</option>' . PHP_EOL;
+                            }
+                            ?>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
@@ -116,7 +225,7 @@
                             $currentYear = date("Y");
                             for ($i = 2021; $i <= $currentYear; $i++) {
                                 $selected = ($i == $tahun) ? 'selected' : '';
-                                echo '<option value="' . $i . '" ' . $selected . '>' . $i . '</option>' . PHP_EOL;
+                                echo '<option value="' . $i . '" ' . $selected . '>' . $i . '</option>';
                             }
                             ?>
                         </select>
@@ -129,385 +238,262 @@
                 </div>
             </form>
         </div>
-    </section><!-- End About Section -->
+    </section>
+    <!-- End Filter Section -->
 
-    <!-- ======= Kependudukan ======= -->
-
-    <!-- demo grafipenduduk -->
-    <section id="Demografi" class="services section-bg">
+    <section id="Ketenagakerjaan" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Infografis Kependudukan</h2>
-                <p>Demografi Penduduk </p>
+                <h2>Ketenagakerjaan </h2>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/laki@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Laki-laki</a></h4>
-                            <p>Jumlah laki-laki di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b>: <?php echo $lakibypekon; ?> Jiwa</p>
-                    </div>
+            <!-- <div class="icon-box"> -->
+              <div class="row">
+                <div class="col-6 hero-img">
+                  <img src="<?php echo base_url('assets')?>/dist/img/Farmer-amico.png" class="img-fluid animated bounce" alt="" style="width: 400px; height: auto;">
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/perempuan@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Perempuan</a></h4>
-                            <p>Jumlah perempuan di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b>: <?php echo $prbypekon; ?> Jiwa</p>
-                    </div>
+                <div class="col-6 d-flex flex-column justify-content-center">
+                  <h5>Jenis sub sektor utama sebagian besar penduduk: </h5>
+                  <h4><b style="color: #444;"><?php echo $getsubsektorbypekon; ?></b></h4>
+                  <br/>
+                  <h5>Komoditas utama dari sub sektor utama: </h5>
+                  <h4><b style="color: #444;"><?php echo $getkomoditasbypekon; ?></b></h4>
                 </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/total@4x-8.png" alt=""></div>
-                         <h4 class="title"><a href="">Total Populasi</a></h4>
-                            <p>Jumlah total laki-laki dan perempuan di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b>: <?php echo $totalbypekon; ?> Jiwa</p>
-                    </div>
-                </div>
-
-            </div>
+              </div>
+            <!-- </div> -->
 
         </div>
     </section>
-    <!-- akhir Demografi Penduduk -->
 
-    <!-- Pendidikan -->
+    <section id="Perumahan" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Perumahan dan Lingkungan Hidup</h2>
+            </div>
+
+            <div class="icon-box">
+              <div class="row">
+                <div class="col-4 d-flex flex-column justify-content-center">
+                  <h5>Keberadaan Tempat Penampungan Sementara (TPS)</h5> 
+                  <h4><b style="color: #444;"><?php echo $gettpsbypekon; ?></b></h4>
+                </div>
+                <div class="col-4 hero-img">
+                  <img src="<?php echo base_url('assets')?>/dist/img/recycling.png" class="img" alt="" style="width: 400px; height: auto;">
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center">
+                  <h5>Keberadaan sungai, saluran irigasi, danau/waduk/situ/bendungan,<br/>dan embung</h5>
+                    <div class="row">
+                      <div class="col-6" style="<?php echo in_array('2', $getsungaibypekon) ? '' : 'opacity: 0.2;'; ?>"
+                        title="<?php echo in_array('2', $getsungaibypekon) ? 'Ada Sungai' : 'Tidak Ada Sungai'; ?>">
+                        <img src="<?php echo base_url('assets')?>/dist/img/icons/river.png" class="img" alt="" style="width: 50px; height: auto;"><br/>
+                        <p><b style="color: <?php echo in_array('2', $getsungaibypekon) ? '#444' : '#aaa'; ?>;">Sungai</b></p>
+                      </div>
+                      <div class="col-6" style="<?php echo in_array('3', $getsungaibypekon) ? '' : 'opacity: 0.2;'; ?>"
+                        title="<?php echo in_array('3', $getsungaibypekon) ? 'Ada Saluran irigasi' : 'Tidak Ada Saluran irigasi'; ?>">
+                        <img src="<?php echo base_url('assets')?>/dist/img/icons/sprinkler.png" class="img" alt="" style="width: 50px; height: auto;"><br/>
+                        <p><b style="color: #444;">Saluran irigasi</b></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6" style="<?php echo in_array('4', $getsungaibypekon) ? '' : 'opacity: 0.2;'; ?>"
+                        title="<?php echo in_array('4', $getsungaibypekon) ? 'Ada Danau/waduk/situ/bendungan' : 'Tidak Ada Danau/waduk/situ/bendungan'; ?>">
+                        <img src="<?php echo base_url('assets')?>/dist/img/icons/lake.png" class="img" alt="" style="width: 50px; height: auto;"><br/>
+                        <p><b style="color: #444;">Danau/waduk/situ/<br/>bendungan</b></p>
+                      </div>
+                      <div class="col-6" style="<?php echo in_array('5', $getsungaibypekon) ? '' : 'opacity: 0.2;'; ?>"
+                        title="<?php echo in_array('5', $getsungaibypekon) ? 'Ada Embung' : 'Tidak Ada Embung'; ?>">
+                        <img src="<?php echo base_url('assets')?>/dist/img/icons/pond.png" class="img" alt="" style="width: 50px; height: auto;"><br/>
+                        <p><b style="color: #444;">Embung</b></p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Bencana" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Bencana Alam</h2>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card card-light shadow-sm rounded">
+                        <div class="card-header bg-info text-white d-flex justify-content-center align-items-center">
+                            <h3 class="card-title mb-0">Kejadian/Bencana Alam Tahun <?php echo $tahun-1 ?></h3>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                            <!-- No Data Message -->
+                            <div id="no-data-message" style="display: none; text-align: center; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <div class="hero-img">
+                                    <img src="<?php echo base_url('assets')?>/dist/img/environment.png" class="img" alt="" style="width: 200px; height: auto;">
+                                </div>
+                                <h5 style="margin-top: 10px;">Tidak ada kejadian bencana.</h5>
+                            </div>
+                            <!-- Chart Container -->
+                            <div class="chart-container" style="position: relative; width: 100%;">
+                                <canvas id="bencana" width="400" height="400"></canvas>
+                                
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4 mb-4">
+                  <div class="card card-light shadow-sm rounded">
+                        <div class="card-header bg-info text-white d-flex justify-content-center align-items-center">
+                            <h3 class="card-title mb-0">Kejadian/Bencana Alam Tahun <?php echo $tahun ?></h3>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                            <!-- No Data Message -->
+                            <div id="no-data-message1" style="display: none; text-align: center; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <div class="hero-img">
+                                    <img src="<?php echo base_url('assets')?>/dist/img/environment.png" class="img" alt="" style="width: 200px; height: auto;">
+                                </div>
+                                <h5 style="margin-top: 10px;">Tidak ada kejadian bencana.</h5>
+                            </div>
+                            <!-- Chart Container -->
+                            <div class="chart-container1" style="position: relative; width: 100%;">
+                                <canvas id="bencana1" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="Pendidikan" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Infografis Kependudukan</h2>
-                <p>Pendidikan</p>
+                <h2>Pendidikan dan Kesehatan</h2>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/belumsekolah@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Belum Sekolah</a></h4>
-                        <p class="description">Jumlah penduduk yang belum sekolah di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_belum_sekolah); ?></b> Jiwa</p>
+            <div class="row">
+            <div class="col-6">
+                <div class="icon-box">
+                    <h5>Jumlah sarana pendidikan</h5>
+                    <div class="card-body">
+                        <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
+                            <canvas id="pendidikan" width="400" height="400"></canvas>
+                            <!-- Button positioned on the right -->
+                            <!-- <button id="download-chart" class="btn btn-info btn-sm" style="position: absolute; right: 0; top: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Grafik">
+                                <i class="fa fa-download"></i>
+                            </button> -->
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/putussekolah@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Tidak Tamat SD</a></h4>
-                        <p class="description">Jumlah penduduk yang tidak tamat SD di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_tidak_tamat_sd); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/sd_1@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Tamat SD/Sederajat</a></h4>
-                        <p class="description">Jumlah penduduk yang tamat SD/Sederajat di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_sd); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/smp@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">SLTP/Sederajat</a></h4>
-                        <p class="description">Jumlah penduduk yang tamat SLTP/Sederajat di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_smp); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/sma@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">SLTA/Sederajat</a></h4>
-                        <p class="description">Jumlah penduduk yang tamat SLTA/Sederajat di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_sma); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/study/d3@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Diploma 1-3</a></h4>
-                        <p class="description">Jumlah penduduk yang Diploma 1-3 di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_diploma); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/study/s1@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Strata 1</a></h4>
-                        <p class="description">Jumlah penduduk yang Strata 1 di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_s1); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/study/s2@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Strata 2</a></h4>
-                        <p class="description">Jumlah penduduk yang Strata 2 di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_s2); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/study/s3@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Strata 3</a></h4>
-                        <p class="description">Jumlah penduduk yang Strata di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_s3); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
             </div>
 
-        </div>
-    </section>
-    <!-- Akhir pendidikan -->
-
-
-
-    <!-- Pekerjaan -->
-
-    <section id="Pekerjaan" class="services section-bg">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Infografis Kependudukan</h2>
-                <p>Pekerjaan</p>
+                <div class="col-lg-6">
+                    <div class="icon-box">
+                      <h5>Jumlah sarana kesehatan</h5>
+                        <div class="card-body">
+                            <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
+                                <canvas id="kesehatan"  width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/belumberkerja@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Belum/Tidak Berkerja</a></h4>
-                        <p class="description">Jumlah penduduk yang belum/tidak berkerja di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_blmbekerja); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/petani.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Petani/Pekebun</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Petani/Pekebun di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_petani); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/buruh_tani.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Buruh Tani</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Buruh Tani di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_buruh_tani); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/buruh_kebun.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Buruh Perkebunan</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Buruh Perkebunan di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_buruh_kebun); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/buruh_bangunan.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Buruh Bangunan</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Buruh Bangunan di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_buruh_bangunan); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/nelayan.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Nelayan</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Nelayan di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_nelayan); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/pedagang.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Pedagang Kecil</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Pedagang di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_pedagang_kecil); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/pedagang.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Pedagang Besar</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Pedagang di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_pedagang_besar); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/industry.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Industri</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Industri di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_industri); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/guru.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Guru</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Guru di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_guru); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/pns.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">PNS</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai PNS di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_pns); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/pensiunan.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Pensiunan</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Pensiunan di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_pensiun); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/perangkat_desa.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">Perangkat Desa</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai Perangkat Desa di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_perdesa); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/job/TKI.png" alt="" class="mt-3 mb-4" width="50%"></div>
-                        <h4 class="title"><a href="">TKI</a></h4>
-                        <p class="description">Jumlah penduduk yang berkerja sebagai TKI di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_tki); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </section>
 
-    <!-- Akhir Pekerjaan -->
-
-
-    <!-- Kelompok umur -->
-
-    <section id="Kelompok" class="services section-bg">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Infografis Kependudukan</h2>
-                <p>Kelompok Umur</p>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/bayi_1@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Bayi</a></h4>
-                        <p class="description">Jumlah bayi di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_umur_bayi); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/anak@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Anak-anak</a></h4>
-                        <p class="description">Jumlah anak-anak di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_umur_anak); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/remaja_1@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Remaja</a></h4>
-                        <p class="description">Jumlah remaja di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_umur_remaja); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/dewasa_1@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Dewasa</a></h4>
-                        <p class="description">Jumlah orang dewasa yang berada adi <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_umur_dewasa); ?></b> Jiwa</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="<?php echo base_url('assets')?>/dist/img/4x/orang tua_1@4x-8.png" alt=""></div>
-                        <h4 class="title"><a href="">Lansia</a></h4>
-                        <p class="description">Jumlah orang tua di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_umur_lansia); ?></b> Jiwa</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- end kelopok umur   -->
-
-
-    <!-- Agama -->
     <section id="Agama" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Infografis Kependudukan</h2>
-                <p>Agama</p>
+                <h2>Agama</h2>
+                <p>Jumlah Tempat Ibadah</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
-                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/4x/religion/islam.png" alt="" class="p-3" width="50%"></div>
-                        <h4 class="title"><a href="">Islam</a></h4>
-                        <p class="description">Jumlah orang yang memeluk agama Islam di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_islam); ?></b> Jiwa</p>
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/mosque (1).png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Masjid</a></h4>
+                        <h3><?php echo $getmasjidbypekon; ?></h3>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
-                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/4x/religion/christian.png" alt="" class="p-3" width="50%"></div>
-                        <h4 class="title"><a href="">Kristen</a></h4>
-                        <p class="description">Jumlah orang yang memeluk agama Kristen di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_kristen); ?></b> Jiwa</p>
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/mosque.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Surau/Langgar/Musala</a></h4>
+                        <h3><?php echo $getsuraubypekon; ?></h3>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
-                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/4x/religion/christian.png" alt="" class="p-3" width="50%"></div>
-                        <h4 class="title"><a href="">Katolik</a></h4>
-                        <p class="description">Jumlah orang yang memeluk agama Kristen di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_katolik); ?></b> Jiwa</p>
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/church.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Gereja Kristen</a></h4>
+                        <h3><?php echo $getkristenbypekon; ?></h3>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/katholik.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Gereja Katolik</a></h4>
+                        <h3><?php echo $getkatolikbypekon; ?></h3>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="icon">
-                            <img  src="<?php echo base_url('assets')?>/dist/img/4x/religion/buddhism.png" alt="" class="p-3" width="50%">
+                            <img  src="<?php echo base_url('assets')?>/dist/img/icons/chapel.png" alt="" class="p-3" width="50%">
                         </div>
-                        <h4 class="title"><a href="">Budha</a></h4>
-                        <p class="description">Jumlah orang yang memeluk agama Kristen di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_budha); ?></b> Jiwa</p>
+                        <h4 class="title"><a href="">Kapel</a></h4>
+                        <h3><?php echo $getkapelbypekon; ?></h3>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
-                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/4x/religion/hinduism.png" alt="" class="p-3" width="50%"></div>
-                        <h4 class="title"><a href="">Hindu</a></h4>
-                        <p class="description">Jumlah orang yang memeluk agama Kristen di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_hindu); ?></b> Jiwa</p>
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/pura.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Pura</a></h4>
+                        <h3><?php echo $getpurabypekon; ?></h3>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
-                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/4x/religion/confucianism.png" alt="" class="p-3" width="50%"></div>
-                        <h4 class="title"><a href="">Khonghucu</a></h4>
-                        <p class="description">Jumlah orang yang memeluk agama Kristen di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah <b> ($sql_khonghucu); ?></b> Jiwa</p>
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/monastery.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Wihara</a></h4>
+                        <h3><?php echo $getwiharabypekon; ?></h3>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/chinese.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Kelenteng</a></h4>
+                        <h3><?php echo $getkelentengbypekon; ?></h3>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/pagoda.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Balai Basarah</a></h4>
+                        <h3><?php echo $getbasarahbypekon; ?></h3>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/icons/temple.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Lainnya</a></h4>
+                        <h3><?php echo $getlainnyabypekon; ?></h3>
                     </div>
                 </div>
             </div>
@@ -515,105 +501,703 @@
         </div>
     </section>
 
-    <!-- end agama -->
-
-
-    <!-- Dusun -->
-
-    <section id="Dusun" class="services section-bg">
+    <section id="Olahraga" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Infografis Kependudukan</h2>
-                <p>Dusun</p>
+                <h2>Olahraga</h2>
             </div>
-
-            <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box">
-                            <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/4x/dusun_1@4x-8.png" alt=""></div>
-                            <h4 class="title"><a href="">dusun</a></h4>
-                            <p class="description">
-                                Jumlah penduduk di dusun di <b><?php echo ($wilayah == '1810030011') ? 'Panutan' : ($wilayah == '1810030010' ? 'Lugusari' : ($wilayah == '1810040024' ? 'Fajar Agung' : ($wilayah == '1810050023' ? 'Wonodadi Utara' : 'Semua Pekon'))); ?></b> adalah
-                                <b>
-                                </b>
-                                Jiwa
-                            </p>
+              <div class="row justify-content-center align-items-center">
+                
+                <div class="col-6">
+                    <div class="card card-light shadow-sm rounded">
+                        <div class="card-header bg-info text-white d-flex justify-content-center align-items-center">
+                            <h3 class="card-title mb-0">Ketersediaan fasilitas/lapangan</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
+                                <canvas id="olahraga" width="400" height="400"></canvas>
+                                <!-- Button positioned on the right -->
+                                <!-- <button id="download-chart" class="btn btn-info btn-sm" style="position: absolute; right: 0; top: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Grafik">
+                                    <i class="fa fa-download"></i>
+                                </button> -->
+                            </div>
                         </div>
                     </div>
-            </div>
+                </div>
 
+                <div class="col-6 hero-img d-flex flex-column justify-content-center align-items-center">
+                  <img src="<?php echo base_url('assets')?>/dist/img/sport.png" class="img-fluid animated bounce" alt="" style="width: 350px; height: auto;">
+                </div>
+              </div>
         </div>
     </section>
 
-    <!-- end dusun -->
-
-    <!-- End Kependudukan -->
-
-
-    <!-- ======= Contact Us Section ======= -->
-    <!-- <section id="contact" class="contact">
+    <section id="Ekonomi" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Hubungi Kami</h2>
+                <h2>Ekonomi</h2>
             </div>
-
             <div class="row">
-                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="info">
-                                <div class="address">
-                                    <i class="fa fa-map-pin"></i>
-                                    <h4>Lokasi:</h4>
-                                    <p>Jln, contoh, Kabupaten contoh, contoh 96264</p>
-                                </div>
+                <div class="col-6">
+                    <div class="icon-box">
+                        <h5>Jumlah bank yang beroperasi</h5>
+                        <div class="card-body">
+                            <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
+                                <canvas id="bank" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="email">
-                                    <i class="fa fa-envelope"></i>
-                                    <h4>Email:</h4>
-                                    <p>desacantik1810@gmail.com</p>
-                                </div>
+                <div class="col-6">
+                    <div class="icon-box">
+                      <h5>Jumlah koperasi yang masih aktif</h5>
+                        <div class="card-body">
+                            <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
+                                <canvas id="koperasi"  width="400" height="400"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-6">
+                    <div class="icon-box">
+                        <h5>Jumlah sarana penunjang ekonomi</h5>
+                        <div class="card-body">
+                            <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
+                                <canvas id="sarpek" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="icon-box">
+                      <h5>Jumlah sarana dan prasarana ekonomi</h5>
+                        <div class="card-body">
+                            <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
+                                <canvas id="sarprase"  width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section> -->
-    <!-- End Contact Us Section -->
+    </section>
 
-</main><!-- End #main -->
+    <section id="Keamanan" class="services section-bg">
+        <div class="container" data-aos="fade-up">
 
+            <div class="section-title">
+                <h2>Keamanan</h2>
+            </div>
+
+            <div class="icon-box">
+              <div class="row">
+                <div class="col-4 d-flex flex-column justify-content-center">
+                  <h5>Jumlah anggota linmas/hansip</h5> 
+                  <h4><?php echo $gethansipbypekon; ?></h4>
+                </div>
+                <div class="col-4 hero-img">
+                  <img src="<?php echo base_url('assets')?>/dist/img/police.png" class="img" alt="" style="width: 400px; height: auto;">
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center">
+                  <h5>Keberadaan pos polisi</h5> 
+                  <h4><?php echo $getpolisibypekon; ?></h4>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Pemerintahan" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Pemerintahan</h2>
+                <p>Pelaksanaan pemilihan kepala desa</p>
+            </div>
+            <div class="row justify-content-center">
+                
+                <div class="col-6 d-flex flex-column align-items-center">
+                    <div class="icon-box-container d-flex flex-column align-items-center">
+                        <div class="icon-box" style="width: 100%; max-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                            <h4 class="title"><a href="">Tahun terakhir pelaksanaan</a></h4>
+                            <h3><?php echo $getthpilkadesbypekon; ?></h3>
+                        </div>
+                        <div class="icon-box mt-4" style="width: 100%; max-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                            <h4 class="title"><a href="">Jumlah calon</a></h4>
+                            <h3><?php echo $getcalonpilkadesbypekon; ?></h3>
+                        </div>
+                        <div class="icon-box mt-4" style="width: 100%; max-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                            <h4 class="title"><a href="">Perolehan suara pemenang</a></h4>
+                            <h3><?php echo $getsuarapilkadesbypekon; ?> %</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 d-flex flex-column justify-content-center">
+                    <img src="<?php echo base_url('assets')?>/dist/img/selecting.png" class="img-fluid animated bounce" alt="" style="width: auto; height: auto;">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+  </main><!-- End #main -->
+
+</div><!-- ./wrapper -->
 <footer class="main-footer">
     <strong>&copy; 2024 <a href="http://pringsewukab.bps.go.id/">BPS Kabupaten Pringsewu</a>.</strong>
     <!-- <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
+        <b>Version</b> 3.2.0
     </div> -->
-  </footer>
-
+</footer>
 <!-- jQuery -->
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="<?php echo base_url('assets')?>/plugins/chart.js/Chart.js"></script>
 <!-- Bootstrap 4 -->
-<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
-<!-- AdminLTE -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script> -->
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script  src="<?php echo base_url('assets')?>/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script  src="<?php echo base_url('assets')?>/dist/js/demo.js"></script>
-<!-- DataTables -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<!-- Select2 -->
-<script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script>
+
+<script>
+        const labels = [
+            'Tanah longsor', 'Banjir', 'Banjir bandang', 'Gempa bumi', 
+            'Tsunami', 'Gelombang pasang laut', 'Angin puyuh/puting beliung/topan', 
+            'Gunung meletus', 'Kebakaran hutan dan lahan', 'Kekeringan (lahan)', 'Abrasi'
+        ];
+        const backgroundColors = [
+            'rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)',
+            'rgba(0, 200, 83, 1)', 'rgba(0, 150, 136, 1)', 'rgba(121, 85, 72, 1)',
+            'rgba(233, 30, 99, 1)', 'rgba(63, 81, 181, 1)', 'rgba(76, 175, 80, 1)',
+            'rgba(156, 39, 176, 1)', 'rgba(244, 67, 54, 1)', 'rgba(33, 150, 243, 1)',
+            'rgba(255, 87, 34, 1)', 'rgba(255, 235, 59, 1)', 'rgba(0, 188, 212, 1)',
+            'rgba(103, 58, 183, 1)', 'rgba(139, 195, 74, 1)', 'rgba(205, 220, 57, 1)',
+            'rgba(255, 152, 0, 1)', 'rgba(96, 125, 139, 1)', 'rgba(255, 193, 7, 1)',
+            'rgba(198, 40, 40, 1)', 'rgba(255, 23, 68, 1)', 'rgba(245, 124, 0, 1)',
+            'rgba(255, 214, 0, 1)', 'rgba(124, 77, 255, 1)', 'rgba(0, 145, 234, 1)',
+            'rgba(0, 191, 165, 1)', 'rgba(0, 105, 92, 1)', 'rgba(239, 83, 80, 1)'
+        ];
+
+        const borderColors = [
+            'rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)',
+            'rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)',
+            'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)',
+            'rgba(255, 206, 86, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)',
+            'rgba(199, 199, 199, 1)', 'rgba(83, 102, 255, 1)', 'rgba(51, 204, 204, 1)',
+            'rgba(255, 204, 204, 1)', 'rgba(255, 255, 128, 1)', 'rgba(204, 255, 204, 1)',
+            'rgba(255, 153, 204, 1)', 'rgba(204, 204, 255, 1)', 'rgba(255, 204, 128, 1)',
+            'rgba(255, 128, 128, 1)', 'rgba(128, 255, 128, 1)'
+        ];
+
+        
+        const bencana = <?= json_encode($getbencanabypekon) ?>;
+        const bencanasekarang = <?= json_encode($getbencanasekarangbypekon) ?>;
+
+        // Extract values from the bencana object into an array
+        const data = [
+            Number(bencana.count_a), Number(bencana.count_b), Number(bencana.count_c), Number(bencana.count_d),
+            Number(bencana.count_e), Number(bencana.count_f), Number(bencana.count_g), Number(bencana.count_h),
+            Number(bencana.count_i), Number(bencana.count_j), Number(bencana.count_k)
+        ];
+
+        const datasekarang = [
+            Number(bencanasekarang.count_a), Number(bencanasekarang.count_b), Number(bencanasekarang.count_c), Number(bencanasekarang.count_d),
+            Number(bencanasekarang.count_e), Number(bencanasekarang.count_f), Number(bencanasekarang.count_g), Number(bencanasekarang.count_h),
+            Number(bencanasekarang.count_i), Number(bencanasekarang.count_j), Number(bencanasekarang.count_k)
+        ];
+
+        // Check if all values in the data array are zero
+        const allZeros = Array.isArray(data) && data.every(value => value === 0);
+
+        if (allZeros) {
+            // Show the no data message and hide the chart container
+            document.getElementById('no-data-message').style.display = 'block';
+            document.querySelector('.chart-container').style.display = 'none';
+        } else {
+            // Show the chart container and hide the no data message
+            document.getElementById('no-data-message').style.display = 'none';
+            document.querySelector('.chart-container').style.display = 'block';
+
+            // Initialize the chart if data is not all zeros
+            const ctx_bencana = document.getElementById('bencana').getContext('2d');
+            new Chart(ctx_bencana, {
+                type: 'doughnut',
+                data: {
+                    labels: labels, // Replace with actual labels if needed
+                    datasets: [{
+                        label: 'Jumlah Kejadian Bencana',
+                        data: data,
+                        backgroundColor: backgroundColors, // Assuming you have defined backgroundColors
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                }
+            });
+        }
+
+        const allZerosNow = Array.isArray(datasekarang) && datasekarang.every(value => value === 0);
+
+        if (allZerosNow) {
+            // Show the no data message and hide the chart container
+            document.getElementById('no-data-message1').style.display = 'block';
+            document.querySelector('.chart-container1').style.display = 'none';
+        } else {
+            // Show the chart container and hide the no data message
+            document.getElementById('no-data-message1').style.display = 'none';
+            document.querySelector('.chart-container1').style.display = 'block';
+
+            // Initialize the chart if data is not all zeros
+            const ctx_bencana1 = document.getElementById('bencana1').getContext('2d');
+            new Chart(ctx_bencana1, {
+                type: 'doughnut',
+                data: {
+                    labels: labels, // Replace with actual labels if needed
+                    datasets: [{
+                        label: 'Jumlah Kejadian Bencana',
+                        data: datasekarang,
+                        backgroundColor: backgroundColors, // Assuming you have defined backgroundColors
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                }
+            });
+        }
+       
+        const bank = <?= json_encode($getbankbypekon) ?>;
+        const koperasi = <?= json_encode($getkoperasibypekon) ?>;
+        const sarpek = <?= json_encode($getsarpekbypekon) ?>;
+        const sarprase = <?= json_encode($getsarprasebypekon) ?>;
+        
+        // Define labels and data
+        
+        const label_kes = [
+            'Rumah Sakit', 'Rumah Sakit Bersalin', 'Puskesmas dengan rawat inap', 'Puskesmas tanpa rawat inap', 
+            'Puskesmas Pembantu', 'Poliklinik/balai pengobatan', 'Tempat praktik dokter', 
+            'Rumah Bersalin', 'Tempat praktik bidan', 'Poskesdes (Pos Kesehatan Desa)', 'Polindes (Pondok Bersalin Desa)',
+            'Apotek','Toko khusus obat/jamu'
+        ];
+
+        const label_pend = [
+            'PAUD', 'TK', 'RA/BA', 'SD', 'MI', 'SMP', 'MTs', 'SMA', 'MA', 'SMK',
+            'Akademi/Perguruan Tinggi', 'SDLB', 'SMPLB', 'SMALB', 'Pondok Pesantren', 'Madrasah Diniyah', 'Seminari/sejenisnya'
+        ];
+
+        const label_bank = [
+            'Bank Umum Pemerintah', 'Bank Umum Swasta', 'Bank Perkreditan Rakyat (BPR)'
+        ];
+
+        const label_koperasi = [
+            'KUD', 'Kopinkra/Usaha mikro', 'KSP/Kospin', 'Koperasi lainnya'
+        ];
+
+        const label_sarpek = [
+            'Baitul Maal Wa Tamwil (BMT)', 'Anjungan Tunai Mandiri (ATM)', 'Agen Bank', 'Perusahaan Pembiayaan', 'Pedagang Valuta Asing',
+            'Pergadaian', 'Agen Tiket/Travel/Biro Perjalanan', 'Bengkel Mobil/Motor', 'Salon Kecantikan'
+        ];
+
+        const label_sarprase = [
+            'Kelompok pertokoan', 'Pasar dengan bangunan permanen', 'Pasar dengan bangunan semi permanen', 'Pasar tanpa bangunan',
+            'Minimarket/swalayan/supermarket', 'Restoran/rumah makan', 'Warung/kedai makanan minuman', 'Hotel',
+            'Penginapan: hostel/motel/losmen/wisma', 'Toko/warung kelontong'
+        ];
+
+        const label_olahraga = [
+            'Sepak bola', 'Bola voli', 'Bulu tangkis', 'Bola basket', 'Tenis lapangan', 'Tenis meja', 'Futsal', 'Renang',
+            'Bela diri', 'Bilyard', 'Pusat kebugaran', 'Lainnya'
+        ];
+
+        const databank = [
+            bank.count_a, bank.count_b, bank.count_c
+        ];
+
+        const datakoperasi = [
+            koperasi.count_a, koperasi.count_b, koperasi.count_c, koperasi.count_d
+        ];
+
+        const datasarpek = [
+            sarpek.count_a, sarpek.count_b, sarpek.count_c, sarpek.count_d,
+            sarpek.count_e, sarpek.count_f, sarpek.count_g, sarpek.count_h,
+            sarpek.count_i
+        ];
+
+        const datasarprase = [
+            sarprase.count_a, sarprase.count_b, sarprase.count_c, sarprase.count_d,
+            sarprase.count_e, sarprase.count_f, sarprase.count_g, sarprase.count_h,
+            sarprase.count_i, sarprase.count_j
+        ];
+
+
+        const sarkes = <?= json_encode($getsarkesbypekon) ?>;
+        const sarpend = <?= json_encode($getsarpendbypekon) ?>;
+        const olahraga = <?= json_encode($getolahragabypekon) ?>;
+
+        const datasarkes = [
+            sarkes.count_a, sarkes.count_b, sarkes.count_c, sarkes.count_d,
+            sarkes.count_e, sarkes.count_f, sarkes.count_g, sarkes.count_h,
+            sarkes.count_i, sarkes.count_j, sarkes.count_k, sarkes.count_l, sarkes.count_m
+        ];
+
+        const datasarpend = [
+            sarpend.count_a, sarpend.count_b, sarpend.count_c, sarpend.count_d,
+            sarpend.count_e, sarpend.count_f, sarpend.count_g, sarpend.count_h,
+            sarpend.count_i, sarpend.count_j, sarpend.count_k, sarpend.count_l,
+            sarpend.count_m, sarpend.count_n, sarpend.count_o, sarpend.count_p, sarpend.count_q
+        ];
+
+        const dataolahraga = [
+            olahraga.count_a, olahraga.count_b, olahraga.count_c, olahraga.count_d,
+            olahraga.count_e, olahraga.count_f, olahraga.count_g, olahraga.count_h,
+            olahraga.count_i, olahraga.count_j, olahraga.count_k, olahraga.count_l
+        ];
+
+        var tooltips = ['Tidak ada', 'Ada, rusak parah', 'Ada, rusak sedang', 'Ada, baik' ];
+        console.log(tooltips, dataolahraga);
+
+        window.onload = function() {
+            const ctx_kes = document.getElementById('kesehatan').getContext('2d');
+            new Chart(ctx_kes, {
+                type: 'bar',
+                data: {
+                    labels: label_kes,
+                    datasets: [{
+                        label: 'Jumlah Sarana Kesehatan',
+                        data: datasarkes,
+                        backgroundColor: borderColors,
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false,
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false // Hide grid lines for x-axis
+                            },
+                            ticks: {
+                                display: true // Show x-axis labels
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false // Hide grid lines for y-axis
+                            },
+                            ticks: {
+                                display: true, // Show y-axis labels
+                                callback: function(value) {
+                                    return Number.isInteger(value) ? value : ''; // Display only integer values
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const ctx_pend = document.getElementById('pendidikan').getContext('2d');
+            const pendidikanChart = new Chart(ctx_pend, {
+                type: 'bar',
+                data: {
+                    labels: label_pend,
+                    datasets: [{
+                        label: 'Jumlah Sarana Pendidikan',
+                        data: datasarpend,
+                        backgroundColor: backgroundColors,
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false,
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false // Hide grid lines for x-axis
+                            },
+                            ticks: {
+                                display: true // Show x-axis labels
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false // Hide grid lines for y-axis
+                            },
+                            ticks: {
+                                display: true, // Show y-axis labels
+                                callback: function(value) {
+                                    return Number.isInteger(value) ? value : ''; // Display only integer values
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const ctx_bank = document.getElementById('bank').getContext('2d');
+            new Chart(ctx_bank, {
+                type: 'bar',
+                data: {
+                    labels: label_bank,
+                    datasets: [{
+                        label: 'Jumlah bank',
+                        data: databank,
+                        backgroundColor: borderColors,
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false,
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false // Hide grid lines for x-axis
+                            },
+                            ticks: {
+                                display: true // Show x-axis labels
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false // Hide grid lines for y-axis
+                            },
+                            ticks: {
+                                display: true, // Show y-axis labels
+                                callback: function(value) {
+                                    return Number.isInteger(value) ? value : ''; // Display only integer values
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const ctx_koperasi = document.getElementById('koperasi').getContext('2d');
+            new Chart(ctx_koperasi, {
+                type: 'bar',
+                data: {
+                    labels: label_koperasi,
+                    datasets: [{
+                        label: 'Jumlah koperasi',
+                        data: datakoperasi,
+                        backgroundColor: borderColors,
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false,
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false // Hide grid lines for x-axis
+                            },
+                            ticks: {
+                                display: true // Show x-axis labels
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false // Hide grid lines for y-axis
+                            },
+                            ticks: {
+                                display: true, // Show y-axis labels
+                                callback: function(value) {
+                                    return Number.isInteger(value) ? value : ''; // Display only integer values
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const ctx_sarpek = document.getElementById('sarpek').getContext('2d');
+            new Chart(ctx_sarpek, {
+                type: 'doughnut',
+                data: {
+                    labels: label_sarpek,
+                    datasets: [{
+                        label: 'Jumlah sarpek',
+                        data: datasarpek,
+                        backgroundColor: backgroundColors,
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'right',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const ctx_sarprase = document.getElementById('sarprase').getContext('2d');
+            new Chart(ctx_sarprase, {
+                type: 'doughnut',
+                data: {
+                    labels: label_sarprase,
+                    datasets: [{
+                        label: 'Jumlah sarprase',
+                        data: datasarprase,
+                        backgroundColor: backgroundColors,
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'right',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const ctx_olh = document.getElementById('olahraga').getContext('2d');
+            new Chart(ctx_olh, {
+                type: 'bar',
+                data: {
+                    labels: label_olahraga,
+                    datasets: [{
+                        label: 'Jumlah Sarana olahraga',
+                        data: dataolahraga,
+                        backgroundColor: borderColors,
+                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false // Hide grid lines for y-axis
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false // Hide grid lines for y-axis
+                            },
+                            ticks: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                // Mengganti tooltip dengan keterangan yang diinginkan
+                                label: function(context) {
+                                    let index = context.dataIndex;
+                                    let label = labels[index];
+                                    let value = dataolahraga[index];
+                                    let description = tooltips[dataolahraga[index]];
+                                    return `${description}`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            
+        }
+       
+        // document.getElementById('download-chart').addEventListener('click', function() {
+        //     // Create a link element
+        //     const link = document.createElement('a');
+        //     // Set the link href to the chart image
+        //     link.href = pendidikanChart.toBase64Image();
+        //     // Set the download attribute with a default file name
+        //     link.download = 'pendidikan_chart.png';
+        //     // Simulate a click on the link to trigger the download
+        //     link.click();
+        // });
+
+    </script>
+
 </body>
 </html>
