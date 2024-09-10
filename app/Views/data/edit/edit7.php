@@ -162,7 +162,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for=""><?php echo $ques[$i + 1]['ques_label'] ?></label>
-                                                            <input type="number" name="<?php echo $ques[$i + 1]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 1]['dataKey']] ?>" class="form-control">
+                                                            <input type="number" step="any" name="<?php echo $ques[$i + 1]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 1]['dataKey']] ?>" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -219,7 +219,7 @@
                                             </td>
                                             <td id="ekonomis-1-<?php echo $i ?>" class="ekonomis" style="display:none;">
                                                 <div class="form-group">
-                                                    <input type="number" name="<?php echo $ques[$i + 1]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 1]['dataKey']] ?>" class="form-control">
+                                                    <input type="number" step="any" name="<?php echo $ques[$i + 1]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 1]['dataKey']] ?>" class="form-control">
                                                 </div>
                                             </td>
                                             <td id="ekonomis-2-<?php echo $i ?>" class="ekonomis" style="display:none;">

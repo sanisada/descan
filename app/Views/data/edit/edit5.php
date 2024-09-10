@@ -92,7 +92,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for=""><?php echo $ques[$i + 2]['ques_label'] ?></label>
-                                                            <input type="number" name="<?php echo $ques[$i + 2]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 2]['dataKey']] ?>" class="form-control">
+                                                            <input type="number" step="any" name="<?php echo $ques[$i + 2]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 2]['dataKey']] ?>" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">

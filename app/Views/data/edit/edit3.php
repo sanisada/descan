@@ -494,7 +494,7 @@
 
     function on_change3(el){
         var selectedOption2 = el.target.value;
-        if (selectedOption2 === '1') {
+        if (selectedOption2 !== 0 && selectedOption2 === '1') { 
         document.getElementById('R403C').style.display = 'block';
         } else {
         document.getElementById('R403C').style.display = 'none'; // Hide el
@@ -565,7 +565,7 @@
         }
         window.localStorage.setItem('var1', selectedOption1);
 
-        if (selectedOption2 === '1') {
+        if (selectedOption1 === '1' && selectedOption2 === '1') {
         document.getElementById('R403C').style.display = 'block';
         } else {
         document.getElementById('R403C').style.display = 'none'; // Hide el

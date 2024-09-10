@@ -35,7 +35,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R202',
-                'ques_label' => '202. Luas wilayah desa/kelurahan (1 Ha= 0,01 km2 )\r\n(dalam satuan kilometer persegi)'
+                'ques_label' => '202. Luas wilayah desa/kelurahan (1 Ha= 0,01 km2 )' . PHP_EOL .'(dalam satuan kilometer persegi)'
             ],
             [
                 'dataKey' => 'R203',
@@ -55,7 +55,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R203B2',
-                'ques_label' => 'Ketinggian letak (Altitude) lokasi kegiatan pemerintahan desa/kelurahan dari permukaan air laut (dpal)\r\n............................... m'
+                'ques_label' => 'Ketinggian letak (Altitude) lokasi kegiatan pemerintahan desa/kelurahan dari permukaan air laut (dpal)' . PHP_EOL .'............................... m'
             ],
             [
                 'dataKey' => 'R301',
@@ -2169,7 +2169,7 @@ class Ques extends Seeder
             ],
             [
                 'dataKey' => 'R1203B',
-                'ques_label' => 'b. Keberadaan kerjasama antar desa tahun kemarin'
+                'ques_label' => 'b. Keberadaan kerjasama desa dengan pihak ketiga tahun kemarin'
             ],
             [
                 'dataKey' => 'R1204',

@@ -82,7 +82,7 @@
                                                 <?php endif; ?>
                                                 <!-- Input below Right -->
                                                 <div id="input-below-right-<?php echo $k + 1 ?>" style="display: none; margin-top: 10px;">
-                                                    <label for=""><?php echo $ques[$k + 1]['dataKey'] ?></label>
+                                                    <label for=""><?php echo $ques[$k + 1]['ques_label'] ?></label>
                                                     <input type="text" id="input-rights-below-<?php echo $k + 1 ?>" name="<?php echo $ques[$k + 1]['dataKey']?>" value="<?php echo $data[$ques[$k + 1]['dataKey']] ?>" class="form-control">
                                                 </div>
                                             </td>
@@ -92,7 +92,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for=""><?php echo $ques[$i + 2]['ques_label'] ?></label>
-                                                            <input type="number" name="<?php echo $ques[$i + 2]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 2]['dataKey']] ?>" class="form-control">
+                                                            <input type="number" step="any" name="<?php echo $ques[$i + 2]['dataKey'] ?>" value="<?php echo $data[$ques[$i + 2]['dataKey']] ?>" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
