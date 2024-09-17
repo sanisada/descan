@@ -66,14 +66,18 @@
       background: #0056b3;
     }
 
-    /* Hero Section */
-    /* #hero {
-      background: linear-gradient(135deg, #6dd5ed, #2193b0);
-      color: #fff;
-      padding: 100px 0;
-      text-align: center;
-      position: relative;
-    } */
+    #hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* menyesuaikan tinggi section jika diperlukan */
+  overflow: hidden; /* agar gambar tidak melampaui batas kontainer */
+}
+
+#hero .img {
+  max-width: 100%;
+  height: auto;
+}
 
     #hero h1 {
       font-size: 50px;
@@ -165,7 +169,7 @@
                         <li><a href="#Bencana">Bencana Alam</a></li>
                         <li><a href="#Pendidikan">Pendidikan & Kesehatan</a></li>
                         <li><a href="#Agama">Agama</a></li>
-                        <li><a href="#Olahraga">Olahraga</a></li>
+                        <li><a href="#Olahraga">Olahraga dan Hiburan</a></li>
                         <li><a href="#Ekonomi">Ekonomi</a></li>
                         <li><a href="#Keamanan">Keamanan</a></li>
                         <li><a href="#Pemerintahan">Pemerintahan</a></li>
@@ -181,19 +185,12 @@
 
   <!-- Hero Section -->
   <section id="hero" class="d-flex align-items-center">
-    <div class="container">
-        <div class="row gy-6">
-            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h1>Prospera</h1>
-                <h4>Profil Potensi Pekon/Kelurahan</h4> 
-                <p>Sistem Prospera merupakan suatu sistem yang mengumpulkan dan menyajikan beragam informasi, baik yang bersifat potensi yang dimiliki desa/kelurahan maupun informasi terkait kerawanan atau tantangan yang dihadapi desa/kelurahan.</p>
-            </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                <img src="<?php echo base_url('assets')?>/dist/img/20944100.png" class="img-fluid animated" alt="">
-            </div>
-        </div>
-    </div>
-  </section>
+    <!-- <div class="container"> -->
+        <!-- Konten lain seperti teks, jika diperlukan, bisa ditambahkan di sini -->
+        <img src="<?php echo base_url('assets')?>/dist/img/PROSPERA.png" class="img" alt="Prospera Image">
+    <!-- </div> -->
+    </section>
+
   <!-- End Hero -->
 
   <main id="main">
@@ -286,28 +283,32 @@
                 <div class="col-4 d-flex flex-column justify-content-center">
                   <h5>Keberadaan sungai, saluran irigasi, danau/waduk/situ/bendungan,<br/>dan embung</h5>
                     <div class="row">
-                      <div class="col-6" style="<?php echo in_array('2', $getsungaibypekon) ? '' : 'opacity: 0.2;'; ?>"
-                        title="<?php echo in_array('2', $getsungaibypekon) ? 'Ada Sungai' : 'Tidak Ada Sungai'; ?>">
-                        <img src="<?php echo base_url('assets')?>/dist/img/icons/river.png" class="img" alt="" style="width: 50px; height: auto;"><br/>
-                        <p><b style="color: <?php echo in_array('2', $getsungaibypekon) ? '#444' : '#aaa'; ?>;">Sungai</b></p>
-                      </div>
-                      <div class="col-6" style="<?php echo in_array('3', $getsungaibypekon) ? '' : 'opacity: 0.2;'; ?>"
-                        title="<?php echo in_array('3', $getsungaibypekon) ? 'Ada Saluran irigasi' : 'Tidak Ada Saluran irigasi'; ?>">
-                        <img src="<?php echo base_url('assets')?>/dist/img/icons/sprinkler.png" class="img" alt="" style="width: 50px; height: auto;"><br/>
-                        <p><b style="color: #444;">Saluran irigasi</b></p>
-                      </div>
+                        <div class="col-6" style="opacity: <?php echo (in_array('2', $getsungaibypekon)) ? '1' : '0.2'; ?>;">
+                            <img src="<?php echo base_url('assets')?>/dist/img/icons/river.png" class="img" alt="River icon" style="width: 50px; height: auto;">
+                            <p><b style="color: #444;">
+                                <?php echo (in_array('2', $getsungaibypekon)) ? 'Ada Sungai' : 'Tidak Ada Sungai'; ?>
+                            </b></p>
+                        </div>
+                        <div class="col-6" style="opacity: <?php echo (in_array('3', $getsungaibypekon)) ? '1' : '0.2'; ?>;">
+                            <img src="<?php echo base_url('assets')?>/dist/img/icons/sprinkler.png" class="img" alt="sprinkler icon" style="width: 50px; height: auto;">
+                            <p><b style="color: #444;">
+                                <?php echo (in_array('3', $getsungaibypekon)) ? 'Ada Saluran irigasi' : 'Tidak Ada Saluran irigasi'; ?>
+                            </b></p>
+                        </div>
                     </div>
                     <div class="row">
-                      <div class="col-6" style="<?php echo in_array('4', $getsungaibypekon) ? '' : 'opacity: 0.2;'; ?>"
-                        title="<?php echo in_array('4', $getsungaibypekon) ? 'Ada Danau/waduk/situ/bendungan' : 'Tidak Ada Danau/waduk/situ/bendungan'; ?>">
-                        <img src="<?php echo base_url('assets')?>/dist/img/icons/lake.png" class="img" alt="" style="width: 50px; height: auto;"><br/>
-                        <p><b style="color: #444;">Danau/waduk/situ/<br/>bendungan</b></p>
-                      </div>
-                      <div class="col-6" style="<?php echo in_array('5', $getsungaibypekon) ? '' : 'opacity: 0.2;'; ?>"
-                        title="<?php echo in_array('5', $getsungaibypekon) ? 'Ada Embung' : 'Tidak Ada Embung'; ?>">
-                        <img src="<?php echo base_url('assets')?>/dist/img/icons/pond.png" class="img" alt="" style="width: 50px; height: auto;"><br/>
-                        <p><b style="color: #444;">Embung</b></p>
-                      </div>
+                        <div class="col-6" style="opacity: <?php echo (in_array('4', $getsungaibypekon)) ? '1' : '0.2'; ?>;">
+                            <img src="<?php echo base_url('assets')?>/dist/img/icons/lake.png" class="img" alt="lake icon" style="width: 50px; height: auto;">
+                            <p><b style="color: #444;">
+                                <?php echo (in_array('4', $getsungaibypekon)) ? 'Ada Danau/waduk/situ/<br/>bendungan' : 'Tidak Ada Danau/waduk/<br/>situ/bendungan'; ?>
+                            </b></p>
+                        </div>
+                        <div class="col-6" style="opacity: <?php echo (in_array('5', $getsungaibypekon)) ? '1' : '0.2'; ?>;">
+                            <img src="<?php echo base_url('assets')?>/dist/img/icons/pond.png" class="img" alt="pond icon" style="width: 50px; height: auto;">
+                            <p><b style="color: #444;">
+                                <?php echo (in_array('5', $getsungaibypekon)) ? 'Ada Embung' : 'Tidak Ada Embung'; ?>
+                            </b></p>
+                        </div>
                     </div>
                 </div>
               </div>
@@ -378,27 +379,194 @@
             </div>
 
             <div class="row">
-            <div class="col-6">
-                <div class="icon-box">
-                    <h5>Jumlah sarana pendidikan</h5>
-                    <div class="card-body">
-                        <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
-                            <canvas id="pendidikan" width="400" height="400"></canvas>
-                            <!-- Button positioned on the right -->
-                            <!-- <button id="download-chart" class="btn btn-info btn-sm" style="position: absolute; right: 0; top: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Grafik">
-                                <i class="fa fa-download"></i>
-                            </button> -->
+                <div class="col-6">
+                    <div class="card card-light shadow-sm rounded">
+                        <div class="card-header bg-info text-white d-flex justify-content-center align-items-center">
+                            <h3 class="card-title mb-0">Keberadaan Sarana Pendidikan</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="pendidikanTable" class="table table-bordered table-hover" style="font-size: 12px;">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th rowspan="2" scope="col" style="text-align: center; vertical-align: middle">Jenis/Jenjang Pendidikan</th>
+                                            <th colspan="2" scope="col" style="text-align: center; vertical-align: middle">Jumlah Lembaga</th>
+                                            <th rowspan="2" scope="col" style="text-align: center; vertical-align: middle">Jarak (km)</th>
+                                            <th rowspan="2" scope="col" style="text-align: center; vertical-align: middle">Kemudahan untuk mencapai</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" style="text-align: center;">Negeri</th>
+                                            <th scope="col" style="text-align: center;">Swasta</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-                <div class="col-lg-6">
-                    <div class="icon-box">
-                      <h5>Jumlah sarana kesehatan</h5>
+                <div class="col-6">
+                    <div class="card card-light shadow-sm rounded">
+                        <div class="card-header bg-info text-white d-flex justify-content-center align-items-center">
+                            <h3 class="card-title mb-0">Jumlah Sarana Kesehatan</h3>
+                        </div>
                         <div class="card-body">
-                            <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
-                                <canvas id="kesehatan"  width="400" height="400"></canvas>
+                            <div class="table-responsive">
+                                <table id="kesehatanTable" class="table table-bordered table-hover" style="font-size: 12px;">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" style="text-align: center;">Jenis Sarana Kesehatan</th>
+                                            <th scope="col" style="text-align: center;">Jumlah</th>
+                                            <th scope="col" style="text-align: center;">Nama Sarana Kesehatan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -505,31 +673,98 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Olahraga</h2>
+                <h2>Olahraga dan Hiburan</h2>
+                <p>Ketersediaan Fasilitas/Lapangan</p>
             </div>
-              <div class="row justify-content-center align-items-center">
-                
-                <div class="col-6">
+              <!-- <div class="row justify-content-center align-items-center">
+                <div class="col-6"> -->
                     <div class="card card-light shadow-sm rounded">
-                        <div class="card-header bg-info text-white d-flex justify-content-center align-items-center">
-                            <h3 class="card-title mb-0">Ketersediaan fasilitas/lapangan</h3>
-                        </div>
+                        <!-- <div class="card-header bg-info text-white d-flex justify-content-center align-items-center">
+                            <h3 class="card-title mb-0">Ketersediaan Fasilitas/Lapangan</h3>
+                        </div> -->
                         <div class="card-body">
-                            <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
-                                <canvas id="olahraga" width="400" height="400"></canvas>
-                                <!-- Button positioned on the right -->
-                                <!-- <button id="download-chart" class="btn btn-info btn-sm" style="position: absolute; right: 0; top: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Grafik">
-                                    <i class="fa fa-download"></i>
-                                </button> -->
+                            <div class="table-responsive">
+                                <table id="fasilitasTable" class="table table-bordered table-hover" style="font-size: 12px;">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" style="text-align: center;">Jenis Olahraga</th>
+                                            <th scope="col" style="text-align: center;">Fasilitas/Lapangan Olahraga</th>
+                                            <th scope="col" style="text-align: center;">Kelompok Kegiatan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sepak Bola</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bola Voli</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bulu Tangkis</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bola Basket</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tenis Lapangan</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tenis Meja</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Futsal</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Renang</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bela Diri (silat, karate, dll)</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bilyard</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pusat Kebugaran</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lainnya</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-6 hero-img d-flex flex-column justify-content-center align-items-center">
+                <!-- </div> -->
+
+                <!-- <div class="col-6 hero-img d-flex flex-column justify-content-center align-items-center">
                   <img src="<?php echo base_url('assets')?>/dist/img/sport.png" class="img-fluid animated bounce" alt="" style="width: 350px; height: auto;">
                 </div>
-              </div>
+              </div> -->
         </div>
     </section>
 
@@ -619,30 +854,74 @@
 
             <div class="section-title">
                 <h2>Pemerintahan</h2>
-                <p>Pelaksanaan pemilihan kepala desa</p>
             </div>
             <div class="row justify-content-center">
-                
                 <div class="col-6 d-flex flex-column align-items-center">
                     <div class="icon-box-container d-flex flex-column align-items-center">
-                        <div class="icon-box" style="width: 100%; max-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
-                            <h4 class="title"><a href="">Tahun terakhir pelaksanaan</a></h4>
-                            <h3><?php echo $getthpilkadesbypekon; ?></h3>
+                        <div class="section-title">
+                            <p>Jumlah aparatur pemerintahan</p>
                         </div>
-                        <div class="icon-box mt-4" style="width: 100%; max-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
-                            <h4 class="title"><a href="">Jumlah calon</a></h4>
-                            <h3><?php echo $getcalonpilkadesbypekon; ?></h3>
+                        <div class="row justify-content-center">
+                            <div class="col-6 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <h4 class="title"><a href="">Sekretariat Desa/Kelurahan (kaur keuangan, dll)</a></h4>
+                                    <h3><?php echo $getmasjidbypekon; ?></h3>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <h4 class="title"><a href="">Pelaksana Teknis (kasi kesejahteraan, dll)</a></h4>
+                                    <h3><?php echo $getmasjidbypekon; ?></h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="icon-box mt-4" style="width: 100%; max-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
-                            <h4 class="title"><a href="">Perolehan suara pemenang</a></h4>
-                            <h3><?php echo $getsuarapilkadesbypekon; ?> %</h3>
+                        <div class="row justify-content-center">
+                            <div class="col-6 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <h4 class="title"><a href="">Pelaksana Kewilayahan (Kadus, Ketua RT, dll.)</a></h4>
+                                    <h3><?php echo $getmasjidbypekon; ?></h3>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <h4 class="title"><a href="">Pegawai desa lainnya (hansip, dll)</a></h4>
+                                    <h3><?php echo $getmasjidbypekon; ?></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 d-flex flex-column align-items-center">
+                    <div class="icon-box-container d-flex flex-column align-items-center">
+                        <div class="section-title"><p>Pelaksanaan pemilihan kepala desa</p></div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch" style="width: 100%; max-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <h4 class="title"><a href="">Tahun terakhir pelaksanaan</a></h4>
+                                    <h3><?php echo $getthpilkadesbypekon; ?></h3>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch" style="width: 100%; max-width: 300px;" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <h4 class="title"><a href="">Jumlah calon</a></h4>
+                                    <h3><?php echo $getcalonpilkadesbypekon; ?></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <h4 class="title"><a href="">Perolehan suara pemenang</a></h4>
+                                    <h3><?php echo $getsuarapilkadesbypekon; ?>%</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-6 d-flex flex-column justify-content-center">
+                <!-- <div class="col-6 d-flex flex-column justify-content-center">
                     <img src="<?php echo base_url('assets')?>/dist/img/selecting.png" class="img-fluid animated bounce" alt="" style="width: auto; height: auto;">
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -730,7 +1009,7 @@
             // Initialize the chart if data is not all zeros
             const ctx_bencana = document.getElementById('bencana').getContext('2d');
             new Chart(ctx_bencana, {
-                type: 'doughnut',
+                type: 'bar',
                 data: {
                     labels: labels, // Replace with actual labels if needed
                     datasets: [{
@@ -758,7 +1037,7 @@
             // Initialize the chart if data is not all zeros
             const ctx_bencana1 = document.getElementById('bencana1').getContext('2d');
             new Chart(ctx_bencana1, {
-                type: 'doughnut',
+                type: 'bar',
                 data: {
                     labels: labels, // Replace with actual labels if needed
                     datasets: [{
@@ -837,8 +1116,14 @@
 
 
         const sarkes = <?= json_encode($getsarkesbypekon) ?>;
+        const namasarkes = <?= json_encode($getnamasarkesbypekon) ?>;
         const sarpend = <?= json_encode($getsarpendbypekon) ?>;
+        const sarpendswasta = <?= json_encode($getsarpendswastabypekon) ?>;
+        const jarak = <?= json_encode($getjaraksarpendbypekon) ?>;
+        const kemudahan = <?= json_encode($getkemudahansarpendbypekon) ?>;
+
         const olahraga = <?= json_encode($getolahragabypekon) ?>;
+        const kelolahraga = <?= json_encode($getkomunitasolahragabypekon) ?>;
 
         const datasarkes = [
             sarkes.count_a, sarkes.count_b, sarkes.count_c, sarkes.count_d,
@@ -846,11 +1131,37 @@
             sarkes.count_i, sarkes.count_j, sarkes.count_k, sarkes.count_l, sarkes.count_m
         ];
 
+        const datanamasarkes = [
+            namasarkes.count_b, namasarkes.count_c, namasarkes.count_d,
+            namasarkes.count_e, namasarkes.count_f, namasarkes.count_g, namasarkes.count_h,
+            namasarkes.count_i, namasarkes.count_j, namasarkes.count_k, namasarkes.count_l, namasarkes.count_m, namasarkes.count_a
+        ];
+
         const datasarpend = [
             sarpend.count_a, sarpend.count_b, sarpend.count_c, sarpend.count_d,
             sarpend.count_e, sarpend.count_f, sarpend.count_g, sarpend.count_h,
             sarpend.count_i, sarpend.count_j, sarpend.count_k, sarpend.count_l,
-            sarpend.count_m, sarpend.count_n, sarpend.count_o, sarpend.count_p, sarpend.count_q
+            sarpend.count_m, sarpend.count_n, sarpend.count_o
+        ];
+
+        const datasarpendswasta = [
+            sarpendswasta.count_a, sarpendswasta.count_b, sarpendswasta.count_c, sarpendswasta.count_d,
+            sarpendswasta.count_e, sarpendswasta.count_f, sarpendswasta.count_g, sarpendswasta.count_h,
+            sarpendswasta.count_i, sarpendswasta.count_j, sarpendswasta.count_k, sarpendswasta.count_l,
+            sarpendswasta.count_m, sarpendswasta.count_n, sarpendswasta.count_o, sarpendswasta.count_p,
+            sarpendswasta.count_q
+        ];
+
+        const datajaraksarpend = [
+            jarak.count_a, jarak.count_b, jarak.count_c, jarak.count_d,
+            jarak.count_e, jarak.count_f, jarak.count_g, jarak.count_h,
+            jarak.count_i, jarak.count_j, jarak.count_k
+        ];
+
+        const datakemudahansarpend = [
+            kemudahan.count_a, kemudahan.count_b, kemudahan.count_c, kemudahan.count_d,
+            kemudahan.count_e, kemudahan.count_f, kemudahan.count_g, kemudahan.count_h,
+            kemudahan.count_i, kemudahan.count_j, kemudahan.count_k
         ];
 
         const dataolahraga = [
@@ -859,113 +1170,145 @@
             olahraga.count_i, olahraga.count_j, olahraga.count_k, olahraga.count_l
         ];
 
-        var tooltips = ['Tidak ada', 'Ada, rusak parah', 'Ada, rusak sedang', 'Ada, baik' ];
-        console.log(tooltips, dataolahraga);
+        const datakelolahraga = [
+            kelolahraga.count_a, kelolahraga.count_b, kelolahraga.count_c, kelolahraga.count_d,
+            kelolahraga.count_e, kelolahraga.count_f, kelolahraga.count_g, kelolahraga.count_h,
+            kelolahraga.count_i, kelolahraga.count_j, kelolahraga.count_k, kelolahraga.count_l
+        ];
+
+        const table = document.getElementById('fasilitasTable');
+        const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+        // Loop through the rows and assign the values from `dataolahraga`
+        for (let i = 0; i < rows.length; i++) {
+            rows[i].getElementsByTagName('td')[1].innerText = dataolahraga[i];
+            rows[i].getElementsByTagName('td')[2].innerText = datakelolahraga[i];
+        }
+
+        const tablePend = document.getElementById('pendidikanTable');
+        const rowsPend = tablePend.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+        for (let i = 0; i < rowsPend.length; i++) {
+            rowsPend[i].getElementsByTagName('td')[0].innerText = label_pend[i];
+            rowsPend[i].getElementsByTagName('td')[1].innerText = datasarpend[i];
+            rowsPend[i].getElementsByTagName('td')[2].innerText = datasarpendswasta[i];
+            rowsPend[i].getElementsByTagName('td')[3].innerText = datajaraksarpend[i];
+            rowsPend[i].getElementsByTagName('td')[4].innerText = datakemudahansarpend[i];
+        }
+
+        const tableKes = document.getElementById('kesehatanTable');
+        const rowsKes = tableKes.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+        for (let i = 0; i < rowsKes.length; i++) {
+            rowsKes[i].getElementsByTagName('td')[0].innerText = label_kes[i];
+            rowsKes[i].getElementsByTagName('td')[1].innerText = datasarkes[i];
+            rowsKes[i].getElementsByTagName('td')[2].innerText = datanamasarkes[i];
+        }
 
         window.onload = function() {
-            const ctx_kes = document.getElementById('kesehatan').getContext('2d');
-            new Chart(ctx_kes, {
-                type: 'bar',
-                data: {
-                    labels: label_kes,
-                    datasets: [{
-                        label: 'Jumlah Sarana Kesehatan',
-                        data: datasarkes,
-                        backgroundColor: borderColors,
-                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false,
-                            position: 'bottom',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.label + ': ' + context.raw;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false // Hide grid lines for x-axis
-                            },
-                            ticks: {
-                                display: true // Show x-axis labels
-                            }
-                        },
-                        y: {
-                            grid: {
-                                display: false // Hide grid lines for y-axis
-                            },
-                            ticks: {
-                                display: true, // Show y-axis labels
-                                callback: function(value) {
-                                    return Number.isInteger(value) ? value : ''; // Display only integer values
-                                }
-                            }
-                        }
-                    }
-                }
-            });
+            // const ctx_kes = document.getElementById('kesehatan').getContext('2d');
+            // new Chart(ctx_kes, {
+            //     type: 'bar',
+            //     data: {
+            //         labels: label_kes,
+            //         datasets: [{
+            //             label: 'Jumlah Sarana Kesehatan',
+            //             data: datasarkes,
+            //             backgroundColor: borderColors,
+            //             borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+            //             borderWidth: 0
+            //         }]
+            //     },
+            //     options: {
+            //         responsive: true,
+            //         plugins: {
+            //             legend: {
+            //                 display: false,
+            //                 position: 'bottom',
+            //             },
+            //             tooltip: {
+            //                 callbacks: {
+            //                     label: function(context) {
+            //                         return context.label + ': ' + context.raw;
+            //                     }
+            //                 }
+            //             }
+            //         },
+            //         scales: {
+            //             x: {
+            //                 grid: {
+            //                     display: false // Hide grid lines for x-axis
+            //                 },
+            //                 ticks: {
+            //                     display: true // Show x-axis labels
+            //                 }
+            //             },
+            //             y: {
+            //                 grid: {
+            //                     display: false // Hide grid lines for y-axis
+            //                 },
+            //                 ticks: {
+            //                     display: true, // Show y-axis labels
+            //                     callback: function(value) {
+            //                         return Number.isInteger(value) ? value : ''; // Display only integer values
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+            // });
 
-            const ctx_pend = document.getElementById('pendidikan').getContext('2d');
-            const pendidikanChart = new Chart(ctx_pend, {
-                type: 'bar',
-                data: {
-                    labels: label_pend,
-                    datasets: [{
-                        label: 'Jumlah Sarana Pendidikan',
-                        data: datasarpend,
-                        backgroundColor: backgroundColors,
-                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false,
-                            position: 'bottom',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.label + ': ' + context.raw;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false // Hide grid lines for x-axis
-                            },
-                            ticks: {
-                                display: true // Show x-axis labels
-                            }
-                        },
-                        y: {
-                            grid: {
-                                display: false // Hide grid lines for y-axis
-                            },
-                            ticks: {
-                                display: true, // Show y-axis labels
-                                callback: function(value) {
-                                    return Number.isInteger(value) ? value : ''; // Display only integer values
-                                }
-                            }
-                        }
-                    }
-                }
-            });
+            // const ctx_pend = document.getElementById('pendidikan').getContext('2d');
+            // const pendidikanChart = new Chart(ctx_pend, {
+            //     type: 'bar',
+            //     data: {
+            //         labels: label_pend,
+            //         datasets: [{
+            //             label: 'Jumlah Sarana Pendidikan',
+            //             data: datasarpend,
+            //             backgroundColor: backgroundColors,
+            //             borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+            //             borderWidth: 0
+            //         }]
+            //     },
+            //     options: {
+            //         responsive: true,
+            //         plugins: {
+            //             legend: {
+            //                 display: false,
+            //                 position: 'bottom',
+            //             },
+            //             tooltip: {
+            //                 callbacks: {
+            //                     label: function(context) {
+            //                         return context.label + ': ' + context.raw;
+            //                     }
+            //                 }
+            //             }
+            //         },
+            //         scales: {
+            //             x: {
+            //                 grid: {
+            //                     display: false // Hide grid lines for x-axis
+            //                 },
+            //                 ticks: {
+            //                     display: true // Show x-axis labels
+            //                 }
+            //             },
+            //             y: {
+            //                 grid: {
+            //                     display: false // Hide grid lines for y-axis
+            //                 },
+            //                 ticks: {
+            //                     display: true, // Show y-axis labels
+            //                     callback: function(value) {
+            //                         return Number.isInteger(value) ? value : ''; // Display only integer values
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+            // });
 
             const ctx_bank = document.getElementById('bank').getContext('2d');
             new Chart(ctx_bank, {
@@ -1008,8 +1351,12 @@
                             grid: {
                                 display: false // Hide grid lines for y-axis
                             },
+                             // Show y-axis labels
+                            min: 0,
+                            max: 5,
                             ticks: {
-                                display: true, // Show y-axis labels
+                                display: true,
+                                stepSize: 1,
                                 callback: function(value) {
                                     return Number.isInteger(value) ? value : ''; // Display only integer values
                                 }
@@ -1060,8 +1407,11 @@
                             grid: {
                                 display: false // Hide grid lines for y-axis
                             },
+                            min: 0,
+                            max: 5,
                             ticks: {
-                                display: true, // Show y-axis labels
+                                display: true,
+                                stepSize: 1,
                                 callback: function(value) {
                                     return Number.isInteger(value) ? value : ''; // Display only integer values
                                 }
@@ -1073,7 +1423,7 @@
 
             const ctx_sarpek = document.getElementById('sarpek').getContext('2d');
             new Chart(ctx_sarpek, {
-                type: 'doughnut',
+                type: 'bar',
                 data: {
                     labels: label_sarpek,
                     datasets: [{
@@ -1088,7 +1438,7 @@
                     responsive: true,
                     plugins: {
                         legend: {
-                            display: true,
+                            display: false,
                             position: 'right',
                         },
                         tooltip: {
@@ -1098,13 +1448,37 @@
                                 }
                             }
                         }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false // Hide grid lines for x-axis
+                            },
+                            ticks: {
+                                display: true // Show x-axis labels
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false // Hide grid lines for y-axis
+                            },
+                            min: 0,
+                            max: 10,
+                            ticks: {
+                                display: true,
+                                stepSize: 1,
+                                callback: function(value) {
+                                    return Number.isInteger(value) ? value : ''; // Display only integer values
+                                }
+                            }
+                        }
                     }
                 }
             });
 
             const ctx_sarprase = document.getElementById('sarprase').getContext('2d');
             new Chart(ctx_sarprase, {
-                type: 'doughnut',
+                type: 'bar',
                 data: {
                     labels: label_sarprase,
                     datasets: [{
@@ -1119,7 +1493,7 @@
                     responsive: true,
                     plugins: {
                         legend: {
-                            display: true,
+                            display: false,
                             position: 'right',
                         },
                         tooltip: {
@@ -1129,59 +1503,83 @@
                                 }
                             }
                         }
-                    }
-                }
-            });
-
-            const ctx_olh = document.getElementById('olahraga').getContext('2d');
-            new Chart(ctx_olh, {
-                type: 'bar',
-                data: {
-                    labels: label_olahraga,
-                    datasets: [{
-                        label: 'Jumlah Sarana olahraga',
-                        data: dataolahraga,
-                        backgroundColor: borderColors,
-                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-                        borderWidth: 0
-                    }]
-                },
-                options: {
+                    },
                     scales: {
                         x: {
                             grid: {
-                                display: false // Hide grid lines for y-axis
+                                display: false // Hide grid lines for x-axis
+                            },
+                            ticks: {
+                                display: true // Show x-axis labels
                             }
                         },
                         y: {
                             grid: {
                                 display: false // Hide grid lines for y-axis
                             },
+                            min: 0,
+                            max: 100,
                             ticks: {
-                                display: false
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: false,
-                            position: 'bottom',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                // Mengganti tooltip dengan keterangan yang diinginkan
-                                label: function(context) {
-                                    let index = context.dataIndex;
-                                    let label = labels[index];
-                                    let value = dataolahraga[index];
-                                    let description = tooltips[dataolahraga[index]];
-                                    return `${description}`;
+                                display: true,
+                                stepSize: 1,
+                                callback: function(value) {
+                                    return Number.isInteger(value) ? value : ''; // Display only integer values
                                 }
                             }
                         }
                     }
                 }
             });
+
+            // const ctx_olh = document.getElementById('olahraga').getContext('2d');
+            // new Chart(ctx_olh, {
+            //     type: 'bar',
+            //     data: {
+            //         labels: label_olahraga,
+            //         datasets: [{
+            //             label: 'Jumlah Sarana olahraga',
+            //             data: dataolahraga,
+            //             backgroundColor: borderColors,
+            //             borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+            //             borderWidth: 0
+            //         }]
+            //     },
+            //     options: {
+            //         scales: {
+            //             x: {
+            //                 grid: {
+            //                     display: false // Hide grid lines for y-axis
+            //                 }
+            //             },
+            //             y: {
+            //                 grid: {
+            //                     display: false // Hide grid lines for y-axis
+            //                 },
+            //                 ticks: {
+            //                     display: false
+            //                 }
+            //             }
+            //         },
+            //         plugins: {
+            //             legend: {
+            //                 display: false,
+            //                 position: 'bottom',
+            //             },
+            //             tooltip: {
+            //                 callbacks: {
+            //                     // Mengganti tooltip dengan keterangan yang diinginkan
+            //                     label: function(context) {
+            //                         let index = context.dataIndex;
+            //                         let label = labels[index];
+            //                         let value = dataolahraga[index];
+            //                         let description = tooltips[dataolahraga[index]];
+            //                         return `${description}`;
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+            // });
 
             
         }

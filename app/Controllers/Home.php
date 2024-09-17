@@ -50,10 +50,17 @@ class Home extends BaseController
         ];
 
         $olahragaMapping = [
-            1 => '3',
-            2 => '2',
-            3 => '1',
-            4 => '0'
+            4 => 'Tidak ada',
+            3 => 'Ada, rusak parah',
+            2 => 'Ada, rusak sedang',
+            1 => 'Ada, baik'
+        ];
+
+        $kemudahanMapping = [
+            1 => 'Sangat Mudah',
+            2 => 'Mudah',
+            3 => 'Sulit',
+            4 => 'Sangat Sulit'
         ];
         
         if (!empty($wilayah) && !empty($tahun)) {
@@ -70,7 +77,13 @@ class Home extends BaseController
             $getbencanasekarangbypekon   = $dataModel->getbencanasekarangbypekon($wilayah, $tahun);
 
             $getsarkesbypekon   = $data2Model->getsarkesbypekon($wilayah, $tahun);
+            $getnamasarkesbypekon   = $data2Model->getnamasarkesbypekon($wilayah, $tahun);
             $getsarpendbypekon   = $data2Model->getsarpendbypekon($wilayah, $tahun);
+            $getsarpendswastabypekon   = $data2Model->getsarpendswastabypekon($wilayah, $tahun);
+            $getjaraksarpendbypekon   = $data2Model->getjaraksarpendbypekon($wilayah, $tahun);
+            $kemudahan = $data2Model->getkemudahansarpendbypekon($wilayah, $tahun);
+            $getkemudahansarpendbypekon = array_map(function($value) use ($kemudahanMapping) {return isset($kemudahanMapping[$value]) ? $kemudahanMapping[$value] : '-';
+            }, $kemudahan);
 
             $getmasjidbypekon    = $data2Model->getmasjidbypekon($wilayah, $tahun);
             $getsuraubypekon    = $data2Model->getsuraubypekon($wilayah, $tahun);
@@ -92,6 +105,10 @@ class Home extends BaseController
             $getolahragabypekon = array_map(function($value) use ($olahragaMapping) {return isset($olahragaMapping[$value]) ? $olahragaMapping[$value] : '-';
             }, $olahraga);
 
+            $kelolahraga = $data2Model->getkomunitasolahragabypekon($wilayah, $tahun);
+            $getkomunitasolahragabypekon = array_map(function($value) use ($polisiMapping) {return isset($polisiMapping[$value]) ? $polisiMapping[$value] : '-';
+            }, $kelolahraga);
+
             $gethansipbypekon    = $data2Model->gethansipbypekon($wilayah, $tahun);
             $polisi    = $data2Model->getpolisibypekon($wilayah, $tahun);
             $getpolisibypekon = isset($polisiMapping[$polisi]) ? $polisiMapping[$polisi] : '-';
@@ -112,7 +129,11 @@ class Home extends BaseController
             'getbencanabypekon'     => $getbencanabypekon,
             'getbencanasekarangbypekon'     => $getbencanasekarangbypekon,
             'getsarkesbypekon'       => $getsarkesbypekon,
+            'getnamasarkesbypekon'       => $getnamasarkesbypekon,
             'getsarpendbypekon'       => $getsarpendbypekon,
+            'getsarpendswastabypekon'       => $getsarpendswastabypekon,
+            'getjaraksarpendbypekon'       => $getjaraksarpendbypekon,
+            'getkemudahansarpendbypekon'       => $getkemudahansarpendbypekon,
             'getmasjidbypekon'      => $getmasjidbypekon,
             'getsuraubypekon'       => $getsuraubypekon,
             'getkristenbypekon'       => $getkristenbypekon,
@@ -128,6 +149,7 @@ class Home extends BaseController
             'getsarpekbypekon'       => $getsarpekbypekon,
             'getsarprasebypekon'       => $getsarprasebypekon,
             'getolahragabypekon'        => $getolahragabypekon,
+            'getkomunitasolahragabypekon' => $getkomunitasolahragabypekon,
             'gethansipbypekon'       => $gethansipbypekon,
             'getpolisibypekon'       => $getpolisibypekon,
             'getthpilkadesbypekon'       => $getthpilkadesbypekon,

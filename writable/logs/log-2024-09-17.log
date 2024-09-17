@@ -1,0 +1,504 @@
+INFO - 2024-09-17 02:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 02:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 02:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 02:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 03:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 03:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 08:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 08:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-17 08:06:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 08:06:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 08:06:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 08:06:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 08:06:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 08:06:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 08:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-17 08:07:09 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Metadata.php on line 21.
+ 1 APPPATH\Controllers\Metadata.php(21): trim(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Metadata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Metadata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 08:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 08:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 08:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 08:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-17 13:28:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 13:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-17 13:28:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 13:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-17 13:28:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 13:28:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 13:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 13:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-17 14:01:11 --> ErrorException: Undefined variable $getsarpendswastabypekon
+[Method: GET, Route: /]
+in APPPATH\Views\home.php on line 1106.
+ 1 APPPATH\Views\home.php(1106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getsarpendswastabypekon', 'D:\\prospera\\descan\\app\\Views\\home.php', 1106)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\prospera\\descan\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(145): view('home', [...])
+ 6 APPPATH\Controllers\Home.php(19): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 14:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-17 14:16:40 --> BadMethodCallException: Call to undefined method App\Models\data2_model::getjaraksarpendbypekon
+[Method: GET, Route: /]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Home.php(75): CodeIgniter\Model->__call('getjaraksarpendbypekon', [...])
+ 2 APPPATH\Controllers\Home.php(19): App\Controllers\Home->show_data('1810030011')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 14:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-17 14:17:15 --> mysqli_sql_exception: Unknown column 'data2.R601LK4' in 'field list' in D:\prospera\descan\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\prospera\descan\system\Database\MySQLi\Connection.php(308): mysqli->query('\r\n         SELE...', 0)
+#1 D:\prospera\descan\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\r\n         SELE...')
+#2 D:\prospera\descan\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n         SELE...')
+#3 D:\prospera\descan\app\Models\data2_model.php(858): CodeIgniter\Database\BaseConnection->query('\r\n         SELE...', Array)
+#4 D:\prospera\descan\app\Controllers\Home.php(75): App\Models\data2_model->getjaraksarpendbypekon('1810030011', '2024')
+#5 D:\prospera\descan\app\Controllers\Home.php(19): App\Controllers\Home->show_data('1810030011')
+#6 D:\prospera\descan\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 D:\prospera\descan\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\prospera\descan\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\prospera\descan\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\prospera\descan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\prospera\descan\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\prospera\descan\system\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\des...')
+#13 {main}
+CRITICAL - 2024-09-17 14:17:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'data2.R601LK4' in 'field list'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Models\data2_model.php(858): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k, data2.R601LK4 AS count_l,
+            data2.R601MK4 AS count_m, data2.R601NK4 AS count_n, data2.R601OK4 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 2 APPPATH\Controllers\Home.php(75): App\Models\data2_model->getjaraksarpendbypekon('1810030011', '2024')
+ 3 APPPATH\Controllers\Home.php(19): App\Controllers\Home->show_data('1810030011')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+CRITICAL - 2024-09-17 14:17:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'data2.R601LK4' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k, data2.R601LK4 AS count_l,
+            data2.R601MK4 AS count_m, data2.R601NK4 AS count_n, data2.R601OK4 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k, data2.R601LK4 AS count_l,
+            data2.R601MK4 AS count_m, data2.R601NK4 AS count_n, data2.R601OK4 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 APPPATH\Models\data2_model.php(858): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k, data2.R601LK4 AS count_l,
+            data2.R601MK4 AS count_m, data2.R601NK4 AS count_n, data2.R601OK4 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 4 APPPATH\Controllers\Home.php(75): App\Models\data2_model->getjaraksarpendbypekon('1810030011', '2024')
+ 5 APPPATH\Controllers\Home.php(19): App\Controllers\Home->show_data('1810030011')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+CRITICAL - 2024-09-17 14:17:15 --> [Caused by] mysqli_sql_exception: Unknown column 'data2.R601LK4' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k, data2.R601LK4 AS count_l,
+            data2.R601MK4 AS count_m, data2.R601NK4 AS count_n, data2.R601OK4 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k, data2.R601LK4 AS count_l,
+            data2.R601MK4 AS count_m, data2.R601NK4 AS count_n, data2.R601OK4 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k, data2.R601LK4 AS count_l,
+            data2.R601MK4 AS count_m, data2.R601NK4 AS count_n, data2.R601OK4 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = \'1810030011\' AND data.Tahun = \'2024\'')
+ 4 APPPATH\Models\data2_model.php(858): CodeIgniter\Database\BaseConnection->query('
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k, data2.R601LK4 AS count_l,
+            data2.R601MK4 AS count_m, data2.R601NK4 AS count_n, data2.R601OK4 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?', [...])
+ 5 APPPATH\Controllers\Home.php(75): App\Models\data2_model->getjaraksarpendbypekon('1810030011', '2024')
+ 6 APPPATH\Controllers\Home.php(19): App\Controllers\Home->show_data('1810030011')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:17:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:17:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:17:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:17:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:17:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:17:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 14:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-17 14:19:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$dataModel is deprecated in APPPATH\Controllers\Data.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:19:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$desaModel is deprecated in APPPATH\Controllers\Data.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:19:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$kecamatanModel is deprecated in APPPATH\Controllers\Data.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:19:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$quesModel is deprecated in APPPATH\Controllers\Data.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:19:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$slsModel is deprecated in APPPATH\Controllers\Data.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+WARNING - 2024-09-17 14:19:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Data::$uri is deprecated in APPPATH\Controllers\Data.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Data->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\prospera\\descan\\public\\index.php')
+INFO - 2024-09-17 14:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 14:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

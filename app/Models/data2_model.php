@@ -725,11 +725,74 @@ class data2_model extends Model{
    public function getsarpendbypekon($region, $tahun) {
       // Execute the query to get the values from the specified columns
       $query = $this->db->query("
-         SELECT SUM(data2.R601AK2 + data2.R601AK3) AS count_a, SUM(data2.R601BK2 + data2.R601BK3) AS count_b, SUM(data2.R601CK2 + data2.R601CK3) AS count_c,
-            SUM(data2.R601DK2 + data2.R601DK3) AS count_d, SUM(data2.R601EK2 + data2.R601EK3) AS count_e, SUM(data2.R601FK2 + data2.R601FK3) AS count_f,
-            SUM(data2.R601GK2 + data2.R601GK3) AS count_g, SUM(data2.R601HK2 + data2.R601HK3) AS count_h, SUM(data2.R601IK2 + data2.R601IK3) AS count_i,
-            SUM(data2.R601JK2 + data2.R601JK3) AS count_j, SUM(data2.R601KK2 + data2.R601KK3) AS count_k, SUM(data2.R601LK2 + data2.R601LK3) AS count_l,
-            SUM(data2.R601MK2 + data2.R601MK3) AS count_m, SUM(data2.R601NK2 + data2.R601NK3) AS count_n, SUM(data2.R601OK2 + data2.R601OK3) AS count_o,
+         SELECT data2.R601AK2 AS count_a, data2.R601BK2 AS count_b, data2.R601CK2 AS count_c,
+            data2.R601DK2 AS count_d, data2.R601EK2 AS count_e, data2.R601FK2 AS count_f,
+            data2.R601GK2 AS count_g, data2.R601HK2 AS count_h, data2.R601IK2 AS count_i,
+            data2.R601JK2 AS count_j, data2.R601KK2 AS count_k, data2.R601LK2 AS count_l,
+            data2.R601MK2 AS count_m, data2.R601NK2 AS count_n, data2.R601OK2 AS count_o
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k,
+            'count_l' => $result->count_l,
+            'count_m' => $result->count_m,
+            'count_n' => $result->count_n,
+            'count_o' => $result->count_o
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0,
+            'count_l' => 0,
+            'count_m' => 0,
+            'count_n' => 0,
+            'count_o' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getsarpendswastabypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R601AK3 AS count_a, data2.R601BK3 AS count_b, data2.R601CK3 AS count_c,
+            data2.R601DK3 AS count_d, data2.R601EK3 AS count_e, data2.R601FK3 AS count_f,
+            data2.R601GK3 AS count_g, data2.R601HK3 AS count_h, data2.R601IK3 AS count_i,
+            data2.R601JK3 AS count_j, data2.R601KK3 AS count_k, data2.R601LK3 AS count_l,
+            data2.R601MK3 AS count_m, data2.R601NK3 AS count_n, data2.R601OK3 AS count_o,
             data2.R601PK3 AS count_p, data2.R601QK3 AS count_q
          FROM data
          JOIN data2 ON data.data_id = data2.data_id 
@@ -790,6 +853,114 @@ class data2_model extends Model{
       return $columns;
    }
 
+   public function getjaraksarpendbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R601AK4 AS count_a, data2.R601BK4 AS count_b, data2.R601CK4 AS count_c,
+            data2.R601DK4 AS count_d, data2.R601EK4 AS count_e, data2.R601FK4 AS count_f,
+            data2.R601GK4 AS count_g, data2.R601HK4 AS count_h, data2.R601IK4 AS count_i,
+            data2.R601JK4 AS count_j, data2.R601KK4 AS count_k
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getkemudahansarpendbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R601AK5 AS count_a, data2.R601BK5 AS count_b, data2.R601CK5 AS count_c,
+            data2.R601DK5 AS count_d, data2.R601EK5 AS count_e, data2.R601FK5 AS count_f,
+            data2.R601GK5 AS count_g, data2.R601HK5 AS count_h, data2.R601IK5 AS count_i,
+            data2.R601JK5 AS count_j, data2.R601KK5 AS count_k
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
    public function getsarkesbypekon($region, $tahun) {
       // Execute the query to get the values from the specified columns
       $query = $this->db->query("
@@ -840,6 +1011,63 @@ class data2_model extends Model{
             'count_k' => 0,
             'count_l' => 0,
             'count_m' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+
+   public function getnamasarkesbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R604AK2S AS count_a, data2.R604BK2S AS count_b, data2.R604CK2S AS count_c, data2.R604DK2S AS count_d,
+               data2.R604EK2S AS count_e, data2.R604FK2S AS count_f, data2.R604GK2S AS count_g, data2.R604HK2S AS count_h,
+               data2.R604IK2S AS count_i, data2.R604JK2S AS count_j, data2.R604KK2S AS count_k, data2.R604LK2S AS count_l, data2.R604MK2S AS count_m
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k,
+            'count_l' => $result->count_l,
+            'count_m' => $result->count_m
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => '-',
+            'count_b' => '-',
+            'count_c' => '-',
+            'count_d' => '-',
+            'count_e' => '-',
+            'count_f' => '-',
+            'count_g' => '-',
+            'count_h' => '-',
+            'count_i' => '-',
+            'count_j' => '-',
+            'count_k' => '-',
+            'count_l' => '-',
+            'count_m' => '-'
          ];
       }
 
@@ -1073,5 +1301,61 @@ class data2_model extends Model{
       // Return the array of column values
       return $columns;
    }
+
+   public function getkomunitasolahragabypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R801AK3 AS count_a, data2.R801BK3 AS count_b, data2.R801CK3 AS count_c, data2.R801DK3 AS count_d,
+               data2.R801EK3 AS count_e, data2.R801FK3 AS count_f, data2.R801GK3 AS count_g, data2.R801HK3 AS count_h,
+               data2.R801IK3 AS count_i, data2.R801JK3 AS count_j, data2.R801KK3 AS count_k, data2.R801LK3 AS count_l
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d,
+            'count_e' => $result->count_e,
+            'count_f' => $result->count_f,
+            'count_g' => $result->count_g,
+            'count_h' => $result->count_h,
+            'count_i' => $result->count_i,
+            'count_j' => $result->count_j,
+            'count_k' => $result->count_k,
+            'count_l' => $result->count_l
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0,
+            'count_e' => 0,
+            'count_f' => 0,
+            'count_g' => 0,
+            'count_h' => 0,
+            'count_i' => 0,
+            'count_j' => 0,
+            'count_k' => 0,
+            'count_l' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
+  
   
 }
