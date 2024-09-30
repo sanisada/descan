@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- AdminLTE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/template/css/style.css') ?>">
   <style>
@@ -144,6 +145,25 @@
     .btn-primary:hover {
       background-color: #0056b3;
     }
+
+    .select2-container--default .select2-selection--single {
+        height: 38px; /* Set the desired height */
+        line-height: 36px; /* Center text vertically */
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 36px; /* Center text vertically */
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 36px; /* Align the dropdown arrow */
+    }
+
+    /* Adjust the dropdown menu height */
+    .select2-container--default .select2-results--options {
+        max-height: 200px; /* Set the maximum height for the dropdown menu */
+        overflow-y: auto; /* Enable scrolling if necessary */
+    }
   </style>
 </head>
 <body class="hold-transition layout-top-nav">
@@ -164,7 +184,7 @@
                 <li class="dropdown">
                     <a href="#"><span>Data</span> <i class="fas fa-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#Ketenagakerjaan">Ketenagakerjaan</a></li>
+                        <li><a href="#Ketenagakerjaan">Kependudukan & Ketenagakerjaan</a></li>
                         <li><a href="#Perumahan">Perumahan & Lingkungan Hidup</a></li>
                         <li><a href="#Bencana">Bencana Alam</a></li>
                         <li><a href="#Pendidikan">Pendidikan & Kesehatan</a></li>
@@ -207,12 +227,12 @@
                     <div class="form-group col-md-6">
                         <label for="wilayah">Pekon:</label>
                         <select class="form-control" id="wilayah" name="wilayah">
-                            <?php echo "<option hidden>--Pilih Kecamatan--</option>" . PHP_EOL; foreach ($desa as $key => $desa) {
-                                echo '<option value="' . $desa['kode_desa'] . '"';
-                                if ($wilayah == $desa['kode_desa']) echo "selected";
-                                echo '>' . $desa['desa'] . '</option>' . PHP_EOL;
-                            }
-                            ?>
+                            <?php echo "<option hidden>--Pilih Pekon--</option>" . PHP_EOL; ?>
+                            <?php foreach ($desa as $key => $desa): ?>
+                                <option value="<?php echo $desa['kode_desa']; ?>" <?php echo ($wilayah == $desa['kode_desa']) ? 'selected' : ''; ?>>
+                                    <?php echo $desa['desa']; ?>
+                                </option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
@@ -230,10 +250,18 @@
                 </div>
                 <div class="form-row">
                     <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary">Tampilkan</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Tampilkan</button>
                     </div>
                 </div>
+                <br/>
+                
             </form>
+            <div class="row">
+                    <div class="col-md-12 text-center">
+                    <a href="<?= base_url('Home/downloadExcel?wilayah=' . $wilayah . '&tahun=' . $tahun); ?>" class="btn btn-info btn-sm"><i class="fa fa-download"> Download Data</i></a>
+                    </div>
+                </div>
+            
         </div>
     </section>
     <!-- End Filter Section -->
@@ -242,24 +270,50 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Ketenagakerjaan </h2>
+                <h2>Kependudukan & Ketenagakerjaan </h2>
+            </div>
+            <div class="section-title">
+                    <p>Jumlah Penduduk</p>
+                </div>
+            <div class="row justify-content-center">
+                
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/man.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Laki-laki</a></h4>
+                        <h3><?php echo $getlakilakibypekon; ?></h3>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/woman.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Perempuan</a></h4>
+                        <h3><?php echo $getprbypekon; ?></h3>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img  src="<?php echo base_url('assets')?>/dist/img/group.png" alt="" class="p-3" width="50%"></div>
+                        <h4 class="title"><a href="">Total Penduduk</a></h4>
+                        <h3><?php echo $getpendudukbypekon; ?></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-6 hero-img">
+                <img src="<?php echo base_url('assets')?>/dist/img/Farmer-amico.png" class="img-fluid animated bounce" alt="" style="width: 400px; height: auto;">
             </div>
 
-            <!-- <div class="icon-box"> -->
-              <div class="row">
-                <div class="col-6 hero-img">
-                  <img src="<?php echo base_url('assets')?>/dist/img/Farmer-amico.png" class="img-fluid animated bounce" alt="" style="width: 400px; height: auto;">
-                </div>
-
-                <div class="col-6 d-flex flex-column justify-content-center">
-                  <h5>Jenis sub sektor utama sebagian besar penduduk: </h5>
-                  <h4><b style="color: #444;"><?php echo $getsubsektorbypekon; ?></b></h4>
-                  <br/>
-                  <h5>Komoditas utama dari sub sektor utama: </h5>
-                  <h4><b style="color: #444;"><?php echo $getkomoditasbypekon; ?></b></h4>
-                </div>
-              </div>
-            <!-- </div> -->
+            <div class="col-6 d-flex flex-column justify-content-center">
+                <h5>Jenis sub sektor utama sebagian besar penduduk: </h5>
+                <h4><b style="color: #444;"><?php echo $getsubsektorbypekon; ?></b></h4>
+                <br/>
+                <h5>Komoditas utama dari sub sektor utama: </h5>
+                <h4><b style="color: #444;"><?php echo $getkomoditasbypekon; ?></b></h4>
+            </div>
+            </div>
 
         </div>
     </section>
@@ -480,6 +534,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <button id="downloadPendExcel" class="btn btn-info" style="padding: 5px 10px;font-size: 12px;">Download Table to Excel</button>
                         </div>
                     </div>
                 </div>
@@ -567,6 +622,8 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <button id="downloadKesehatanExcel" class="btn btn-info" style="padding: 5px 10px;font-size: 12px;">Download Table to Excel</button>
+
                             </div>
                         </div>
                     </div>
@@ -755,6 +812,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <button id="downloadOlahragaExcel" class="btn btn-info" style="padding: 5px 10px;font-size: 12px;">Download Table to Excel</button>
                             </div>
                         </div>
                     </div>
@@ -781,6 +839,9 @@
                         <div class="card-body">
                             <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
                                 <canvas id="bank" width="400" height="400"></canvas>
+                                <button id="download-bank-chart" class="btn btn-info btn-sm" style="position: absolute; right: 0; top: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Grafik">
+                                    <i class="fa fa-download"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -792,6 +853,9 @@
                         <div class="card-body">
                             <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
                                 <canvas id="koperasi"  width="400" height="400"></canvas>
+                                <button id="download-koperasi-chart" class="btn btn-info btn-sm" style="position: absolute; right: 0; top: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Grafik">
+                                    <i class="fa fa-download"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -805,6 +869,9 @@
                         <div class="card-body">
                             <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
                                 <canvas id="sarpek" width="400" height="400"></canvas>
+                                <button id="download-sarpek-chart" class="btn btn-info btn-sm" style="position: absolute; right: 0; top: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Grafik">
+                                    <i class="fa fa-download"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -816,6 +883,9 @@
                         <div class="card-body">
                             <div class="chart-container" style="position: relative; width: 100%; padding-right: 50px;">
                                 <canvas id="sarprase"  width="400" height="400"></canvas>
+                                <button id="download-sarprase-chart" class="btn btn-info btn-sm" style="position: absolute; right: 0; top: 10px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Grafik">
+                                    <i class="fa fa-download"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -865,13 +935,13 @@
                             <div class="col-6 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="icon-box">
                                     <h4 class="title"><a href="">Sekretariat Desa/Kelurahan (kaur keuangan, dll)</a></h4>
-                                    <h3><?php echo $getmasjidbypekon; ?></h3>
+                                    <h3><?php echo $getaparaturbypekon['count_a']; ?></h3>
                                 </div>
                             </div>
                             <div class="col-6 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="icon-box">
                                     <h4 class="title"><a href="">Pelaksana Teknis (kasi kesejahteraan, dll)</a></h4>
-                                    <h3><?php echo $getmasjidbypekon; ?></h3>
+                                    <h3><?php echo $getaparaturbypekon['count_b']; ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -879,13 +949,13 @@
                             <div class="col-6 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="icon-box">
                                     <h4 class="title"><a href="">Pelaksana Kewilayahan (Kadus, Ketua RT, dll.)</a></h4>
-                                    <h3><?php echo $getmasjidbypekon; ?></h3>
+                                    <h3><?php echo $getaparaturbypekon['count_c']; ?></h3>
                                 </div>
                             </div>
                             <div class="col-6 d-flex align-items-stretch" style="width: 100%; max-width: 1000px;" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="icon-box">
                                     <h4 class="title"><a href="">Pegawai desa lainnya (hansip, dll)</a></h4>
-                                    <h3><?php echo $getmasjidbypekon; ?></h3>
+                                    <h3><?php echo $getaparaturbypekon['count_d']; ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -943,7 +1013,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script>
         const labels = [
             'Tanah longsor', 'Banjir', 'Banjir bandang', 'Gempa bumi', 
@@ -977,6 +1048,12 @@
             'rgba(255, 128, 128, 1)', 'rgba(128, 255, 128, 1)'
         ];
 
+        const aparatur = <?= json_encode($getaparaturbypekon) ?>;
+
+        // Extract values from the bencana object into an array
+        const dataaparatur = [
+            Number(aparatur.count_a), Number(aparatur.count_b), Number(aparatur.count_c), Number(aparatur.count_d)
+        ];
         
         const bencana = <?= json_encode($getbencanabypekon) ?>;
         const bencanasekarang = <?= json_encode($getbencanasekarangbypekon) ?>;
@@ -1205,395 +1282,373 @@
             rowsKes[i].getElementsByTagName('td')[2].innerText = datanamasarkes[i];
         }
 
-        window.onload = function() {
-            // const ctx_kes = document.getElementById('kesehatan').getContext('2d');
-            // new Chart(ctx_kes, {
-            //     type: 'bar',
-            //     data: {
-            //         labels: label_kes,
-            //         datasets: [{
-            //             label: 'Jumlah Sarana Kesehatan',
-            //             data: datasarkes,
-            //             backgroundColor: borderColors,
-            //             borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-            //             borderWidth: 0
-            //         }]
-            //     },
-            //     options: {
-            //         responsive: true,
-            //         plugins: {
-            //             legend: {
-            //                 display: false,
-            //                 position: 'bottom',
-            //             },
-            //             tooltip: {
-            //                 callbacks: {
-            //                     label: function(context) {
-            //                         return context.label + ': ' + context.raw;
-            //                     }
-            //                 }
-            //             }
-            //         },
-            //         scales: {
-            //             x: {
-            //                 grid: {
-            //                     display: false // Hide grid lines for x-axis
-            //                 },
-            //                 ticks: {
-            //                     display: true // Show x-axis labels
-            //                 }
-            //             },
-            //             y: {
-            //                 grid: {
-            //                     display: false // Hide grid lines for y-axis
-            //                 },
-            //                 ticks: {
-            //                     display: true, // Show y-axis labels
-            //                     callback: function(value) {
-            //                         return Number.isInteger(value) ? value : ''; // Display only integer values
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // });
-
-            // const ctx_pend = document.getElementById('pendidikan').getContext('2d');
-            // const pendidikanChart = new Chart(ctx_pend, {
-            //     type: 'bar',
-            //     data: {
-            //         labels: label_pend,
-            //         datasets: [{
-            //             label: 'Jumlah Sarana Pendidikan',
-            //             data: datasarpend,
-            //             backgroundColor: backgroundColors,
-            //             borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-            //             borderWidth: 0
-            //         }]
-            //     },
-            //     options: {
-            //         responsive: true,
-            //         plugins: {
-            //             legend: {
-            //                 display: false,
-            //                 position: 'bottom',
-            //             },
-            //             tooltip: {
-            //                 callbacks: {
-            //                     label: function(context) {
-            //                         return context.label + ': ' + context.raw;
-            //                     }
-            //                 }
-            //             }
-            //         },
-            //         scales: {
-            //             x: {
-            //                 grid: {
-            //                     display: false // Hide grid lines for x-axis
-            //                 },
-            //                 ticks: {
-            //                     display: true // Show x-axis labels
-            //                 }
-            //             },
-            //             y: {
-            //                 grid: {
-            //                     display: false // Hide grid lines for y-axis
-            //                 },
-            //                 ticks: {
-            //                     display: true, // Show y-axis labels
-            //                     callback: function(value) {
-            //                         return Number.isInteger(value) ? value : ''; // Display only integer values
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // });
-
-            const ctx_bank = document.getElementById('bank').getContext('2d');
-            new Chart(ctx_bank, {
-                type: 'bar',
-                data: {
-                    labels: label_bank,
-                    datasets: [{
-                        label: 'Jumlah bank',
-                        data: databank,
-                        backgroundColor: borderColors,
-                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false,
-                            position: 'bottom',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.label + ': ' + context.raw;
-                                }
+        const ctx_bank = document.getElementById('bank').getContext('2d');
+        const bankChart = new Chart(ctx_bank, {
+            type: 'bar',
+            data: {
+                labels: label_bank,
+                datasets: [{
+                    label: 'Jumlah bank',
+                    data: databank,
+                    backgroundColor: borderColors,
+                    borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw;
                             }
                         }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false // Hide grid lines for x-axis
-                            },
-                            ticks: {
-                                display: true // Show x-axis labels
-                            }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false // Hide grid lines for x-axis
                         },
-                        y: {
-                            grid: {
-                                display: false // Hide grid lines for y-axis
-                            },
-                             // Show y-axis labels
-                            min: 0,
-                            max: 5,
-                            ticks: {
-                                display: true,
-                                stepSize: 1,
-                                callback: function(value) {
-                                    return Number.isInteger(value) ? value : ''; // Display only integer values
-                                }
+                        ticks: {
+                            display: true // Show x-axis labels
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false // Hide grid lines for y-axis
+                        },
+                            // Show y-axis labels
+                        min: 0,
+                        max: 5,
+                        ticks: {
+                            display: true,
+                            stepSize: 1,
+                            callback: function(value) {
+                                return Number.isInteger(value) ? value : ''; // Display only integer values
                             }
                         }
                     }
                 }
-            });
+            }
+        });
 
-            const ctx_koperasi = document.getElementById('koperasi').getContext('2d');
-            new Chart(ctx_koperasi, {
-                type: 'bar',
-                data: {
-                    labels: label_koperasi,
-                    datasets: [{
-                        label: 'Jumlah koperasi',
-                        data: datakoperasi,
-                        backgroundColor: borderColors,
-                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false,
-                            position: 'bottom',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.label + ': ' + context.raw;
-                                }
+        const ctx_koperasi = document.getElementById('koperasi').getContext('2d');
+        const koperasiChart = new Chart(ctx_koperasi, {
+            type: 'bar',
+            data: {
+                labels: label_koperasi,
+                datasets: [{
+                    label: 'Jumlah koperasi',
+                    data: datakoperasi,
+                    backgroundColor: borderColors,
+                    borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw;
                             }
                         }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false // Hide grid lines for x-axis
-                            },
-                            ticks: {
-                                display: true // Show x-axis labels
-                            }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false // Hide grid lines for x-axis
                         },
-                        y: {
-                            grid: {
-                                display: false // Hide grid lines for y-axis
-                            },
-                            min: 0,
-                            max: 5,
-                            ticks: {
-                                display: true,
-                                stepSize: 1,
-                                callback: function(value) {
-                                    return Number.isInteger(value) ? value : ''; // Display only integer values
-                                }
+                        ticks: {
+                            display: true // Show x-axis labels
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false // Hide grid lines for y-axis
+                        },
+                        min: 0,
+                        max: 5,
+                        ticks: {
+                            display: true,
+                            stepSize: 1,
+                            callback: function(value) {
+                                return Number.isInteger(value) ? value : ''; // Display only integer values
                             }
                         }
                     }
                 }
-            });
+            }
+        });
 
-            const ctx_sarpek = document.getElementById('sarpek').getContext('2d');
-            new Chart(ctx_sarpek, {
-                type: 'bar',
-                data: {
-                    labels: label_sarpek,
-                    datasets: [{
-                        label: 'Jumlah sarpek',
-                        data: datasarpek,
-                        backgroundColor: backgroundColors,
-                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false,
-                            position: 'right',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.label + ': ' + context.raw;
-                                }
+        const ctx_sarpek = document.getElementById('sarpek').getContext('2d');
+        const sarpekChart = new Chart(ctx_sarpek, {
+            type: 'bar',
+            data: {
+                labels: label_sarpek,
+                datasets: [{
+                    label: 'Jumlah sarpek',
+                    data: datasarpek,
+                    backgroundColor: backgroundColors,
+                    borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'right',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw;
                             }
                         }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false // Hide grid lines for x-axis
-                            },
-                            ticks: {
-                                display: true // Show x-axis labels
-                            }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false // Hide grid lines for x-axis
                         },
-                        y: {
-                            grid: {
-                                display: false // Hide grid lines for y-axis
-                            },
-                            min: 0,
-                            max: 10,
-                            ticks: {
-                                display: true,
-                                stepSize: 1,
-                                callback: function(value) {
-                                    return Number.isInteger(value) ? value : ''; // Display only integer values
-                                }
+                        ticks: {
+                            display: true // Show x-axis labels
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false // Hide grid lines for y-axis
+                        },
+                        min: 0,
+                        max: 10,
+                        ticks: {
+                            display: true,
+                            stepSize: 1,
+                            callback: function(value) {
+                                return Number.isInteger(value) ? value : ''; // Display only integer values
                             }
                         }
                     }
                 }
-            });
+            }
+        });
 
-            const ctx_sarprase = document.getElementById('sarprase').getContext('2d');
-            new Chart(ctx_sarprase, {
-                type: 'bar',
-                data: {
-                    labels: label_sarprase,
-                    datasets: [{
-                        label: 'Jumlah sarprase',
-                        data: datasarprase,
-                        backgroundColor: backgroundColors,
-                        borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false,
-                            position: 'right',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.label + ': ' + context.raw;
-                                }
+        const ctx_sarprase = document.getElementById('sarprase').getContext('2d');
+        const sarpraseChart = new Chart(ctx_sarprase, {
+            type: 'bar',
+            data: {
+                labels: label_sarprase,
+                datasets: [{
+                    label: 'Jumlah sarprase',
+                    data: datasarprase,
+                    backgroundColor: backgroundColors,
+                    borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'right',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw;
                             }
                         }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false // Hide grid lines for x-axis
-                            },
-                            ticks: {
-                                display: true // Show x-axis labels
-                            }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false // Hide grid lines for x-axis
                         },
-                        y: {
-                            grid: {
-                                display: false // Hide grid lines for y-axis
-                            },
-                            min: 0,
-                            max: 100,
-                            ticks: {
-                                display: true,
-                                stepSize: 1,
-                                callback: function(value) {
-                                    return Number.isInteger(value) ? value : ''; // Display only integer values
-                                }
+                        ticks: {
+                            display: true // Show x-axis labels
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false // Hide grid lines for y-axis
+                        },
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            display: true,
+                            stepSize: 1,
+                            callback: function(value) {
+                                return Number.isInteger(value) ? value : ''; // Display only integer values
                             }
                         }
                     }
                 }
-            });
-
-            // const ctx_olh = document.getElementById('olahraga').getContext('2d');
-            // new Chart(ctx_olh, {
-            //     type: 'bar',
-            //     data: {
-            //         labels: label_olahraga,
-            //         datasets: [{
-            //             label: 'Jumlah Sarana olahraga',
-            //             data: dataolahraga,
-            //             backgroundColor: borderColors,
-            //             borderColor: 'rgba(0, 0, 0, 0)', // Transparent border color
-            //             borderWidth: 0
-            //         }]
-            //     },
-            //     options: {
-            //         scales: {
-            //             x: {
-            //                 grid: {
-            //                     display: false // Hide grid lines for y-axis
-            //                 }
-            //             },
-            //             y: {
-            //                 grid: {
-            //                     display: false // Hide grid lines for y-axis
-            //                 },
-            //                 ticks: {
-            //                     display: false
-            //                 }
-            //             }
-            //         },
-            //         plugins: {
-            //             legend: {
-            //                 display: false,
-            //                 position: 'bottom',
-            //             },
-            //             tooltip: {
-            //                 callbacks: {
-            //                     // Mengganti tooltip dengan keterangan yang diinginkan
-            //                     label: function(context) {
-            //                         let index = context.dataIndex;
-            //                         let label = labels[index];
-            //                         let value = dataolahraga[index];
-            //                         let description = tooltips[dataolahraga[index]];
-            //                         return `${description}`;
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // });
-
-            
-        }
+            }
+        });
        
-        // document.getElementById('download-chart').addEventListener('click', function() {
-        //     // Create a link element
-        //     const link = document.createElement('a');
-        //     // Set the link href to the chart image
-        //     link.href = pendidikanChart.toBase64Image();
-        //     // Set the download attribute with a default file name
-        //     link.download = 'pendidikan_chart.png';
-        //     // Simulate a click on the link to trigger the download
-        //     link.click();
-        // });
+        document.getElementById('downloadPendExcel').addEventListener('click', function() {
+            const rows = document.querySelectorAll('#pendidikanTable tbody tr');
+            const data = [];
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const rowData = [];
+                cells.forEach(cell => {
+                    rowData.push(cell.innerText);
+                });
+                data.push(rowData);
+            });
+
+            // Send data to the server
+            fetch('<?= base_url("Home/downloadPendTableToExcel") ?>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => {
+                if (response.ok) {
+                    return response.blob();
+                }
+                throw new Error('Network response was not ok.');
+            }).then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'data_fasilitas_pendidikan.xlsx';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            }).catch(error => console.error('Error downloading the file:', error));
+        });
+
+
+        document.getElementById('downloadKesehatanExcel').addEventListener('click', function() {
+            const rows = document.querySelectorAll('#kesehatanTable tbody tr');
+            const data = [];
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const rowData = [];
+                cells.forEach(cell => {
+                    rowData.push(cell.innerText);
+                });
+                data.push(rowData);
+            });
+
+            // Send data to the server
+            fetch('<?= base_url("Home/downloadTableToExcel") ?>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => {
+                if (response.ok) {
+                    return response.blob();
+                }
+                throw new Error('Network response was not ok.');
+            }).then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'data_sarana_kesehatan.xlsx';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            }).catch(error => console.error('Error downloading the file:', error));
+        });
+
+        document.getElementById('downloadOlahragaExcel').addEventListener('click', function() {
+            const rows = document.querySelectorAll('#fasilitasTable tbody tr');
+            const data = [];
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const rowData = [];
+                cells.forEach(cell => {
+                    rowData.push(cell.innerText);
+                });
+                data.push(rowData);
+            });
+
+            // Send data to the server
+            fetch('<?= base_url("Home/downloadOlahragaTableToExcel") ?>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => {
+                if (response.ok) {
+                    return response.blob();
+                }
+                throw new Error('Network response was not ok.');
+            }).then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'data_fasilitas_olahraga.xlsx';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            }).catch(error => console.error('Error downloading the file:', error));
+        });
+
+        document.getElementById('download-bank-chart').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = bankChart.toBase64Image();
+            link.download = 'bank_chart.png';
+            link.click();
+        });
+
+        document.getElementById('download-koperasi-chart').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = koperasiChart.toBase64Image();
+            link.download = 'koperasi_chart.png';
+            link.click();
+        });
+
+        document.getElementById('download-sarpek-chart').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = sarpekChart.toBase64Image();
+            link.download = 'sarana_penunjang_ekonomi_chart.png';
+            link.click();
+        });
+
+        document.getElementById('download-sarprase-chart').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = sarpraseChart.toBase64Image();
+            link.download = 'sarana_prasarana_ekonomi_chart.png';
+            link.click();
+        });
+
+        $(document).ready(function() {
+            $('#wilayah').select2({
+                placeholder: '--Pilih Pekon--', // Placeholder
+                allowClear: true,
+            });
+        });
 
     </script>
 

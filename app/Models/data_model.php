@@ -704,6 +704,42 @@ class data_model extends Model{
       return $query->getResult();
    }
 
+   public function getlakilakibypekon($region, $tahun) {
+      // Query untuk menghitung jumlah penduduk berdasarkan pekon
+      $query = $this->db->query("SELECT R301A AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      $result = $query->getRow(); // Mengambil satu baris hasil kueri
+  
+      if ($result) {
+          return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+          return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }
+   }
+
+   public function getprbypekon($region, $tahun) {
+      // Query untuk menghitung jumlah penduduk berdasarkan pekon
+      $query = $this->db->query("SELECT R301B AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      $result = $query->getRow(); // Mengambil satu baris hasil kueri
+  
+      if ($result) {
+          return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+          return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }
+   }
+
+   public function getpendudukbypekon($region, $tahun) {
+      // Query untuk menghitung jumlah penduduk berdasarkan pekon
+      $query = $this->db->query("SELECT SUM(R301A + R301B) AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));
+      $result = $query->getRow(); // Mengambil satu baris hasil kueri
+  
+      if ($result) {
+          return $result->total; // Mengembalikan nilai total dari hasil kueri
+      } else {
+          return 0; // Jika tidak ada hasil, kembalikan nilai 0
+      }
+   }
+
    public function getsubsektorbypekon($region, $tahun) {
       // Query untuk menghitung jumlah penduduk berdasarkan pekon
       $query = $this->db->query("SELECT R304A AS total FROM data WHERE R104 = ? AND Tahun = ?", array($region, $tahun));

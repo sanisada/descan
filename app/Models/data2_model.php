@@ -1356,6 +1356,43 @@ class data2_model extends Model{
       // Return the array of column values
       return $columns;
    }
+
+   public function getaparaturbypekon($region, $tahun) {
+      // Execute the query to get the values from the specified columns
+      $query = $this->db->query("
+         SELECT data2.R1402A count_a, data2.R1402B count_b, data2.R1402C count_c, data2.R1402D count_d
+         FROM data
+         JOIN data2 ON data.data_id = data2.data_id 
+         WHERE data.R104 = ? AND data.Tahun = ?", array($region, $tahun));
+      
+      // Fetch the result row
+      $result = $query->getRow();
+      
+      // Initialize an empty array to store column values
+      $columns = [];
+
+      // Check if the result is valid
+      if ($result) {
+         // Populate the array with column values
+         $columns = [
+            'count_a' => $result->count_a,
+            'count_b' => $result->count_b,
+            'count_c' => $result->count_c,
+            'count_d' => $result->count_d
+         ];
+      } else {
+         // If no result, return an empty array
+         $columns = [
+            'count_a' => 0,
+            'count_b' => 0,
+            'count_c' => 0,
+            'count_d' => 0
+         ];
+      }
+
+      // Return the array of column values
+      return $columns;
+   }
   
   
 }

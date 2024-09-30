@@ -9,6 +9,10 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/Home/filter', 'Home::filter');
 $routes->get('/Home/show_data(:any)','Home::show_data/$1');
+$routes->get('/Home/downloadExcel(:any)', 'Home::downloadExcel/$1');
+$routes->post('/Home/downloadTableToExcel', 'Home::downloadTableToExcel');
+$routes->post('/Home/downloadPendTableToExcel', 'Home::downloadPendTableToExcel');
+$routes->post('/Home/downloadOlahragaTableToExcel', 'Home::downloadOlahragaTableToExcel');
 // $routes->get('/dashboard', 'Dashboard::index');
 
 // route pengaturan user
